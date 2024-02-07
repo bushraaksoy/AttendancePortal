@@ -1,2 +1,2 @@
 # AttendancePortal
-An attendance management system for a university
+A self attendance management system for a university
