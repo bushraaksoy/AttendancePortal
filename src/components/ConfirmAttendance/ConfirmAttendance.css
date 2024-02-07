@@ -1,0 +1,9 @@
+.confirm-attendance-form {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  width: 500px;
+}

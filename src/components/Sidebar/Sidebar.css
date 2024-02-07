@@ -1,0 +1,26 @@
+.sidebar {
+  width: 300px;
+  background: #40526c;
+  color: #fff;
+}
+
+.sidebar h2 {
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.sidebar ul li a {
+  display: block;
+}
+
+.sidebar ul li {
+  height: 60px;
+  padding: 15px;
+  background-color: #5f738f;
+  border: 1px solid #99adc9;
+}
+
+.sidebar ul li:hover {
+  background-color: #273c5a;
+  border: 2px solid #99adc9;
+}

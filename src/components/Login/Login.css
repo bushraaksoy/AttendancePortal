@@ -1,0 +1,81 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  width: 37vw;
+  min-width: 350px;
+  height: 460px;
+  padding: 30px 40px;
+  border-radius: 10px;
+  margin: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form > label > input {
+  margin-top: 7px;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(243, 243, 243, 0.89);
+}
+
+.form > button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 8px;
+  border-radius: 20px;
+  border: none;
+  background-color: #7367f0;
+  color: #fff;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.form > button:hover {
+  box-shadow: 4px 4px 6px #bbb;
+  transform: translate3d(-1px, -1px, 0);
+}
+
+.form-title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-title > div {
+  font-size: 14px;
+}
+
+.form-title > h1 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.sign-up-link {
+  color: #e5ce00;
+}
+
+.sign-up-link:hover {
+  text-decoration: underline;
+}
+
+.error-msg {
+  color: #ee0000;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    max-width: 700px;
+    height: 470px;
+    gap: 6px;
+  }
+}

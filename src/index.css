@@ -1,0 +1,30 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  background-color: #eee;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px 20px;
+  border: 1.5px solid #111;
+  background-color: #40526c;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #5f738f;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #ddd;
+  background-color: #eee;
+}

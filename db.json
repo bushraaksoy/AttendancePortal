@@ -1,0 +1,253 @@
+{
+  "users": [
+    {
+      "email": "admin@admin.com",
+      "password": "adminpassword",
+      "id": "9d10"
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "password",
+      "id": "1252"
+    }
+  ],
+  "students": [
+    {
+      "id": "210107190",
+      "firstName": "Bushra",
+      "middleName": "Alptekin",
+      "lastName": "Aksoy",
+      "dob": "17-07-2003",
+      "speciality": "Computer Science"
+    },
+    {
+      "id": "210107180",
+      "firstName": "Bushra",
+      "middleName": "Alptekin",
+      "lastName": "Aksoy",
+      "dob": "18-07-2003",
+      "speciality": "Computer Science"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "6762",
+      "courseId": "CSS105",
+      "courseSection": "05P",
+      "startTime": "9:00",
+      "studentId": "210107190"
+    },
+    {
+      "id": "f148",
+      "courseId": "INF 223",
+      "courseSection": "05-P",
+      "startTime": "16:00",
+      "studentId": "210107190"
+    },
+    {
+      "id": "6f05",
+      "courseId": "CSS105",
+      "courseSection": "05P",
+      "startTime": "9:00",
+      "studentId": "210107180"
+    },
+    {
+      "id": "4163",
+      "courseId": "CSS105",
+      "courseSection": "05P",
+      "startTime": "9:00",
+      "studentId": "210107190"
+    },
+    {
+      "id": "4e50",
+      "courseId": "CSS 105",
+      "courseSection": "03-P",
+      "startTime": "9:00",
+      "studentId": "21017037"
+    },
+    {
+      "id": "01cd",
+      "courseId": "CSS 105",
+      "courseSection": "03-P",
+      "startTime": "9:00",
+      "studentId": "210107161"
+    }
+  ],
+  "departmentSchedule": {
+    "Monday": {
+      "9:00": [
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS][10-P]Yerbol Baigarayev Yerbol Baigarayev Main building - Engineering block: F203(ENG 203): Main building - Engineering block: (ENG 203) F203",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [07-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 10(Virtual Room 10): Virtual building: (Virtual Room 10) VR 10",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS][06-N] Inkar Shoganova Inkar Shoganova Main building: E117(L.T. D1): Main building: (L.T. D1) E117",
+        "CSS 217 Software Architecture and Design Patterns (1+2+0) [3cr / 5ECTS] [11-P]Nursat Bakyt Nursat Bakyt Main building - Engineering block: F104(LAB-EN4): Main building - Engineering block: (LAB-EN4) F104",
+        "MAT 156 Discrete Mathematics (2+1+0) [3cr / 5ECTS] [01-N]Aigerim Dauletiyarova Aigerim Dauletiyarova Main building: E221(L.T. D2): Main building: (L.T. D2) E221",
+        "MDE 191 Foreign Language 2 (English for Academic Purposes - B1+ level ) (0+3+0) [3cr / 5ECTS] [02-P]Toty Aitzhan Toty Aitzhan, [10-P]Usame Ozyurt Usame Ozyurt Main building - Engineering block: F101(ENG 101) Main building: H 106(H 106): Main building - Engineering block: (ENG 101) F101, Main building: (H 106) H 106",
+        "MDE 172 Philosophy (2+1+0) [3cr / 5ECTS] [40-N]Zhanbolat Khumarkhan Zhanbolat Khumarkhan Virtual building: VR 17(Virtual Room 17): Virtual building: (Virtual Room 17) VR 17"
+      ],
+      "10:00": [
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS] [10-P]Yerbol Baigarayev Yerbol Baigarayev Main building - Engineering block: F203(ENG 203): Main building - Engineering block: (ENG 203) F203",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [14-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 99(Virtual Room 99): Virtual building: (Virtual Room 99) VR 99",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS] [25-P]Bauyrzhan Berlikozha Bauyrzhan Berlikozha Main building - Engineering block: F103(ENG 103): Main building - Engineering block: (ENG 103) F103",
+        "CSS 217 Software Architecture and Design Patterns (1+2+0) [3cr / 5ECTS] [11-P]Nursat Bakyt Nursat Bakyt Main building - Engineering block: F104(LAB-EN4): Main building - Engineering block: (LAB-EN4) F104",
+        "MAT 156 Discrete Mathematics (2+1+0) [3cr / 5ECTS] [01-N]Aigerim Dauletiyarova Aigerim Dauletiyarova Main building: H 102(H 102): Main building: (H 102) H 102",
+        "MDE 191 Foreign Language 2 (English for Academic Purposes - B1+ level ) (0+3+0) [3cr / 5ECTS] [02-P]Toty Aitzhan Toty Aitzhan, [10-P]Usame Ozyurt Usame Ozyurt Main building - Engineering block: F101(ENG 101) Main building: H 106(H 106): Main building - Engineering block: (ENG 101) F101, Main building: (H 106) H 106",
+        "MDE 190 Foreign Language 1 (English for Academic Purposes - B1 level ) (0+3+0) [3cr / 5ECTS] [04-P]Kalzhan Rakish Kalzhan Rakish Main building: H 109(H 109): Main building: (H 109) H 109",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [35-N]Ali Baigelenov Ali Baigelenov Virtual building: VR 21(Virtual Room 21): Virtual building: (Virtual Room 21) VR 21",
+        "MDE 172 Philosophy (2+1+0) [3cr / 5ECTS] [40-N]Zhanbolat Khumarkhan Zhanbolat Khumarkhan Virtual building: VR 17(Virtual Room 17): Virtual building: (Virtual Room 17) VR 17",
+        "CSS 350 Cloud Computing (1+2+0) [3cr / 5ECTS] [02-P]MohammedAlaaFadhil Al-Hadeethi, Doctor PhD MohammedAlaaFadhil Al-Hadeethi, Doctor PhD Main building - Engineering block: G102(ECO 102): Main building - Engineering block: (ECO 102) G102",
+        "INF 423 Statistics and Visualization for Data Analysis (2+1+0) [3cr / 5ECTS] [10-N]Khaled Mohamad, Doctor PhD Khaled Mohamad, Doctor PhD Main building: H 01(H 01): Main building: (H 01) H 01",
+        "MDE 153 Module of Social and Political Knowledge (Cultural Studies) (1+0+0) [1cr / 2ECTS] [03-N]Indira Kutbanbayeva Indira Kutbanbayeva, [14-N]Aida Baigarayeva, Doctor PhD Aida Baigarayeva, Doctor PhD Virtual building: VR 75(Virtual Room 55) Virtual building: VR 100(Virtual Room 100): Virtual building: (Virtual Room 55) VR 75, Virtual building: (Virtual Room 100) VR 100"
+      ],
+      "11:00": [
+        "CSS 112 Physics 1 (1+1+2) [3cr / 5ECTS] [06-L]Assem Kaliyeva Assem Kaliyeva Main building - Engineering block: F203(ENG 203): Main building - Engineering block: (ENG 203) F203",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [11-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 15(Virtual Room 15): Virtual building: (Virtual Room 15) VR 15",
+        "CSS 206 Database Management Systems 1 (1+2+0) [3cr / 5ECTS] [01-N]Perizat Yessenova Perizat Yessenova Main building: H 202(H 202): Main building: (H 202) H 202",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS] [25-P]Bauyrzhan Berlikozha Bauyrzhan Berlikozha Main building - Engineering block: F103(ENG 103): Main building - Engineering block: (ENG 103) F103",
+        "MDE 190 Foreign Language 1 (English for Academic Purposes - B1 level ) (0+3+0) [3cr / 5ECTS] [04-P]Kalzhan Rakish Kalzhan Rakish Main building: H 109(H 109): Main building: (H 109) H 109",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [46-P]Binara Imankulova Binara Imankulova Virtual building: VR 10(Virtual Room 10): Virtual building: (Virtual Room 10) VR 10",
+        "CSS 350 Cloud Computing (1+2+0) [3cr / 5ECTS] [02-P]MohammedAlaaFadhil Al-Hadeethi, Doctor PhD MohammedAlaaFadhil Al-Hadeethi, Doctor PhD Main building - Engineering block: G102(ECO 102): Main building - Engineering block: (ECO 102) G102",
+        "INF 423 Statistics and Visualization for Data Analysis (2+1+0) [3cr / 5ECTS] [10-N]Khaled Mohamad, Doctor PhD Khaled Mohamad, Doctor PhD, [07-P]Dina Kengesbay Dina Kengesbay Main building: H 01(H 01) Main building - Engineering block: F104(LAB-EN4): Main building: (H 01) H 01, Main building - Engineering block: (LAB-EN4) F104"
+      ],
+      "12:00": [
+        "CSS 112 Physics 1 (1+1+2) [3cr / 5ECTS] [06-L]Assem Kaliyeva Assem Kaliyeva Main building - Engineering block: F203(ENG 203): Main building - Engineering block: (ENG 203) F203",
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS] [09-P]Yerbol Baigarayev Yerbol Baigarayev Main building - Engineering block: G102(ECO 102): Main building - Engineering block: (ECO 102) G102",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [02-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 22(Virtual Room 22): Virtual building: (Virtual Room 22) VR 22",
+        "CSS 108 Programming Technologies and Educational Practice (2+0+2) [3cr / 5ECTS] [28-N]Nauryzbay Sapargali Nauryzbay Sapargali Main building: H 03(H 03): Main building: (H 03) H 03",
+        "MDE 190 Foreign Language 1 (English for Academic Purposes - B1 level ) (0+3+0) [3cr / 5ECTS] [02-P]Kalzhan Rakish Kalzhan Rakish, [10-P]Kundyzay Omirzak Kundyzay Omirzak Main building - Economics block: G301(ECO 301) Main building - Engineering block: F102(ENG 102): Main building - Economics block: (ECO 301) G301, Main building - Engineering block: (ENG 102) F102",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [46-P]Binara Imankulova Binara Imankulova Virtual building: VR 10(Virtual Room 10): Virtual building: (Virtual Room 10) VR 10",
+        "MDE 153 Module of Social and Political Knowledge (Cultural Studies) (1+0+0) [1cr / 2ECTS] [10-N]Aida Baigarayeva, Doctor PhD Aida Baigarayeva, Doctor PhD Virtual building: VR 79(Virtual Room 79): Virtual building: (Virtual Room 79) VR 79",
+        "CSS 105 Fundamentals of Programming (2+0+2) [4cr / 5ECTS] [03-L]Yelnur Mutaliyev Yelnur Mutaliyev Main building - Engineering block: F104(LAB-EN4): Main building - Engineering block: (LAB-EN4) F104"
+      ],
+      "13:00": [
+        "CSS 110 Calculus 2 (2+0+2) [3cr / 5ECTS] [03-N]Damir Kurmanbay, Doctor PhD Damir Kurmanbay, Doctor PhD Main building: E221(L.T. D2): Main building: (L.T. D2) E221",
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS] [09-P]Yerbol Baigarayev Yerbol Baigarayev Main building - Engineering block: G102(ECO 102): Main building - Engineering block: (ECO 102) G102",
+        "CSS 108 Programming Technologies and Educational Practice (2+0+2) [3cr / 5ECTS] [28-N]Nauryzbay Sapargali Nauryzbay Sapargali Main building: H 03(H 03): Main building: (H 03) H 03",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS] [02-N]Inkar Shoganova Inkar Shoganova Main building: D214(L.T. C2): Main building: (L.T. C2) D214",
+        "MDE 151 Module of Social and Political Knowledge (Political Science) (1+0+0) [1cr / 2ECTS] [08-N]Yerkebulan Akberdiyev Yerkebulan Akberdiyev Virtual building: VR 4(Virtual Room 4): Virtual building: (Virtual Room 4) VR 4",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [49-N]Ualikhan Sadyk Ualikhan Sadyk, [46-P]Binara Imankulova Binara Imankulova Virtual building: VR 18(Virtual Room 18) Virtual building: (Virtual Room 18) VR 18, Virtual building: (Virtual Room 10) VR 10",
+        "MDE 153 Module of Social and Political Knowledge (Cultural Studies) (1+0+0) [1cr / 2ECTS] [06-N]Indira Kutbanbayeva Indira Kutbanbayeva Virtual building: VR 3(Virtual Room 3): Virtual building: (Virtual Room 3) VR 3",
+        "CSS 105 Fundamentals of Programming (2+0+2) [4cr / 5ECTS] [03-L]Yelnur Mutaliyev Yelnur Mutaliyev Main building - Engineering block: F104(LAB-EN4): Main building: (LAB-EN4) F104"
+      ],
+      "14:00": [
+        "CSS 110 Calculus 2 (2+0+2) [3cr / 5ECTS] [03-N]Damir Kurmanbay, Doctor PhD Damir Kurmanbay, Doctor PhD Main building: E221(L.T. D2): Main building: (L.T. D2) E221",
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS] [03-N]MohammedAlaaFadhil Al-Hadeethi, Doctor PhD MohammedAlaaFadhil Al-Hadeethi, Doctor PhD Main building - Economics block: G304(ECO 304): Main building - Economics block: (ECO 304) G304",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [12-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 8(Virtual Room 8): Virtual building: (Virtual Room 8) VR 8",
+        "CSS 341 Computer organization and architecture (2+1+0) [3cr / 5ECTS] [02-N]Alexandr Ivanov, Candidate of Science Alexandr Ivanov, Candidate of Science Main building: H 102(H 102): Main building: (H 102) H 102",
+        "CSS 342 Software Engineering (2+1+0) [3cr / 5ECTS] [02-N]Lyazzat Atymtayeva, Doctor of Science Lyazzat Atymtayeva, Doctor of Science Main building: D218(L.T. A2): Main building: (L.T. A2) D218",
+        "CSS 108 Programming Technologies and Educational Practice (2+0+2) [3cr / 5ECTS] [29-N]Nauryzbay Sapargali Nauryzbay Sapargali Main building: H 101(H 101): Main building: (H 101) H 101",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS] [14-P]Assyl Abilakim Assyl Abilakim Main building - Engineering block: F107(LAB-EN2): Main building: (LAB-EN2) F107",
+        "MDE 151 Module of Social and Political Knowledge (Political Science) (1+0+0) [1cr / 2ECTS] [05-N]Yerkebulan Akberdiyev Yerkebulan Akberdiyev Virtual building: VR 54(Virtual Room 54): Virtual building: (Virtual Room 54) VR 54",
+        "MAT 153 Mathematics for Computer Science 1 (2+0+2) [3cr / 5ECTS] [01-N]Bekzat Zhakhayev, Doctor PhD Bekzat Zhakhayev, Doctor PhD Virtual building: VR 48(Virtual Room 48): Virtual building: (Virtual Room 48) VR 48",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [44-P]Perizat Yessenova Perizat Yessenova, [50-P]Ualikhan Sadyk Ualikhan Sadyk Virtual building: VR 9(Virtual Room 9) Virtual building: (Virtual Room 9) VR 9, Virtual building: (Virtual Room 22) VR 22",
+        "INF 423 Statistics and Visualization for Data Analysis (2+1+0) [3cr / 5ECTS] [08-P]Dina Kengesbay Dina Kengesbay Main building - Engineering block: F104(LAB-EN4): Main building: (LAB-EN4) F104",
+        "MDE 153 Module of Social and Political Knowledge (Cultural Studies) (1+0+0) [1cr / 2ECTS] [04-N]Indira Kutbanbayeva Indira Kutbanbayeva Virtual building: VR 58(Virtual Room 58): Virtual building: (Virtual Room 58) VR 58"
+      ],
+      "15:00": [
+        "CSS 228 Advanced Algorithmic Design and Analysis (2+2+0) [4cr / 5ECTS] [03-N]MohammedAlaaFadhil Al-Hadeethi, Doctor PhD MohammedAlaaFadhil Al-Hadeethi, Doctor PhD Main building - Economics block: G304(ECO 304): Main building - Economics block: (ECO 304) G304",
+        "MDE 154 Module of Social and Political Knowledge (Psychology) (1+0+0) [1cr / 2ECTS] [13-N]Yelnura Autalipova Yelnura Autalipova Virtual building: VR 13(Virtual Room 13): Virtual building: (Virtual Room 13) VR 13",
+        "CSS 341 Computer organization and architecture (2+1+0) [3cr / 5ECTS] [02-N]Alexandr Ivanov, Candidate of Science Alexandr Ivanov, Candidate of Science Main building: H 102(H 102): Main building: (H 102) H 102",
+        "CSS 342 Software Engineering (2+1+0) [3cr / 5ECTS] [02-N]Lyazzat Atymtayeva, Doctor of Science Lyazzat Atymtayeva, Doctor of Science Main building: D218(L.T. A2): Main building: (L.T. A2) D218",
+        "CSS 108 Programming Technologies and Educational Practice (2+0+2) [3cr / 5ECTS] [29-N]Nauryzbay Sapargali Nauryzbay Sapargali Main building: H 101(H 101): Main building: (H 101) H 101",
+        "INF 313 Computer networks 1 (1+2+0) [3cr / 5ECTS] [14-P]Assyl Abilakim Assyl Abilakim Main building - Engineering block: F107(LAB-EN2): Main building - Engineering block: (LAB-EN2) F107",
+        "MAN 322 Entrepreneurship (2+1+0) [3cr / 5ECTS] [01-N]Qaswa-Binte-Firdous Wani Qaswa-Binte-Firdous Wani Main building - Economics block: G205(ECO 205): Main building - Economics block: (ECO 205) G205",
+        "MAT 156 Discrete Mathematics (2+1+0) [3cr / 5ECTS] [02-N]Aigerim Dauletiyarova Aigerim Dauletiyarova Main building: D113(L.T. C1): Main building: (L.T. C1) D113",
+        "MAT 153 Mathematics for Computer Science 1 (2+0+2) [3cr / 5ECTS] [01-N]Bekzat Zhakhayev, Doctor PhD Bekzat Zhakhayev, Doctor PhD Virtual building: VR 48(Virtual Room 48): Virtual building: (Virtual Room 48) VR 48",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [47-N]Ulzhan Mukasheva Ulzhan Mukasheva, [44-P]Perizat Yessenova Perizat Yessenova, [50-P]Ualikhan Sadyk Ualikhan Sadyk Virtual building: VR 43(Virtual Room 43) Virtual building: (Virtual Room 43) VR 43, Virtual building: (Virtual Room 9) VR 9, Virtual building: (Virtual Room 22) VR 22",
+        "MDE 153 Module of Social and Political Knowledge (Cultural Studies) (1+0+0) [1cr / 2ECTS] [08-N]Aida Baigarayeva, Doctor PhD Aida Baigarayeva, Doctor PhD Virtual building: VR 94(Virtual Room 94): Virtual building: (Virtual Room 94) VR 94"
+      ],
+      "16:00": [
+        "MAN 322 Entrepreneurship (2+1+0) [3cr / 5ECTS] [01-N]Qaswa-Binte-Firdous Wani Qaswa-Binte-Firdous Wani Main building - Economics block: G205(ECO 205): Main building - Economics block: (ECO 205) G205",
+        "MAT 156 Discrete Mathematics (2+1+0) [3cr / 5ECTS] [02-N]Aigerim Dauletiyarova Aigerim Dauletiyarova Main building: D217(L.T. B2): Main building: (L.T. B2) D217",
+        "MDE 191 Foreign Language 2 (English for Academic Purposes - B1+ level ) (0+3+0) [3cr / 5ECTS] [08-P]Toty Aitzhan Toty Aitzhan Main building - Economics block: G301(ECO 301): Main building - Economics block: (ECO 301) G301",
+        "MAT 153 Mathematics for Computer Science 1 (2+0+2) [3cr / 5ECTS] [02-L]Bekzat Zhakhayev, Doctor PhD Bekzat Zhakhayev, Doctor PhD Virtual building: VR 48(Virtual Room 48): Virtual building: (Virtual Room 48) VR 48",
+        "CSS 489 Diploma preparation (1+3+0) [4cr / 6ECTS] [44-P]Perizat Yessenova Perizat Yessenova, [50-P]Ualikhan Sadyk Ualikhan Sadyk Virtual building: VR 9(Virtual Room 9) Virtual building: (Virtual Room 9) VR 9, Virtual building: (Virtual Room 22) VR 22",
+        "MDE 172 Philosophy (2+1+0) [3cr / 5ECTS] [01-N]Yerzhan Chongarov, Candidate of Science Yerzhan Chongarov, Candidate of Science Virtual building: VR 82(Virtual Room 82): Virtual building: (Virtual Room 82) VR 82"
+      ],
+      "17:00": [
+        "CSS 112 Physics 1 (1+1+2) [3cr / 5ECTS] [18-P]Ualikhan Sadyk Ualikhan Sadyk Main building - Engineering block: G101(ECO 101): Main building - Engineering block: (ECO 101) G101",
+        "CSS 341 Computer organization and architecture (2+1+0) [3cr / 5ECTS] [12-P]Alexandr Ivanov, Candidate of Science Alexandr Ivanov, Candidate of Science Main building - Engineering block: F301(ENG 301): Main building - Engineering block: (ENG 301) F301",
+        "MAN 322 Entrepreneurship (2+1+0) [3cr / 5ECTS] [02-P]Qaswa-Binte-Firdous Wani Qaswa-Binte-Firdous Wani Main building - Economics block: G205(ECO 205): Main building - Economics block: (ECO 205) G205",
+        "MAT 156 Discrete Mathematics (2+1+0) [3cr / 5ECTS] [08-P]Abdibek Ydyrys Abdibek Ydyrys Main building - Engineering block: F203(ENG 203): Main building - Engineering block: (ENG 203) F203",
+        "MAT 153 Mathematics for Computer Science 1 (2+0+2) [3cr / 5ECTS] [02-L]Bekzat Zhakhayev, Doctor PhD Bekzat Zhakhayev, Doctor PhD Virtual building: VR 48(Virtual Room 48): Virtual building: (Virtual Room 48) VR 48",
+        "MDE 172 Philosophy (2+1+0) [3cr / 5ECTS] [01-N]Yerzhan Chongarov, Candidate of Science Yerzhan Chongarov, Candidate of Science Virtual building: VR 82(Virtual Room 82): Virtual building: (Virtual Room 82) VR 82"
+      ],
+      "18:00": [
+        "CSS 381 Industrial practice 2 (1+0+0) [1cr / 1ECTS] [01-N]Assel Yembergenova Assel Yembergenova Virtual building: VR 20(Virtual Room 20): Virtual building: (Virtual Room 20) VR 20"
+      ],
+      "19:00": [
+        "CSS 380 Industrial practice 1 (1+0+0) [1cr / 1ECTS] [01-N]Kuanyshbek Mamay Kuanyshbek Mamay Virtual building: VR 20(Virtual Room 20): Virtual building: (Virtual Room 20) VR 20"
+      ],
+      "20:00": []
+    },
+    "Tuesday": {
+      "9:00": [],
+      "10:00": [],
+      "11:00": [],
+      "12:00": [],
+      "13:00": [],
+      "14:00": [],
+      "15:00": [],
+      "16:00": [],
+      "17:00": [],
+      "18:00": [],
+      "19:00": [],
+      "20:00": []
+    },
+    "Wednesday": {
+      "9:00": [],
+      "10:00": [],
+      "11:00": [],
+      "12:00": [],
+      "13:00": [],
+      "14:00": [],
+      "15:00": [],
+      "16:00": [],
+      "17:00": [],
+      "18:00": [],
+      "19:00": [],
+      "20:00": []
+    },
+    "Thursday": {
+      "9:00": [],
+      "10:00": [],
+      "11:00": [],
+      "12:00": [],
+      "13:00": [],
+      "14:00": [],
+      "15:00": [],
+      "16:00": [],
+      "17:00": [],
+      "18:00": [],
+      "19:00": [],
+      "20:00": []
+    },
+    "Friday": {
+      "9:00": [],
+      "10:00": [],
+      "11:00": [],
+      "12:00": [],
+      "13:00": [],
+      "14:00": [],
+      "15:00": [],
+      "16:00": [],
+      "17:00": [],
+      "18:00": [],
+      "19:00": [],
+      "20:00": []
+    },
+    "Saturday": {
+      "9:00": [],
+      "10:00": [],
+      "11:00": [],
+      "12:00": [],
+      "13:00": [],
+      "14:00": [],
+      "15:00": [],
+      "16:00": [],
+      "17:00": [],
+      "18:00": [],
+      "19:00": [],
+      "20:00": []
+    }
+  }
+}
