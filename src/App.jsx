@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Login from "./components/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -8,68 +8,71 @@ import { ToastContainer } from "react-toastify";
 import Schedule from "./pages/Schedule/Schedule";
 import ConfirmAttendance from "./components/ConfirmAttendance/ConfirmAttendance";
 import TeacherQrCode from "./components/QrCodeGenerator/TeacherQrCode";
-import Sidebar from "./components/Sidebar/Sidebar";
+import AdminLayout from "./components/AdminLayout/AdminLayout";
+import CourseDetails from "./pages/CourseDetails/CourseDetails";
+import AttendanceRequest from "./pages/AttendaceRequest/AttendanceRequest";
+import MainLayout from "./components/MainLayout/MainLayout";
+import CoursesTable from "./components/CoursesTable/CoursesTable";
 
 function App() {
+  const navigate = useNavigate();
+
+  // save the value of isAuth from localstorage to isAuthenticated, and false if it does not exist
   const [isAuthenticated, setIsAuth] = useState(() => {
     const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
     return savedAuth || false;
   });
 
+  // update isAuth in local storage each time isAuthenticated changes
   useEffect(() => {
-    const savedAuth = JSON.parse(localStorage.getItem("isAuth")) || false;
-    setIsAuth(savedAuth);
-  }, []);
+    localStorage.setItem("isAuth", JSON.stringify(isAuthenticated));
+  }, [isAuthenticated]);
+
+  if (!isAuthenticated) {
+    navigate("/login");
+  }
 
   return (
     <LoginContext.Provider value={{ isAuthenticated, setIsAuth }}>
       <ToastContainer position="top-right" theme="colored" />
       <div className="app">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              !isAuthenticated ? (
+                <Login />
+              ) : (
+                <MainLayout children={<CoursesTable />} />
+              )
+            }
+          />
+          <Route
+            path="/:courseId"
+            element={<MainLayout children={<CourseDetails />} />}
+          />
+          <Route
+            path="/:courseId/attendance-request"
+            element={<AttendanceRequest />}
+          />
+
+          {/* routes for admin */}
           <Route
             path="/dashboard"
-            element={
-              <div className="main">
-                <Sidebar />
-                <div className="page-content">
-                  <Dashboard />
-                </div>
-              </div>
-            }
+            element={<AdminLayout children={<Dashboard />} />}
           />
           <Route
             path="/department-schedule"
-            element={
-              <div className="main">
-                <Sidebar />
-                <div className="page-content">
-                  <Schedule />
-                </div>
-              </div>
-            }
+            element={<AdminLayout children={<Schedule />} />}
           />
           <Route
             path="/confirm-attendance"
-            element={
-              <div className="main">
-                <Sidebar />
-                <div className="page-content">
-                  <ConfirmAttendance />
-                </div>
-              </div>
-            }
+            element={<AdminLayout children={<ConfirmAttendance />} />}
           />
           <Route
             path="teacher-qr-code"
-            element={
-              <div className="main">
-                <Sidebar />
-                <div className="page-content">
-                  <TeacherQrCode />
-                </div>
-              </div>
-            }
+            element={<AdminLayout children={<TeacherQrCode />} />}
           />
         </Routes>
 

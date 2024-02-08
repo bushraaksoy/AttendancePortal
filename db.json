@@ -9,11 +9,13 @@
       "email": "user@gmail.com",
       "password": "password",
       "id": "1252"
-    }
+    },
+    { "email": "210107190@stu.sdu.edu.kz", "password": "password" }
   ],
+
   "students": [
     {
-      "id": "210107190",
+      "id": "210107110",
       "firstName": "Bushra",
       "middleName": "Alptekin",
       "lastName": "Aksoy",
@@ -21,14 +23,64 @@
       "speciality": "Computer Science"
     },
     {
-      "id": "210107180",
+      "id": "210107190",
       "firstName": "Bushra",
       "middleName": "Alptekin",
       "lastName": "Aksoy",
       "dob": "18-07-2003",
-      "speciality": "Computer Science"
+      "speciality": "Computer Science",
+      "courses": [
+        {
+          "courseId": "CSS 217",
+          "courseName": "Software Architecture and Design Patterns",
+          "courseEcts": "5",
+          "courseAbsence": "0%",
+          "sections": [
+            { "courseSection": "01-N", "startTime": "10:00" },
+            { "courseSection": "04-P", "startTime": "13:00" },
+            { "courseSection": "04-P", "startTime": "14:00" }
+          ]
+        },
+        {
+          "courseId": "CSS 342",
+          "courseName": "Software Engineering",
+          "courseEcts": "5",
+          "courseAbsence": "0%"
+        },
+        {
+          "courseId": "CSS 350",
+          "courseName": "Cloud Computing",
+          "courseEcts": "5",
+          "courseAbsence": "0%"
+        },
+        {
+          "courseId": "MDE 112",
+          "courseName": "Kazakh Language 2 (А2 level/for foreigners)",
+          "courseEcts": "5",
+          "courseAbsence": "0%"
+        },
+        {
+          "courseId": "CSS 384",
+          "courseName": "Advanced Android Programming",
+          "courseEcts": "5",
+          "courseAbsence": "0%"
+        },
+        {
+          "courseId": "INF 337",
+          "courseName": "Deep Learning",
+          "courseEcts": "5",
+          "courseAbsence": "0%"
+        },
+        {
+          "courseId": "MDE 153",
+          "courseName": "Module of Social and Political Knowledge (Cultural Studies)",
+          "courseEcts": "2",
+          "courseAbsence": "0%"
+        }
+      ]
     }
   ],
+
   "attendance": [
     {
       "id": "6762",

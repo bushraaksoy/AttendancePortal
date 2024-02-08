@@ -38,7 +38,7 @@ const Login = () => {
       if (authUser) {
         setIsAuth(true);
         useToast("Logged in Successfully", "success");
-        navigate("/dashboard");
+        navigate("/");
       } else if (username !== "" && password !== "") {
         useToast("Invalid Username or Password!", "error");
       }
