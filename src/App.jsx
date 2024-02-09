@@ -13,20 +13,12 @@ import CourseDetails from "./pages/CourseDetails/CourseDetails";
 import AttendanceRequest from "./pages/AttendaceRequest/AttendanceRequest";
 import MainLayout from "./components/MainLayout/MainLayout";
 import CoursesTable from "./components/CoursesTable/CoursesTable";
+import useLocalstorage from "./Hooks/useLocalstorage";
 
 function App() {
   const navigate = useNavigate();
 
-  // save the value of isAuth from localstorage to isAuthenticated, and false if it does not exist
-  const [isAuthenticated, setIsAuth] = useState(() => {
-    const savedAuth = JSON.parse(localStorage.getItem("isAuth"));
-    return savedAuth || false;
-  });
-
-  // update isAuth in local storage each time isAuthenticated changes
-  useEffect(() => {
-    localStorage.setItem("isAuth", JSON.stringify(isAuthenticated));
-  }, [isAuthenticated]);
+  const [isAuthenticated, setIsAuth] = useLocalstorage("isAuth");
 
   if (!isAuthenticated) {
     navigate("/login");
@@ -56,7 +48,6 @@ function App() {
             path="/:courseId/attendance-request"
             element={<AttendanceRequest />}
           />
-
           {/* routes for admin */}
           <Route
             path="/dashboard"
@@ -70,24 +61,12 @@ function App() {
             path="/confirm-attendance"
             element={<AdminLayout children={<ConfirmAttendance />} />}
           />
+          {/* For teacher */}
           <Route
             path="teacher-qr-code"
             element={<AdminLayout children={<TeacherQrCode />} />}
           />
         </Routes>
-
-        {/* {isAuthenticated ? (
-          <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/department-schedule" element={<Schedule />} />
-            <Route path="/confirm-attendance" element={<ConfirmAttendance />} />
-          </Routes>
-        ) : (
-          <Routes>
-            <Route path="/" element={<Login />} />
-          </Routes>
-        )} */}
       </div>
     </LoginContext.Provider>
   );

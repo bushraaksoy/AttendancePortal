@@ -11,8 +11,8 @@
 .courses-table {
   border-collapse: collapse;
   background-color: #ececec;
-  font-size: 14px;
-  width: 800px;
+  font-size: 13px;
+  width: 700px;
 }
 
 .courses-table tr {
@@ -21,7 +21,7 @@
 
 .courses-table th,
 .courses-table td {
-  border: 1px solid black;
+  border: 2px solid #555;
   padding: 10px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .course-id {
-  color: #446799;
+  color: #2064c4;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 500;
 }

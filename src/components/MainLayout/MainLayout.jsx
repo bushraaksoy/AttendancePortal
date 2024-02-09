@@ -5,8 +5,8 @@ import UserDetails from "../UserDetails/UserDetails";
 const MainLayout = ({ children }) => {
   return (
     <div className="layout">
-      <UserDetails />
       {children}
+      <UserDetails />
     </div>
   );
 };

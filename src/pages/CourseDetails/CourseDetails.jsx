@@ -22,8 +22,12 @@ const CourseDetails = () => {
     console.log(courseSections);
   }, [courseId]);
 
+  const attendedStyle = {
+    // backgroundColor: "#9dc183",
+  };
+
   return (
-    <div className="course-details">
+    <div className="course-info">
       <h1>{course.courseName}</h1>
       <table className="courses-table">
         <thead>
@@ -43,7 +47,9 @@ const CourseDetails = () => {
                 <td>{course.courseName}</td>
                 <td>{section.courseSection}</td>
                 <td>{section.startTime}</td>
-                <td>true</td>
+                <td className="attended" style={attendedStyle}>
+                  true
+                </td>
               </tr>
             ))}
         </tbody>

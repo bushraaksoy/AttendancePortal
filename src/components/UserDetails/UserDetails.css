@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 35px;
   padding: 40px 50px;
   width: 440px;
-  box-shadow: 5px 0px 15px #ccc;
+  box-shadow: -5px 0px 15px #ccc;
   color: #666;
 }
 
