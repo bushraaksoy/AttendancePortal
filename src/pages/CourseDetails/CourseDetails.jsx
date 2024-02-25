@@ -28,6 +28,9 @@ const CourseDetails = () => {
 
   return (
     <div className="course-info">
+      <div className="prompt">
+        Select section to submit attendance or attendance request!
+      </div>
       <h1>{course.courseName}</h1>
       <table className="courses-table">
         <thead>

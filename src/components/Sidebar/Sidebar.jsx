@@ -18,6 +18,9 @@ const Sidebar = () => {
         <li>
           <Link to="/teacher-qr-code">Teacher QR code</Link>
         </li>
+        <li>
+          <Link to="/add-user">Add User</Link>
+        </li>
       </ul>
     </div>
   );

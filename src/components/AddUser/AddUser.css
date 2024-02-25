@@ -1,0 +1,19 @@
+.add-user-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 30px;
+  background-color: #ddd;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.select-role-input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-family: "Poppins", sans-serif;
+    border: 1px solid #ddd;
+    background-color: #eee;
+}
