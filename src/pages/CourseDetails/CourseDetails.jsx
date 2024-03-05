@@ -22,10 +22,6 @@ const CourseDetails = () => {
     console.log(courseSections);
   }, [courseId]);
 
-  const attendedStyle = {
-    // backgroundColor: "#9dc183",
-  };
-
   return (
     <div className="course-info">
       <div className="prompt">
@@ -50,9 +46,25 @@ const CourseDetails = () => {
                 <td>{course.courseName}</td>
                 <td>{section.courseSection}</td>
                 <td>{section.startTime}</td>
-                <td className="attended" style={attendedStyle}>
-                  true
+                <td>
+                  <div className="status">
+                    <div
+                      className={`indicator ${
+                        section.attended ? " attended" : "absent"
+                      }`}
+                    ></div>
+                    <div
+                      className={`text ${
+                        section.attended ? "attended-bg" : "absent-bg"
+                      }`}
+                    >
+                      {section.attended ? "Attended" : "Absent"}
+                    </div>
+                  </div>
                 </td>
+                {/* <td>
+                  <button> {"Take Attendance"}</button>
+                </td> */}
               </tr>
             ))}
         </tbody>

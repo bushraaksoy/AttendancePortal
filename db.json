@@ -36,9 +36,13 @@
           "courseEcts": "5",
           "courseAbsence": "0%",
           "sections": [
-            { "courseSection": "01-N", "startTime": "10:00" },
-            { "courseSection": "04-P", "startTime": "13:00" },
-            { "courseSection": "04-P", "startTime": "14:00" }
+            { "courseSection": "01-N", "startTime": "10:00", "attended": true },
+            {
+              "courseSection": "04-P",
+              "startTime": "13:00",
+              "attended": false
+            },
+            { "courseSection": "04-P", "startTime": "14:00", "attended": false }
           ]
         },
         {

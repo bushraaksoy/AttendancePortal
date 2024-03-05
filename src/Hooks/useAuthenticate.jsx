@@ -40,6 +40,7 @@ const useAuthenticate = () => {
         throw new Error("Request failed!");
       }
     } catch (error) {
+      useToast(error.message, "error");
       console.log(error.message);
     }
   };

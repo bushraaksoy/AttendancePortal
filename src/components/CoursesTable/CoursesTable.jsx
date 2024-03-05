@@ -34,7 +34,10 @@ const CoursesTable = () => {
               </td>
               <td>{course.courseName}</td>
               <td>{course.courseEcts}</td>
-              <td>{course.courseAbsence}</td>
+              <td>
+                <div className="absence-percentage-bar"></div>
+                {course.courseAbsence}
+              </td>
             </tr>
           ))}
         </tbody>
