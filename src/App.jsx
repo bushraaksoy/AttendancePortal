@@ -17,6 +17,7 @@ import CoursesTable from "./components/CoursesTable/CoursesTable";
 import useLocalstorage from "./Hooks/useLocalstorage";
 import Statistics from "./components/Statistics/Statistics";
 import AddUser from "./components/AddUser/AddUser";
+import CourseDetails2 from "./pages/CourseDetails/CourseDetails2";
 
 function App() {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ function App() {
           />
           <Route
             path="/:courseId"
-            element={<MainLayout children={<CourseDetails />} />}
+            element={<MainLayout children={<CourseDetails2 />} />}
           />
           <Route
             path="/:courseId/attendance-request"

@@ -44,35 +44,101 @@
             },
             { "courseSection": "04-P", "startTime": "14:00", "attended": false }
           ],
+
           "sections2": [
             {
-              "courseSection": "04-P",
-              "startTime": "13:00",
-              "attended": [
-                false,
-                false,
-                false,
-                true,
-                true,
-                false,
-                true,
-                true,
-                true
+              "courseSection": "01-N",
+              "hours": [
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": false
+                },
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                }
               ]
             },
             {
               "courseSection": "04-P",
-              "startTime": "14:00",
-              "attended": [
-                true,
-                true,
-                false,
-                true,
-                true,
-                false,
-                true,
-                true,
-                true
+              "hours": [
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": false
+                },
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "13:00",
+                  "endTime": "14:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": false
+                },
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                },
+                {
+                  "startTime": "14:00",
+                  "endTime": "15:00",
+                  "day": "Monday",
+                  "date": "2024-03-04",
+                  "attended": true
+                }
               ]
             }
           ]

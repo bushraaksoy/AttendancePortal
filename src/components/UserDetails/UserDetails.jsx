@@ -4,13 +4,16 @@ import user from "../../assets/user-image-cartoon.png";
 import sduLogo from "/logo_sdu.png";
 import { LoginContext } from "../../Context/LoginContext";
 import useToast from "../../Hooks/useToast";
+import { useNavigate } from "react-router-dom";
 
 const UserDetails = () => {
+  const navigate = useNavigate();
   const { setIsAuth, setToken } = useContext(LoginContext);
 
   const signout = () => {
     setToken("");
     setIsAuth(false);
+    navigate("/login");
     useToast("Signed out successfully", "success");
     console.log("successful signout");
   };

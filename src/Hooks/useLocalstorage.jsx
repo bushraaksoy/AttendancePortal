@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 
 const useLocalstorage = (nameInLocalstorage) => {
   const [value, setValue] = useState(() => {
-    const savedValue = JSON.parse(localStorage.getItem(nameInLocalstorage));
+    const savedValue =
+      JSON.parse(localStorage.getItem(nameInLocalstorage)) || false;
     return savedValue || false;
   });
 
