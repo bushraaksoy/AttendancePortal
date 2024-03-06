@@ -49,19 +49,6 @@
 
 /* attendance status design */
 
-.status {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.indicator {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
 .text {
   border-radius: 25px;
   height: 28px;
@@ -72,17 +59,33 @@
 }
 
 .attended {
+  background-color: #c4e3c3;
+  position: relative;
+}
+
+.attended::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 12px;
+  left: -14px;
   background-color: green;
 }
 
-.attended-bg {
-  background-color: #c4e3c3;
-}
-
 .absent {
-  background-color: rgb(202, 0, 0);
+  background-color: #eed5d5;
+  position: relative;
 }
 
-.absent-bg {
-  background-color: #eed5d5;
+.absent::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 12px;
+  left: -14px;
+  background-color: rgb(202, 0, 0);
 }

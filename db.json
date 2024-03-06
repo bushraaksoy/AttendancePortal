@@ -43,6 +43,38 @@
               "attended": false
             },
             { "courseSection": "04-P", "startTime": "14:00", "attended": false }
+          ],
+          "sections2": [
+            {
+              "courseSection": "04-P",
+              "startTime": "13:00",
+              "attended": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                false,
+                true,
+                true,
+                true
+              ]
+            },
+            {
+              "courseSection": "04-P",
+              "startTime": "14:00",
+              "attended": [
+                true,
+                true,
+                false,
+                true,
+                true,
+                false,
+                true,
+                true,
+                true
+              ]
+            }
           ]
         },
         {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./CourseDetails.css";
 
-const CourseDetails = () => {
+const CourseDetails2 = () => {
   const { courseId } = useParams();
   const [course, setCourse] = useState([]);
   const [courseSections, setCourseSections] = useState([]);
@@ -47,12 +47,19 @@ const CourseDetails = () => {
                 <td>{section.courseSection}</td>
                 <td>{section.startTime}</td>
                 <td>
-                  <div
-                    className={`text ${
-                      section.attended ? "attended" : "absent"
-                    }`}
-                  >
-                    {section.attended ? "Attended" : "Absent"}
+                  <div className="status">
+                    <div
+                      className={`indicator ${
+                        section.attended ? " attended" : "absent"
+                      }`}
+                    ></div>
+                    <div
+                      className={`text ${
+                        section.attended ? "attended-bg" : "absent-bg"
+                      }`}
+                    >
+                      {section.attended ? "Attended" : "Absent"}
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -63,4 +70,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default CourseDetails2;
