@@ -16,7 +16,7 @@ const CoursesTable = () => {
   return (
     <div className="course-info">
       <div className="prompt">Select course to take attendance!</div>
-      <h1>Courses</h1>
+      <h2>Courses</h2>
       <table className="courses-table">
         <thead>
           <tr>

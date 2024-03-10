@@ -28,7 +28,7 @@ const CourseDetails2 = () => {
       <div className="prompt">
         Select section to submit attendance or attendance request!
       </div>
-      <h1>{course.courseName}</h1>
+      <h2>{course.courseName}</h2>
 
       {courseSections &&
         courseSections.map((section, inx) => (
@@ -36,7 +36,7 @@ const CourseDetails2 = () => {
             <thead>
               <tr>
                 <th>Code</th>
-                <th>Course name</th>
+                {/* <th>Course name</th> */}
                 <th>Section</th>
                 <th>Time</th>
                 <th>Date</th>
@@ -49,7 +49,7 @@ const CourseDetails2 = () => {
                 section.hours.map((hour, inx) => (
                   <tr key={inx}>
                     <td className="course-id">{course.courseId}</td>
-                    <td>{course.courseName}</td>
+                    {/* <td>{course.courseName}</td> */}
                     <td>{section.courseSection}</td>
                     <td>{hour.startTime}</td>
                     <td>{hour.date}</td>

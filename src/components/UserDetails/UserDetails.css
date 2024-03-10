@@ -39,3 +39,21 @@
   border: none;
   margin-top: auto;
 }
+
+/* For smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (max-width: 480px) {
+  .user-details {
+    gap: 20px;
+    width: 100%;
+    box-shadow: 0px 5px 5px #ccc;
+    padding: 25px;
+  }
+}
+
+/* For smartphones, Android phones, landscape iPhone */
+@media (min-width: 480px) {
+}
+
+/* For portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width: 600px) {
+}
