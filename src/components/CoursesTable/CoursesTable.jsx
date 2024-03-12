@@ -17,31 +17,33 @@ const CoursesTable = () => {
     <div className="course-info">
       <div className="prompt">Select course to take attendance!</div>
       <h2>Courses</h2>
-      <table className="courses-table">
-        <thead>
-          <tr>
-            <th>Code</th>
-            <th>Course name</th>
-            <th>ECTS</th>
-            <th>Absence</th>
-          </tr>
-        </thead>
-        <tbody>
-          {courses.map((course, inx) => (
-            <tr key={inx}>
-              <td className="course-id">
-                <Link to={`/${course.courseId}`}>{course.courseId}</Link>
-              </td>
-              <td>{course.courseName}</td>
-              <td>{course.courseEcts}</td>
-              <td>
-                <div className="absence-percentage-bar"></div>
-                {course.courseAbsence}
-              </td>
+      <div className="table-div">
+        <table className="courses-table">
+          <thead>
+            <tr>
+              <th>Code</th>
+              <th>Course name</th>
+              <th>ECTS</th>
+              <th>Absence</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {courses.map((course, inx) => (
+              <tr key={inx}>
+                <td className="course-id">
+                  <Link to={`/${course.courseId}`}>{course.courseId}</Link>
+                </td>
+                <td>{course.courseName}</td>
+                <td>{course.courseEcts}</td>
+                <td>
+                  <div className="absence-percentage-bar"></div>
+                  {course.courseAbsence}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

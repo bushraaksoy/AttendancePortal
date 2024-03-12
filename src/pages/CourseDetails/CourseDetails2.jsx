@@ -30,44 +30,46 @@ const CourseDetails2 = () => {
       </div>
       <h2>{course.courseName}</h2>
 
-      {courseSections &&
-        courseSections.map((section, inx) => (
-          <table key={section.courseSection} className="courses-table">
-            <thead>
-              <tr>
-                <th>Code</th>
-                {/* <th>Course name</th> */}
-                <th>Section</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Day</th>
-                <th>Attended</th>
-              </tr>
-            </thead>
-            <tbody>
-              {section.hours &&
-                section.hours.map((hour, inx) => (
-                  <tr key={inx}>
-                    <td className="course-id">{course.courseId}</td>
-                    {/* <td>{course.courseName}</td> */}
-                    <td>{section.courseSection}</td>
-                    <td>{hour.startTime}</td>
-                    <td>{hour.date}</td>
-                    <td>{hour.day}</td>
-                    <td>
-                      <div
-                        className={`text ${
-                          hour.attended ? "attended" : "absent"
-                        }`}
-                      >
-                        {hour.attended ? "Attended" : "Absent"}
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        ))}
+      <div className="table-div">
+        {courseSections &&
+          courseSections.map((section, inx) => (
+            <table className="courses-table" key={section.courseSection}>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  {/* <th>Course name</th> */}
+                  <th>Section</th>
+                  <th>Time</th>
+                  <th>Date</th>
+                  <th>Day</th>
+                  <th>Attended</th>
+                </tr>
+              </thead>
+              <tbody>
+                {section.hours &&
+                  section.hours.map((hour, inx) => (
+                    <tr key={inx}>
+                      <td className="course-id">{course.courseId}</td>
+                      {/* <td>{course.courseName}</td> */}
+                      <td>{section.courseSection}</td>
+                      <td>{hour.startTime}</td>
+                      <td>{hour.date}</td>
+                      <td>{hour.day}</td>
+                      <td>
+                        <div
+                          className={`text ${
+                            hour.attended ? "attended" : "absent"
+                          }`}
+                        >
+                          {hour.attended ? "Attended" : "Absent"}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          ))}
+      </div>
     </div>
   );
 };
