@@ -33,6 +33,7 @@
 }
 
 .courses-table th {
+  border-top: 1px solid #555;
   background-color: #d2d2d2;
 }
 
@@ -119,11 +120,12 @@
     position: relative;
   }
 
-  .courses-table::after,
+  /* shadows on both tables separately */
+
+  /* .courses-table::after,
   .courses-table::before {
     position: absolute;
     top: 0;
-    bottom: 0;
     width: 35px;
     height: 100%;
     pointer-events: none;
@@ -138,5 +140,28 @@
   .courses-table::before {
     left: 0;
     background: linear-gradient(to left, rgba(9, 9, 9, 0), rgba(9, 9, 9, 0.3));
+  } */
+
+  /* shadow on both tables container */
+
+  /* .table-div::after,
+  .table-div::before {
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    width: 35px;
+    height: 100%;
+    pointer-events: none;
+    content: "";
   }
+
+  .table-div::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0.5));
+  }
+
+  .table-div::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(3, 3, 3, 0), rgba(3, 3, 3, 0.5));
+  } */
 }
