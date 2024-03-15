@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
+import sduLogo from "/logo_sdu.png";
 
 const Sidebar = () => {
+  const sidebarItems = {
+    dashboard: "Dashboard",
+    "all-courses": "Courses",
+    "attendance-requests": "Attendance Requests",
+  };
   return (
     <div className="sidebar">
-      <h2>Sidebar</h2>
+      <img src={sduLogo} alt="SDU logo" width={130} />
+      <h3>Admin Panel</h3>
       <ul>
+        {Object.entries(sidebarItems).map((item, inx) => (
+          <li key={inx}>
+            <Link to={`/${item[0]}`}>{item[1]}</Link>
+          </li>
+        ))}
         <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-        <li>
-          <Link to="/department-schedule">Schedule</Link>
-        </li>
-        <li>
-          <Link to="/confirm-attendance">Confirm Attendance</Link>
-        </li>
-        <li>
-          <Link to="/teacher-qr-code">Teacher QR code</Link>
-        </li>
-        <li>
-          <Link to="/add-user">Add User</Link>
+          <Link>Sign Out</Link>
         </li>
       </ul>
     </div>
@@ -27,3 +27,24 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+{
+  /* <li>
+  <Link to="/dashboard">Dashboard</Link>
+</li>
+<li>
+  <Link to="/all-courses">Courses</Link>
+</li>
+<li>
+  <Link to="/attendace-requests">Attendance Requests</Link>
+</li>
+<li>
+  <Link to="/teacher-qr-code">Teacher QR code</Link>
+</li>
+<li>
+  <Link to="/add-user">Add User</Link>
+</li>
+<li>
+  <Link>Sign Out</Link>
+</li> */
+}

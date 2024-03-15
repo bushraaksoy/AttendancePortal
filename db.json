@@ -403,5 +403,2389 @@
       "19:00": [],
       "20:00": []
     }
-  }
+  },
+  "courses": [
+    {
+      "courseId": "CSS 218",
+      "courseName": "Advanced Algorithms",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 219",
+      "courseName": "Database Management Systems",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 220",
+      "courseName": "Operating Systems",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 221",
+      "courseName": "Computer Networks",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 222",
+      "courseName": "Software Engineering",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 223",
+      "courseName": "Artificial Intelligence",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 224",
+      "courseName": "Web Development",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 225",
+      "courseName": "Machine Learning",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 226",
+      "courseName": "Computer Graphics",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 227",
+      "courseName": "Information Security",
+      "courseEcts": "5",
+      "courseAbsence": "10%",
+      "students": [
+        {
+          "studentId": 210107190,
+          "studentName": "John Doe",
+          "absence": 3
+        },
+        {
+          "studentId": 210107191,
+          "studentName": "Alice Smith",
+          "absence": 0
+        },
+        {
+          "studentId": 210107192,
+          "studentName": "David Johnson",
+          "absence": 7
+        },
+        {
+          "studentId": 210107193,
+          "studentName": "Emily Brown",
+          "absence": 0
+        },
+        {
+          "studentId": 210107194,
+          "studentName": "Michael Wilson",
+          "absence": 2
+        },
+        {
+          "studentId": 210107195,
+          "studentName": "Sarah Taylor",
+          "absence": 0
+        },
+        {
+          "studentId": 210107196,
+          "studentName": "Robert Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107197,
+          "studentName": "Jennifer Lee",
+          "absence": 7
+        },
+        {
+          "studentId": 210107198,
+          "studentName": "William Anderson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107199,
+          "studentName": "Jessica Thomas",
+          "absence": 3
+        },
+        {
+          "studentId": 210107200,
+          "studentName": "Daniel Hernandez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107201,
+          "studentName": "Ashley Moore",
+          "absence": 0
+        },
+        {
+          "studentId": 210107202,
+          "studentName": "Matthew Clark",
+          "absence": 7
+        },
+        {
+          "studentId": 210107203,
+          "studentName": "Lauren Lewis",
+          "absence": 2
+        },
+        {
+          "studentId": 210107204,
+          "studentName": "Christopher White",
+          "absence": 0
+        },
+        {
+          "studentId": 210107205,
+          "studentName": "Amanda Hall",
+          "absence": 3
+        },
+        {
+          "studentId": 210107206,
+          "studentName": "Andrew Walker",
+          "absence": 7
+        },
+        {
+          "studentId": 210107207,
+          "studentName": "Megan Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107208,
+          "studentName": "James Garcia",
+          "absence": 2
+        },
+        {
+          "studentId": 210107209,
+          "studentName": "Rachel King",
+          "absence": 0
+        },
+        {
+          "studentId": 210107210,
+          "studentName": "Kevin Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107211,
+          "studentName": "Elizabeth Young",
+          "absence": 0
+        },
+        {
+          "studentId": 210107212,
+          "studentName": "Joshua Brown",
+          "absence": 7
+        },
+        {
+          "studentId": 210107213,
+          "studentName": "Olivia Scott",
+          "absence": 3
+        },
+        {
+          "studentId": 210107214,
+          "studentName": "Tyler Perez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107215,
+          "studentName": "Natalie Miller",
+          "absence": 2
+        },
+        {
+          "studentId": 210107216,
+          "studentName": "Ryan Allen",
+          "absence": 0
+        },
+        {
+          "studentId": 210107217,
+          "studentName": "Grace Martinez",
+          "absence": 3
+        },
+        {
+          "studentId": 210107218,
+          "studentName": "Alexander Adams",
+          "absence": 7
+        },
+        {
+          "studentId": 210107219,
+          "studentName": "Victoria Rodriguez",
+          "absence": 0
+        },
+        {
+          "studentId": 210107220,
+          "studentName": "Samuel Hill",
+          "absence": 3
+        },
+        {
+          "studentId": 210107221,
+          "studentName": "Sophia King",
+          "absence": 2
+        },
+        {
+          "studentId": 210107222,
+          "studentName": "David Collins",
+          "absence": 0
+        },
+        {
+          "studentId": 210107223,
+          "studentName": "Madison Diaz",
+          "absence": 7
+        },
+        {
+          "studentId": 210107224,
+          "studentName": "Dylan Martinez",
+          "absence": 2
+        },
+        {
+          "studentId": 210107225,
+          "studentName": "Emma Campbell",
+          "absence": 0
+        },
+        {
+          "studentId": 210107226,
+          "studentName": "Joseph Johnson",
+          "absence": 3
+        },
+        {
+          "studentId": 210107227,
+          "studentName": "Samantha Wright",
+          "absence": 7
+        },
+        {
+          "studentId": 210107228,
+          "studentName": "Benjamin Nelson",
+          "absence": 0
+        },
+        {
+          "studentId": 210107229,
+          "studentName": "Chloe Martinez",
+          "absence": 3
+        }
+      ]
+    },
+    {
+      "courseId": "CSS 228",
+      "courseName": "Software Testing and Quality Assurance",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 229",
+      "courseName": "Parallel and Distributed Computing",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 230",
+      "courseName": "Computer Vision",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 231",
+      "courseName": "Cloud Computing",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 232",
+      "courseName": "Natural Language Processing",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 233",
+      "courseName": "Big Data Analytics",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 234",
+      "courseName": "Software Project Management",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 235",
+      "courseName": "Embedded Systems",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 236",
+      "courseName": "Virtual Reality",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 237",
+      "courseName": "Internet of Things (IoT)",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 238",
+      "courseName": "Blockchain Technology",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 239",
+      "courseName": "Cybersecurity",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 240",
+      "courseName": "Data Mining",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 241",
+      "courseName": "Mobile Application Development",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 242",
+      "courseName": "Robotics",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 243",
+      "courseName": "Software Architecture and Design Patterns",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 244",
+      "courseName": "Computer Ethics and Professionalism",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 245",
+      "courseName": "Human-Computer Interaction",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 246",
+      "courseName": "Geographic Information Systems (GIS)",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 247",
+      "courseName": "Information Retrieval",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 248",
+      "courseName": "Software Maintenance",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 249",
+      "courseName": "Compiler Design",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 250",
+      "courseName": "Computer Architecture",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 251",
+      "courseName": "Computational Complexity",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 252",
+      "courseName": "Information Visualization",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 253",
+      "courseName": "Secure Software Development",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "CSS 254",
+      "courseName": "Software Metrics and Measurements",
+      "courseEcts": "5",
+      "courseAbsence": "10%"
+    },
+    {
+      "courseId": "INF 225",
+      "courseName": "Database Management Systems",
+      "courseEcts": "6",
+      "courseAbsence": "4%"
+    },
+    {
+      "courseId": "CSS 332",
+      "courseName": "Advanced Algorithms",
+      "courseEcts": "7",
+      "courseAbsence": "5%"
+    },
+    {
+      "courseId": "MAT 419",
+      "courseName": "Numerical Analysis",
+      "courseEcts": "5",
+      "courseAbsence": "3%"
+    },
+    {
+      "courseId": "INF 121",
+      "courseName": "Operating Systems",
+      "courseEcts": "6",
+      "courseAbsence": "2%"
+    },
+    {
+      "courseId": "CSS 446",
+      "courseName": "Software Testing and Quality Assurance",
+      "courseEcts": "6",
+      "courseAbsence": "0%"
+    },
+    {
+      "courseId": "MAT 518",
+      "courseName": "Game Theory",
+      "courseEcts": "5",
+      "courseAbsence": "7%"
+    },
+    {
+      "courseId": "INF 211",
+      "courseName": "Web Development",
+      "courseEcts": "5",
+      "courseAbsence": "3%"
+    },
+    {
+      "courseId": "CSS 550",
+      "courseName": "Machine Learning",
+      "courseEcts": "8",
+      "courseAbsence": "2%"
+    },
+    {
+      "courseId": "MAT 336",
+      "courseName": "Probability Theory",
+      "courseEcts": "6",
+      "courseAbsence": "4%"
+    },
+    {
+      "courseId": "INF 312",
+      "courseName": "Information Security",
+      "courseEcts": "7",
+      "courseAbsence": "5%"
+    },
+    {
+      "courseId": "CSS 565",
+      "courseName": "Big Data Analytics",
+      "courseEcts": "7",
+      "courseAbsence": "3%"
+    },
+    {
+      "courseId": "MAT 241",
+      "courseName": "Linear Algebra",
+      "courseEcts": "5",
+      "courseAbsence": "0%"
+    },
+    {
+      "courseId": "INF 466",
+      "courseName": "Cloud Computing",
+      "courseEcts": "6",
+      "courseAbsence": "2%"
+    },
+    {
+      "courseId": "CSS 221",
+      "courseName": "Computer Networks",
+      "courseEcts": "6",
+      "courseAbsence": "3%"
+    },
+    {
+      "courseId": "MAT 377",
+      "courseName": "Mathematical Modeling",
+      "courseEcts": "7",
+      "courseAbsence": "5%"
+    },
+    {
+      "courseId": "INF 121",
+      "courseName": "Information Retrieval",
+      "courseEcts": "5",
+      "courseAbsence": "0%"
+    },
+    {
+      "courseId": "CSS 389",
+      "courseName": "Human-Computer Interaction",
+      "courseEcts": "6",
+      "courseAbsence": "4%"
+    },
+    {
+      "courseId": "MAT 425",
+      "courseName": "Discrete Mathematics",
+      "courseEcts": "6",
+      "courseAbsence": "2%"
+    },
+    {
+      "courseId": "INF 265",
+      "courseName": "Mobile Application Development",
+      "courseEcts": "6",
+      "courseAbsence": "3%"
+    },
+    {
+      "courseId": "CSS 311",
+      "courseName": "Natural Language Processing",
+      "courseEcts": "7",
+      "courseAbsence": "0%"
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "studentId": 210107190,
+      "courseId": "CSS 218",
+      "section": "04-P",
+      "date": "2024-03-04",
+      "explanation": "I was sick and couldn't attend the class.",
+      "documentUrl": "/src/assets/project1.pdf"
+    },
+    {
+      "id": 2,
+      "studentId": 210107191,
+      "courseId": "CSS 219",
+      "section": "01-N",
+      "date": "2024-03-04",
+      "explanation": "I had a family emergency.",
+      "documentUrl": "/src/assets/project1.pdf"
+    }
+  ]
 }

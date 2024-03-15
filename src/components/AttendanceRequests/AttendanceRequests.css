@@ -1,0 +1,26 @@
+@import url("../CoursesTable/CoursesTable.css");
+
+.courses-table {
+  width: 760px;
+}
+
+.approve-btn {
+  background-color: rgb(51, 137, 51);
+}
+
+.deny-btn {
+  background-color: rgb(211, 67, 67);
+}
+
+.deny-btn:hover {
+  background-color: #e78a8a;
+}
+
+.approve-btn:hover {
+  background-color: rgb(80, 160, 80);
+}
+
+button {
+  margin-bottom: 1px;
+  border: none;
+}

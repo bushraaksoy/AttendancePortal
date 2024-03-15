@@ -6,18 +6,19 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import { useEffect, useState } from "react";
 import { LoginContext } from "./Context/LoginContext";
 import { ToastContainer } from "react-toastify";
-import Schedule from "./pages/Schedule/Schedule";
 import ConfirmAttendance from "./components/ConfirmAttendance/ConfirmAttendance";
 import TeacherQrCode from "./components/QrCodeGenerator/TeacherQrCode";
 import AdminLayout from "./components/AdminLayout/AdminLayout";
-import CourseDetails from "./pages/CourseDetails/CourseDetails";
 import AttendanceRequest from "./pages/AttendaceRequest/AttendanceRequest";
 import MainLayout from "./components/MainLayout/MainLayout";
 import CoursesTable from "./components/CoursesTable/CoursesTable";
 import useLocalstorage from "./Hooks/useLocalstorage";
 import Statistics from "./components/Statistics/Statistics";
 import AddUser from "./components/AddUser/AddUser";
-import CourseDetails2 from "./pages/CourseDetails/CourseDetails2";
+import CourseDetails2 from "./components/CourseDetails/CourseDetails2";
+import AllCoursesTable from "./pages/AllCoursesTable/AllCoursesTable";
+import CourseStudents from "./components/CourseStudents/CourseStudents";
+import AttendanceRequests from "./components/AttendanceRequests/AttendanceRequests";
 
 function App() {
   const navigate = useNavigate();
@@ -32,6 +33,8 @@ function App() {
   }, []);
 
   return (
+    // Map all routes when complete
+
     <LoginContext.Provider
       value={{ isAuthenticated, setIsAuth, token, setToken }}
     >
@@ -67,9 +70,18 @@ function App() {
             element={<AdminLayout children={<Dashboard />} />}
           />
           <Route
-            path="/department-schedule"
-            element={<AdminLayout children={<Schedule />} />}
+            path="/all-courses"
+            element={<AdminLayout children={<AllCoursesTable />} />}
           />
+          <Route
+            path="/:courseId/students"
+            element={<AdminLayout children={<CourseStudents />} />}
+          />
+          <Route
+            path="/attendance-requests"
+            element={<AdminLayout children={<AttendanceRequests />} />}
+          />
+          {/* takes you to the list of students taking the course */}
           <Route
             path="/confirm-attendance"
             element={<AdminLayout children={<ConfirmAttendance />} />}

@@ -1,6 +1,6 @@
 import "./UserDetails.css";
 import React, { useContext } from "react";
-import user from "../../assets/user-image-cartoon.png";
+import user from "../../assets/image.png";
 import sduLogo from "/logo_sdu.png";
 import { LoginContext } from "../../Context/LoginContext";
 import useToast from "../../Hooks/useToast";

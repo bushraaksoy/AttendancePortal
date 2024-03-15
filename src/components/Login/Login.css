@@ -27,19 +27,15 @@
   background-color: rgba(243, 243, 243, 0.89);
 }
 
-/* .form > button {
-  width: 100%;
-  padding: 11px;
-  margin-top: 8px;
+.form > button {
   border-radius: 20px;
-  border: none;
-  background-color: #7367f0;
+  padding: 10px 20px;
+  border: 1.5px solid #111;
+  background-color: #40526c;
   color: #fff;
-  transition: 0.3s;
-  font-family: "Poppins", sans-serif;
 }
 
-.form > button:hover {
+/* .form > button:hover {
   box-shadow: 4px 4px 6px #bbb;
   transform: translate3d(-1px, -1px, 0);
 } */

@@ -1,12 +1,17 @@
 .sidebar {
-  width: 300px;
+  width: 400px;
   background: #40526c;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  overflow-y: scroll;
+  padding: 10px 0 40px 0;
 }
 
-.sidebar h2 {
-  text-align: center;
-  padding: 25px 15px;
+.sidebar ul {
+  width: 100%;
 }
 
 .sidebar ul li a {
@@ -23,16 +28,4 @@
 .sidebar ul li:hover {
   background-color: #273c5a;
   border: 2px solid #99adc9;
-}
-
-/* For smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-@media (min-width: 320px) {
-}
-
-/* For smartphones, Android phones, landscape iPhone */
-@media (min-width: 480px) {
-}
-
-/* For portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-@media (min-width: 600px) {
 }
