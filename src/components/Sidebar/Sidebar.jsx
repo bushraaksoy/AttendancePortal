@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 import sduLogo from "/logo_sdu.png";
+import { useContext } from "react";
+import { LoginContext } from "../../Context/LoginContext";
 
 const Sidebar = () => {
   const sidebarItems = {
@@ -8,6 +10,18 @@ const Sidebar = () => {
     "all-courses": "Courses",
     "attendance-requests": "Attendance Requests",
   };
+
+  const navigate = useNavigate();
+  const { setIsAuth, setToken } = useContext(LoginContext);
+
+  const signout = () => {
+    setToken("");
+    setIsAuth(false);
+    navigate("/login");
+    useToast("Signed out successfully", "success");
+    console.log("successful signout");
+  };
+
   return (
     <div className="sidebar">
       <img src={sduLogo} alt="SDU logo" width={130} />
@@ -19,7 +33,7 @@ const Sidebar = () => {
           </li>
         ))}
         <li>
-          <Link>Sign Out</Link>
+          <Link onClick={signout}>Sign Out</Link>
         </li>
       </ul>
     </div>

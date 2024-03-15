@@ -6,7 +6,7 @@ import useToast from "./useToast";
 const URL = `http://localhost:8080/api/v1/auth/login`;
 
 const useAuthenticate = () => {
-  const { setIsAuth, setToken } = useContext(LoginContext);
+  const { setIsAuth, setToken, setUser, user } = useContext(LoginContext);
   const navigate = useNavigate();
 
   const authenticate = async (username, password) => {
@@ -28,7 +28,12 @@ const useAuthenticate = () => {
         const data = await response.json();
         setToken(data.token);
         setIsAuth(true);
-        navigate("/");
+        setUser(username);
+        if (username == "admin") {
+          navigate("/dashboard");
+        } else {
+          navigate("/");
+        }
         console.log("successful login");
         useToast("Logged in Successfully", "success");
         return;

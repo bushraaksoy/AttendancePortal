@@ -36,11 +36,11 @@ const AttendanceRequests = () => {
               <td>{request.courseId}</td>
               <td>{request.section}</td>
               <td>{request.date}</td>
-              <td>{request.explanation}</td>
+              <td className="request-explanation">{request.explanation}</td>
               <td>
                 <a href={request.documentUrl}>View Document</a>
               </td>
-              <td>
+              <td className="action">
                 <button className="approve-btn">Approve</button>
                 <button className="deny-btn">Deny</button>
               </td>

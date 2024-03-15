@@ -25,6 +25,7 @@ function App() {
 
   const [isAuthenticated, setIsAuth] = useLocalstorage("isAuth");
   const [token, setToken] = useLocalstorage("token");
+  const [user, setUser] = useLocalstorage("user");
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -36,7 +37,7 @@ function App() {
     // Map all routes when complete
 
     <LoginContext.Provider
-      value={{ isAuthenticated, setIsAuth, token, setToken }}
+      value={{ isAuthenticated, setIsAuth, token, setToken, user, setUser }}
     >
       <ToastContainer position="top-right" />
       <div className="app">

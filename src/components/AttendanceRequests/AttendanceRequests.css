@@ -24,3 +24,15 @@ button {
   margin-bottom: 1px;
   border: none;
 }
+
+.action {
+  max-width: 150px;
+  flex-wrap: wrap;
+}
+
+.request-explanation {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
