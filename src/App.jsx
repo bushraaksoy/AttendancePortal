@@ -15,10 +15,10 @@ import CoursesTable from "./components/CoursesTable/CoursesTable";
 import useLocalstorage from "./Hooks/useLocalstorage";
 import Statistics from "./components/Statistics/Statistics";
 import AddUser from "./components/AddUser/AddUser";
-import CourseDetails2 from "./components/CourseDetails/CourseDetails2";
 import AllCoursesTable from "./pages/AllCoursesTable/AllCoursesTable";
 import CourseStudents from "./components/CourseStudents/CourseStudents";
 import AttendanceRequests from "./components/AttendanceRequests/AttendanceRequests";
+import CourseDetails2 from "./components/CourseDetails/CourseDetails";
 
 function App() {
   const navigate = useNavigate();
