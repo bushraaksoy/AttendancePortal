@@ -14,3 +14,10 @@
   gap: 20px;
   overflow-y: scroll;
 }
+
+@media (max-width: 480px) {
+  .main {
+    display: block;
+    margin-top: 400px;
+  }
+}

@@ -26,7 +26,8 @@ const useAuthenticate = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setToken(data.token);
+        console.log(data);
+        setToken(data.access_token);
         setIsAuth(true);
         setUser(username);
         if (username == "admin") {

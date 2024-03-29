@@ -29,3 +29,29 @@
   background-color: #273c5a;
   border: 2px solid #99adc9;
 }
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    padding: 10px 0 0 0;
+    box-shadow: 0px 5px 15px #888;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  .sidebar ul {
+    display: flex;
+  }
+
+  .sidebar ul li {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}

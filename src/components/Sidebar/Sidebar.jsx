@@ -8,7 +8,7 @@ const Sidebar = () => {
   const sidebarItems = {
     dashboard: "Dashboard",
     "all-courses": "Courses",
-    "attendance-requests": "Attendance Requests",
+    "attendance-requests": "Requests",
   };
 
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <img src={sduLogo} alt="SDU logo" width={130} />
-      <h3>Admin Panel</h3>
+      {/* <h3>Admin Panel</h3> */}
       <ul>
         {Object.entries(sidebarItems).map((item, inx) => (
           <li key={inx}>
