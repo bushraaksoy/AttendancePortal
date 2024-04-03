@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./AttendanceRequests.css";
+import yes from "/correct.png";
+import no from "/delete.png";
 
 const AttendanceRequests = () => {
   const [requests, setRequests] = useState([]);
+  const [approvalStatus, setApprovalStatus] = useState({});
+
+  const handleApproval = (id, status) => {
+    setApprovalStatus((prevStatus) => ({ ...prevStatus, [id]: status }));
+  };
 
   useEffect(() => {
     const getRequests = async () => {
@@ -41,8 +48,24 @@ const AttendanceRequests = () => {
                 <a href={request.documentUrl}>View Document</a>
               </td>
               <td className="action">
-                <button className="approve-btn">Approve</button>
-                <button className="deny-btn">Deny</button>
+                <img
+                  className={
+                    approvalStatus[request.id] === "approved" ? "active" : ""
+                  }
+                  onClick={() => handleApproval(request.id, "approved")}
+                  src={yes}
+                  alt="Approve Request"
+                  title="Approve Request"
+                />
+                <img
+                  className={
+                    approvalStatus[request.id] === "denied" ? "active" : ""
+                  }
+                  onClick={() => handleApproval(request.id, "denied")}
+                  src={no}
+                  alt="Deny Request"
+                  title="Deny Request"
+                />
               </td>
             </tr>
           ))}

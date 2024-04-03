@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { LoginContext } from "../Context/LoginContext";
 import useToast from "./useToast";
 
-const URL = `http://localhost:8080/api/v1/auth/login`;
+const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
+
+const URL = `${API_BASE_URL}/auth/login`;
 
 const useAuthenticate = () => {
-  const { setIsAuth, setToken, setUser, user } = useContext(LoginContext);
+  const { setIsAuth, setToken, setUser } = useContext(LoginContext);
   const navigate = useNavigate();
 
   const authenticate = async (username, password) => {
@@ -29,10 +31,12 @@ const useAuthenticate = () => {
         console.log(data);
         setToken(data.access_token);
         setIsAuth(true);
-        setUser(username);
-        if (username == "admin") {
+        setUser({ login: data.login, role: data.role });
+        if (data.role === "ADMIN") {
+          console.log("Logged in as ADMIN");
           navigate("/dashboard");
         } else {
+          console.log("Logged in as STUDENT");
           navigate("/");
         }
         console.log("successful login");

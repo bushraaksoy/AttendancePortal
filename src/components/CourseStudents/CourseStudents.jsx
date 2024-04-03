@@ -6,6 +6,9 @@ const CourseStudents = () => {
   const { courseId } = useParams();
   const [course, setCourse] = useState(null);
 
+  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
+  const URL = `${API_BASE_URL}/admin/courses/${courseId}`;
+
   useEffect(() => {
     const fetchCourse = async () => {
       const res = await fetch(`http://localhost:3002/courses`);
@@ -16,6 +19,8 @@ const CourseStudents = () => {
 
     fetchCourse();
   }, [courseId]);
+
+  // TODO: fetch from endpoint of URL and see what it returns, let me go and pray...
 
   return (
     <div className="course-info">

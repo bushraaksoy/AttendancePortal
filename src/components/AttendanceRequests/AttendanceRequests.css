@@ -5,29 +5,49 @@
 }
 
 .approve-btn {
-  background-color: rgb(51, 137, 51);
+  background-color: rgba(51, 178, 72, 0.171);
 }
 
 .deny-btn {
-  background-color: rgb(211, 67, 67);
+  background-color: rgba(223, 44, 20, 0.132);
 }
 
 .deny-btn:hover {
-  background-color: #e78a8a;
+  background-color: rgba(223, 44, 20, 0.882);
 }
 
 .approve-btn:hover {
-  background-color: rgb(80, 160, 80);
+  background-color: rgba(51, 178, 72, 0.942);
 }
 
-button {
+.approve-btn,
+.deny-btn {
   margin-bottom: 1px;
-  border: none;
+  font-weight: 600;
+  color: #000;
+  border: 0.2px solid #888;
 }
 
 .action {
   max-width: 150px;
-  flex-wrap: wrap;
+}
+
+.action img {
+  width: 20px;
+  height: 20px;
+  margin: 0 3px;
+  filter: grayscale();
+  transition: 0.2s ease-out;
+}
+
+.action img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  filter: brightness(85%);
+}
+
+.action img.active {
+  filter: brightness(100%);
 }
 
 .request-explanation {

@@ -3,7 +3,7 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./components/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { LoginContext } from "./Context/LoginContext";
 import { ToastContainer } from "react-toastify";
 import ConfirmAttendance from "./components/ConfirmAttendance/ConfirmAttendance";
@@ -19,19 +19,20 @@ import AllCoursesTable from "./pages/AllCoursesTable/AllCoursesTable";
 import CourseStudents from "./components/CourseStudents/CourseStudents";
 import AttendanceRequests from "./components/AttendanceRequests/AttendanceRequests";
 import CourseDetails2 from "./components/CourseDetails/CourseDetails";
+import PrivateRoutes from "./components/PrivateRoutes";
 
 function App() {
   const navigate = useNavigate();
 
   const [isAuthenticated, setIsAuth] = useLocalstorage("isAuth");
   const [token, setToken] = useLocalstorage("token");
-  const [user, setUser] = useLocalstorage("user");
+  const [user, setUser] = useLocalstorage({});
 
   useEffect(() => {
     if (!isAuthenticated) {
       navigate("/login");
     }
-  }, []);
+  }, [isAuthenticated]);
 
   return (
     // Map all routes when complete
@@ -43,58 +44,65 @@ function App() {
       <div className="app">
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route
-            path="/"
-            element={
-              !isAuthenticated ? (
-                <Login />
-              ) : (
-                <MainLayout children={<CoursesTable />} />
-              )
-            }
-          />
-          <Route
-            path="/:courseId"
-            element={<MainLayout children={<CourseDetails2 />} />}
-          />
-          <Route
-            path="/:courseId/attendance-request"
-            element={<AttendanceRequest />}
-          />
-          <Route
-            path="/statistics"
-            element={<MainLayout children={<Statistics />} />}
-          />
-          {/* routes for admin */}
-          <Route
-            path="/dashboard"
-            element={<AdminLayout children={<Dashboard />} />}
-          />
-          <Route
-            path="/all-courses"
-            element={<AdminLayout children={<AllCoursesTable />} />}
-          />
-          <Route
-            path="/:courseId/students"
-            element={<AdminLayout children={<CourseStudents />} />}
-          />
-          <Route
-            path="/attendance-requests"
-            element={<AdminLayout children={<AttendanceRequests />} />}
-          />
-          {/* takes you to the list of students taking the course */}
-          <Route
-            path="/confirm-attendance"
-            element={<AdminLayout children={<ConfirmAttendance />} />}
-          />
-          <Route
-            path="/statistics"
-            element={<AdminLayout children={<Statistics />} />}
-          />
-          <Route
-            path="/add-user"
-            element={<AdminLayout children={<AddUser />} />}
-          />
+          {/* Privare Routes for Students and Teachers */}
+          <Route element={<PrivateRoutes roles={["STUDENT", "TEACHER"]} />}>
+            <Route
+              path="/"
+              element={
+                !isAuthenticated ? (
+                  <Login />
+                ) : (
+                  <MainLayout children={<CoursesTable />} />
+                )
+              }
+            />
+            <Route
+              path="/:courseId"
+              element={<MainLayout children={<CourseDetails2 />} />}
+            />
+            <Route
+              path="/:courseId/attendance-request"
+              element={<AttendanceRequest />}
+            />
+            <Route
+              path="/statistics"
+              element={<MainLayout children={<Statistics />} />}
+            />
+          </Route>
+
+          {/* private routes for ADMIN */}
+          <Route element={<PrivateRoutes roles={["ADMIN"]} />}>
+            {/* here we will have all the admin routes */}
+            <Route
+              path="/dashboard"
+              element={<AdminLayout children={<Dashboard />} />}
+            />
+            <Route
+              path="/all-courses"
+              element={<AdminLayout children={<AllCoursesTable />} />}
+            />
+            <Route
+              path="/:courseId/students"
+              element={<AdminLayout children={<CourseStudents />} />}
+            />
+            <Route
+              path="/attendance-requests"
+              element={<AdminLayout children={<AttendanceRequests />} />}
+            />
+            {/* takes you to the list of students taking the course */}
+            <Route
+              path="/confirm-attendance"
+              element={<AdminLayout children={<ConfirmAttendance />} />}
+            />
+            <Route
+              path="/statistics"
+              element={<AdminLayout children={<Statistics />} />}
+            />
+            <Route
+              path="/add-user"
+              element={<AdminLayout children={<AddUser />} />}
+            />
+          </Route>
           {/* For teacher */}
           <Route
             path="teacher-qr-code"

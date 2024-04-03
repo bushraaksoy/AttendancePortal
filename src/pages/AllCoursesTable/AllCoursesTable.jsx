@@ -1,12 +1,26 @@
 import "./AllCoursesTable.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { LoginContext } from "../../Context/LoginContext";
 
 const AllCoursesTable = () => {
+  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
+  const URL = `${API_BASE_URL}/admin/courses`;
+
+  const { token } = useContext(LoginContext);
+
   const [courses, setCourses] = useState([]);
+
   useEffect(() => {
     const getAllCourses = async () => {
-      const res = await fetch("http://localhost:3002/courses");
+      const res = await fetch(URL, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
       const data = await res.json();
       setCourses(data);
     };
@@ -23,7 +37,7 @@ const AllCoursesTable = () => {
               <th></th>
               <th>Code</th>
               <th>Course name</th>
-              <th>ECTS</th>
+              <th>Hours</th>
               <th>Absence</th>
             </tr>
           </thead>
@@ -32,12 +46,10 @@ const AllCoursesTable = () => {
               <tr key={inx}>
                 <td>{inx + 1}</td>
                 <td className="course-id">
-                  <Link to={`/${course.courseId}/students`}>
-                    {course.courseId}
-                  </Link>
+                  <Link to={`/${course.code}/students`}>{course.code}</Link>
                 </td>
-                <td>{course.courseName}</td>
-                <td>{course.courseEcts}</td>
+                <td>{course.name}</td>
+                <td>{course.total_hours}</td>
                 <td>
                   <div className="absence-percentage-bar"></div>
                   {course.courseAbsence}

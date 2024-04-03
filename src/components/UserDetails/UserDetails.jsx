@@ -1,22 +1,12 @@
 import "./UserDetails.css";
-import React, { useContext } from "react";
+import React from "react";
 import user from "../../assets/user-image-cartoon.png";
 import sduLogo from "/logo_sdu.png";
-import { LoginContext } from "../../Context/LoginContext";
-import useToast from "../../Hooks/useToast";
-import { useNavigate } from "react-router-dom";
+import useSignout from "../../Hooks/useSignout";
 
 const UserDetails = () => {
-  const navigate = useNavigate();
-  const { setIsAuth, setToken } = useContext(LoginContext);
+  const signout = useSignout();
 
-  const signout = () => {
-    setToken("");
-    setIsAuth(false);
-    navigate("/login");
-    useToast("Signed out successfully", "success");
-    console.log("successful signout");
-  };
   return (
     <div className="user-details">
       <img src={sduLogo} alt="sdu logo" width={100} />
