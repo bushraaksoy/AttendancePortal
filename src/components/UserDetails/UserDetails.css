@@ -5,8 +5,9 @@
   align-items: center;
   gap: 50px;
   padding: 40px 25px;
-  width: 440px;
-  box-shadow: 5px 0px 5px #ccc;
+  width: 390px;
+  box-shadow: 0 0 10px #ccc;
+  background-color: #f6f6f6;
   color: #666;
 }
 

@@ -4,8 +4,27 @@
   display: flex;
 }
 
+.page-content {
+  width: 100%;
+  padding: 30px;
+  overflow-y: scroll;
+}
+
+.title {
+  width: 100%;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px #d2d2d2;
+  padding: 20px 30px;
+  border-radius: 6px;
+  font-size: 22px;
+  color: #777;
+}
+
 @media (max-width: 480px) {
   .layout {
     display: inline;
+  }
+  .page-content {
+    padding: 10px;
   }
 }
