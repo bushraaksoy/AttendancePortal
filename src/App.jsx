@@ -26,7 +26,7 @@ function App() {
 
   const [isAuthenticated, setIsAuth] = useLocalstorage("isAuth");
   const [token, setToken] = useLocalstorage("token");
-  const [user, setUser] = useLocalstorage({});
+  const [user, setUser] = useLocalstorage("user");
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -45,7 +45,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           {/* Privare Routes for Students and Teachers */}
-          <Route element={<PrivateRoutes roles={["STUDENT", "TEACHER"]} />}>
+          <Route
+            element={<PrivateRoutes roles={["STUDENT", "TEACHER", null]} />}
+          >
             <Route
               path="/"
               element={
@@ -71,7 +73,7 @@ function App() {
           </Route>
 
           {/* private routes for ADMIN */}
-          <Route element={<PrivateRoutes roles={["ADMIN"]} />}>
+          <Route element={<PrivateRoutes roles={["ADMIN", null]} />}>
             {/* here we will have all the admin routes */}
             <Route
               path="/dashboard"

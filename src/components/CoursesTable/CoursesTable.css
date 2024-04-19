@@ -5,13 +5,15 @@
   justify-content: flex-start;
   align-items: center;
   padding: 40px 20px;
-  gap: 30px;
-  overflow-y: scroll;
+  gap: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0 0 10px #d2d2d2;
+  border-radius: 6px;
 }
 
 .courses-table {
   border-collapse: collapse;
-  background-color: #ececec;
+  background-color: #eee;
   font-size: 11px;
   font-weight: 500;
   width: 700px;
