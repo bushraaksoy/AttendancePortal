@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./CoursesTable.css";
 import { Link } from "react-router-dom";
-
-// we have to get token from local storage
-// {
-//   method: 'GET',
-//   headers: {
-//     'Content-Type': 'application/json',
-//     // Bearer schema is commonly used for Authorization
-//     'Authorization': `Bearer ${token}`
-// }
+import { LoginContext } from "../../Context/LoginContext";
+import { customFetch } from "../../utils";
 
 const CoursesTable = () => {
+  const { user } = useContext(LoginContext);
   const [courses, setCourses] = useState([]);
+  const url = `/${user.role.toLowerCase()}/courses`;
+
   useEffect(() => {
     const getCourses = async () => {
-      const res = await fetch("http://localhost:3002/students/210107190");
-      const student = await res.json();
-      setCourses(student.courses);
+      const data = await customFetch(url, {
+        method: "GET",
+        headers: {},
+      });
+      setCourses(data);
     };
+
     getCourses();
-  }, []);
+  }, [user.role]);
+
+  console.log(courses);
 
   return (
     <div className="course-info">
@@ -32,7 +33,7 @@ const CoursesTable = () => {
             <tr>
               <th>Code</th>
               <th>Course name</th>
-              <th>ECTS</th>
+              <th>Hours</th>
               <th>Absence</th>
             </tr>
           </thead>
@@ -40,10 +41,10 @@ const CoursesTable = () => {
             {courses.map((course, inx) => (
               <tr key={inx}>
                 <td className="course-id">
-                  <Link to={`/${course.courseId}`}>{course.courseId}</Link>
+                  <Link to={`/${course}`}>{course.code}</Link>
                 </td>
-                <td>{course.courseName}</td>
-                <td>{course.courseEcts}</td>
+                <td>{course.name}</td>
+                <td>{course.total_hours}</td>
                 <td>
                   <div className="absence-percentage-bar"></div>
                   {course.courseAbsence}

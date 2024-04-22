@@ -1,31 +1,20 @@
 import "./AllCoursesTable.css";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { LoginContext } from "../../Context/LoginContext";
+import { customFetch } from "../../utils";
 
 const AllCoursesTable = () => {
-  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
-  const URL = `${API_BASE_URL}/admin/courses`;
-
-  const { token } = useContext(LoginContext);
-
   const [courses, setCourses] = useState([]);
+  const url = `/admin/courses`;
 
   useEffect(() => {
     const getAllCourses = async () => {
-      const res = await fetch(URL, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      const data = await res.json();
+      const data = await customFetch(url, { method: "GET", headers: {} });
       setCourses(data);
     };
     getAllCourses();
   }, []);
+
   console.log(courses);
   return (
     <div className="course-info">

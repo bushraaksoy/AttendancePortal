@@ -46,7 +46,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           {/* Privare Routes for Students and Teachers */}
           <Route
-            element={<PrivateRoutes roles={["STUDENT", "TEACHER", null]} />}
+            element={
+              <PrivateRoutes roles={["STUDENT", "TEACHER", "ADMIN", null]} />
+            }
           >
             <Route
               path="/"
@@ -73,7 +75,7 @@ function App() {
           </Route>
 
           {/* private routes for ADMIN */}
-          <Route element={<PrivateRoutes roles={["ADMIN", null]} />}>
+          <Route element={<PrivateRoutes roles={["ADMIN", "STUDENT", null]} />}>
             {/* here we will have all the admin routes */}
             <Route
               path="/dashboard"

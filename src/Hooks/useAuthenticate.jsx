@@ -15,7 +15,7 @@ const useAuthenticate = () => {
 
   const authenticate = async (username, password) => {
     try {
-      const response = await fetch(URL, {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,6 +31,7 @@ const useAuthenticate = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data);
+        localStorage.setItem("token", JSON.stringify(data.access_token));
         setToken(data.access_token);
         setIsAuth(true);
         setUser({ login: data.login, role: data.role });
@@ -38,7 +39,7 @@ const useAuthenticate = () => {
           console.log("Logged in as ADMIN");
           navigate("/dashboard");
         } else {
-          console.log("Logged in as STUDENT");
+          console.log(`Logged in as ${data.role}`);
           navigate("/");
         }
         console.log("successful login");

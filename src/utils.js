@@ -26,27 +26,33 @@ export const addUser = async (username, password, role) => {
   }
 };
 
-// custom fetch function for fetch with authentification DRY
-export async function fetchWithAuth(url, options = {}) {
-  // Get the token from local storage
-  const token = localStorage.getItem("token");
+// custom fetch function with authentication + base url
 
-  // Add the Authorization header to the request
-  options.headers = {
-    ...options.headers,
-    Authorization: `Bearer ${token}`,
-  };
+export const customFetch = async (url, options) => {
+  const URL = import.meta.env.VITE_APP_API_BASE_URL + url;
 
-  // Make the request
-  const response = await fetch(url, options);
+  try {
+    const token = localStorage.getItem("token")?.replace(/"/g, "");
+    console.log(token);
+    if (!token) {
+      throw new Error("Token not found");
+    }
 
-  // If the token is expired, redirect to login
-  if (response.status === 401) {
-    localStorage.removeItem("token");
-    window.location.href = "/login";
-    return;
+    const res = await fetch(URL, {
+      ...options,
+      headers: {
+        ...options.headers,
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    if (!res.ok) {
+      localStorage.removeItem("token");
+      throw new Error(res.statusText);
+    }
+
+    return await res.json();
+  } catch (error) {
+    throw new Error(`Fetch failed: ${error.message}`);
   }
-
-  // Otherwise, return the response
-  return response;
-}
+};
