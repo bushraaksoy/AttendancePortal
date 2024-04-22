@@ -7,6 +7,8 @@ const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
 const URL = `${API_BASE_URL}/auth/login`;
 
+const url = "https://attendancesystem-qpr5.onrender.com/api/v1/auth/login";
+
 const useAuthenticate = () => {
   const { setIsAuth, setToken, setUser } = useContext(LoginContext);
   const navigate = useNavigate();

@@ -1,26 +1,40 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 const useFetch = (url, options) => {
-  const [data, setData] = useState(null);
-  const [pending, setPending] = useState(true);
-  const [error, setError] = useState(null);
+  const [response, setResponse] = useState(null);
+  const token = localStorage.getItem("token");
+
+  // Add the Authorization header to the request
+  options.headers = {
+    ...options.headers,
+    Authorization: `Bearer ${token}`,
+  };
 
   useEffect(() => {
-    axios
-      .get(url, options)
-      .then((response) => {
-        setPending(false);
-        setError(null);
-        setData(response.data);
-      })
-      .catch((err) => {
-        setPending(false);
-        setError(err.message);
-      });
+    // Define an async function
+    const fetchData = async () => {
+      // Make the request
+      const res = await fetch(url, options);
+
+      // If the token is expired, redirect to login
+      if (res.status === 401) {
+        localStorage.removeItem("token");
+        window.location.href = "/login";
+        return;
+      }
+
+      // Get the response data
+      const data = await res.json();
+
+      // Set the response state
+      setResponse(data);
+    };
+
+    // Invoke the async function
+    fetchData();
   }, [url, options]);
 
-  return { data, pending, error };
+  return response;
 };
 
 export default useFetch;
