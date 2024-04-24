@@ -1,0 +1,61 @@
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          {/* Privare Routes for Students and Teachers */}
+          <Route
+            element={
+              <PrivateRoutes roles={["STUDENT", "TEACHER", "ADMIN", null]} />
+            }
+          >
+            <Route path="/" element={<CoursesTable />} />
+            <Route
+              path="/:courseId"
+              element={<MainLayout children={<CourseDetails />} />}
+            />
+            <Route
+              path="/:courseId/attendance-request"
+              element={<AttendanceRequest />}
+            />
+            <Route
+              path="/statistics"
+              element={<MainLayout children={<Statistics />} />}
+            />
+          </Route>
+
+          {/* private routes for ADMIN */}
+          <Route element={<PrivateRoutes roles={["ADMIN", "STUDENT", null]} />}>
+            <Route
+              path="/dashboard"
+              element={<AdminLayout children={<Dashboard />} />}
+            />
+            <Route
+              path="/all-courses"
+              element={<AdminLayout children={<AllCoursesTable />} />}
+            />
+            <Route
+              path="/:courseId/students"
+              element={<AdminLayout children={<CourseStudents />} />}
+            />
+            <Route
+              path="/attendance-requests"
+              element={<AdminLayout children={<AttendanceRequests />} />}
+            />
+            {/* takes you to the list of students taking the course */}
+            <Route
+              path="/confirm-attendance"
+              element={<AdminLayout children={<ConfirmAttendance />} />}
+            />
+            <Route
+              path="/statistics"
+              element={<AdminLayout children={<Statistics />} />}
+            />
+            <Route
+              path="/add-user"
+              element={<AdminLayout children={<AddUser />} />}
+            />
+          </Route>
+          {/* For teacher */}
+          <Route
+            path="teacher-qr-code"
+            element={<AdminLayout children={<TeacherQrCode />} />}
+          />
+        </Routes>

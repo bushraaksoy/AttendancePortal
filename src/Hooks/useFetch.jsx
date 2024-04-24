@@ -1,29 +1,49 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-const useFetch = async (url, options) => {
-  const [response, setResponse] = useState(null);
-  const token = localStorage.getItem("token").replace(/"/g, "");
-  // Add the Authorization header to the request
-  options.headers = {
-    ...options.headers,
-    Authorization: `Bearer ${token}`,
-  };
+const useFetch = (url, options) => {
+  const navigate = useNavigate();
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  const URL = import.meta.env.VITE_APP_API_BASE_URL + url;
+
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(url, options);
-      // If the token is expired, redirect to login
-      if (res.status === 401) {
-        localStorage.removeItem("token");
-        window.location.href = "/login";
-        return;
+      try {
+        const token = localStorage.getItem("token")?.replace(/"/g, "");
+        // if (!token) {
+        //   navigate("/login");
+        // }
+
+        const res = await fetch(URL, {
+          ...options,
+          headers: {
+            ...options.headers,
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!res.ok) {
+          localStorage.removeItem("token");
+          navigate("/login");
+          throw new Error(res.statusText);
+        }
+
+        const data = await res.json();
+        setData(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
       }
-      // Get the response data
-      const data = await res.json();
-      setResponse(data);
     };
+
     fetchData();
-  }, [url, options]);
-  return response;
+  }, [url, options.headers, navigate]);
+
+  return { data, loading, error };
 };
 
 export default useFetch;

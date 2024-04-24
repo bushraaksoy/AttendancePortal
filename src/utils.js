@@ -48,11 +48,14 @@ export const customFetch = async (url, options) => {
 
     if (!res.ok) {
       localStorage.removeItem("token");
+      window.location.href("/login");
       throw new Error(res.statusText);
     }
 
     return await res.json();
   } catch (error) {
-    throw new Error(`Fetch failed: ${error.message}`);
+    localStorage.removeItem("token");
+    window.location.pathname = "/login";
+    // throw new Error(`Fetch failed: ${error.message}`);
   }
 };

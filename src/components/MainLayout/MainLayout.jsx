@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
 import "./MainLayout.css";
 import UserDetails from "../UserDetails/UserDetails";
 import Breadcrumbs from "../Breadcrumb/Breadcrumb";
-import { LoginContext } from "../../Context/LoginContext";
+import { useLoginContext } from "../../Context/LoginContext";
 
 const MainLayout = ({ children }) => {
-  const { user } = useContext(LoginContext);
+  const { user } = useLoginContext();
 
   return (
     <div className="layout">

@@ -4,6 +4,7 @@ import useAuthenticate from "../../Hooks/useAuthenticate";
 import "./Login.css";
 
 const Login = () => {
+  console.log("HUG U");
   const [formData, setFormData] = useState({ email: "", password: "" });
   const authenticate = useAuthenticate();
 

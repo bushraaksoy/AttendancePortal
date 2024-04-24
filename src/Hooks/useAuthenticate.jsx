@@ -1,16 +1,12 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { LoginContext } from "../Context/LoginContext";
+import { useLoginContext } from "../Context/LoginContext";
 import useToast from "./useToast";
 
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
-
-const URL = `${API_BASE_URL}/auth/login`;
-
-const url = "https://attendancesystem-qpr5.onrender.com/api/v1/auth/login";
+const url = `${API_BASE_URL}/auth/login`;
 
 const useAuthenticate = () => {
-  const { setIsAuth, setToken, setUser } = useContext(LoginContext);
+  const { setUser } = useLoginContext();
   const navigate = useNavigate();
 
   const authenticate = async (username, password) => {
@@ -32,9 +28,8 @@ const useAuthenticate = () => {
         const data = await response.json();
         console.log(data);
         localStorage.setItem("token", JSON.stringify(data.access_token));
-        setToken(data.access_token);
-        setIsAuth(true);
         setUser({ login: data.login, role: data.role });
+
         if (data.role === "ADMIN") {
           console.log("Logged in as ADMIN");
           navigate("/dashboard");
@@ -42,6 +37,7 @@ const useAuthenticate = () => {
           console.log(`Logged in as ${data.role}`);
           navigate("/");
         }
+
         console.log("successful login");
         useToast("Logged in Successfully", "success");
         return;
@@ -53,8 +49,8 @@ const useAuthenticate = () => {
         throw new Error("Request failed!");
       }
     } catch (error) {
-      useToast(error.message, "error");
-      console.log(error.message);
+      useToast("Failed to Login", "error");
+      throw new Error(error.message);
     }
   };
 

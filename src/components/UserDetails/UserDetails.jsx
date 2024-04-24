@@ -1,14 +1,14 @@
 import "./UserDetails.css";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import userImg from "../../assets/user-image-cartoon.png";
 import sduLogo from "/logo_sdu.png";
 import useSignout from "../../Hooks/useSignout";
-import { LoginContext } from "../../Context/LoginContext";
+import { useLoginContext } from "../../Context/LoginContext";
 
 const UserDetails = () => {
   const [userDetails, setUserDetails] = useState("");
   const signout = useSignout();
-  const { user } = useContext(LoginContext);
+  const { user, setUser } = useLoginContext();
 
   const token = localStorage.getItem("token")?.replace(/"/g, "");
   const url = `https://attendancesystem-qpr5.onrender.com/api/v1/${user.role.toLowerCase()}`;

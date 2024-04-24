@@ -17,13 +17,15 @@ const Sidebar = () => {
       <img src={sduLogo} alt="SDU logo" width={130} />
       {/* <h3>Admin Panel</h3> */}
       <ul>
-        {Object.entries(sidebarItems).map((item, inx) => (
+        {Object.entries(sidebarItems).map(([item], inx) => (
           <li key={inx}>
             <Link to={`/${item[0]}`}>{item[1]}</Link>
           </li>
         ))}
         <li>
-          <Link onClick={signout}>Sign Out</Link>
+          <Link to={"/login"} onClick={signout}>
+            Sign Out
+          </Link>
         </li>
       </ul>
     </div>

@@ -1,16 +1,17 @@
-import { useContext } from "react";
-import { LoginContext } from "../Context/LoginContext";
+import { useLoginContext } from "../Context/LoginContext";
 import useToast from "./useToast";
+import { useNavigate } from "react-router-dom";
 
 const useSignout = () => {
-  const { setIsAuth, setToken, setUser } = useContext(LoginContext);
+  const navigate = useNavigate();
+  const { setUser } = useLoginContext();
 
   const signout = () => {
-    setToken("");
-    setIsAuth(false);
+    localStorage.removeItem("token");
     setUser({ login: null, role: null });
     useToast("Signed out successfully", "success");
     console.log("successful signout");
+    navigate("/login");
   };
 
   return signout;

@@ -1,10 +1,21 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
+import useLocalstorage from "../Hooks/useLocalstorage";
 
-export const LoginContext = createContext({
-  isAuth: false,
-  token: null,
+const LoginContext = createContext({
   user: null,
-  setIsAuth: () => {},
-  setToken: () => {},
   setUser: () => {},
 });
+
+export const useLoginContext = () => useContext(LoginContext);
+
+export const LoginProvider = ({ children }) => {
+  const [user, setUser] = useLocalstorage("user");
+
+  return (
+    <LoginContext.Provider value={{ user, setUser }}>
+      {children}
+    </LoginContext.Provider>
+  );
+};
+
+export default LoginProvider;
