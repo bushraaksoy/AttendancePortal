@@ -1,0 +1,26 @@
+.apeal-popup {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #aaa;
+  width: 500px;
+  height: 500px;
+  font-size: 12px;
+}
+
+.hide {
+  display: hidden;
+}
+
+.apeal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+}

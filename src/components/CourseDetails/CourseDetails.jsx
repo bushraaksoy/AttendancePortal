@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./CourseDetails.css";
 import { customFetch } from "../../utils";
 import { useAuthContext } from "../../Context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
+import ApealForm from "../ApealForm/ApealForm";
 
 const CourseDetails = () => {
   // const { courseId } = useParams();
@@ -37,6 +38,11 @@ const CourseDetails = () => {
     getCourseSections();
     console.log(courseSections);
   }, [courseId]);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const handleApealClick = () => {
+    setIsVisible(true);
+  };
 
   return (
     <MainLayout>
@@ -79,12 +85,12 @@ const CourseDetails = () => {
                             {hour.attended ? "Attended" : "Absent"}
                           </div>
                         </td>
-                        <td
-                          className={
-                            "apeal-column" + hour.attended ? "" : "apeal"
-                          }
-                        >
-                          {hour.attended ? "" : "Apeal"}
+                        <td className={hour.attended ? "" : "apeal"}>
+                          {hour.attended ? (
+                            ""
+                          ) : (
+                            <div onClick={handleApealClick}>Apeal</div>
+                          )}
                         </td>
                       </tr>
                     ))}
@@ -92,6 +98,7 @@ const CourseDetails = () => {
               </table>
             ))}
         </div>
+        <ApealForm visible={isVisible} />
       </div>
     </MainLayout>
   );

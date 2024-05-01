@@ -20,7 +20,7 @@ button:hover {
   background-color: #5f738f;
 }
 
-input[type="text"] {
+/* input[type="text"] {
   width: 100%;
   padding: 10px 15px;
   border-radius: 20px;
@@ -28,7 +28,7 @@ input[type="text"] {
   font-family: "Poppins", sans-serif;
   border: 1px solid #ddd;
   background-color: #eee;
-}
+} */
 
 .prompt {
   font-size: 12px;
