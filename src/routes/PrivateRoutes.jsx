@@ -1,10 +1,10 @@
 import { Outlet, Navigate } from "react-router-dom";
-import { useLoginContext } from "../Context/LoginContext";
+import { useAuthContext } from "../Context/AuthContext";
 
 const PrivateRoutes = ({ roles }) => {
-  const { user } = useLoginContext();
+  const { user } = useAuthContext();
 
-  return roles.includes(user.role) ? <Outlet /> : <Navigate to="/" />;
+  return roles.includes(user.role) ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoutes;

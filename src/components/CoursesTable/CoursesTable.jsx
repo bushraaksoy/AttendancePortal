@@ -1,12 +1,11 @@
 import "./CoursesTable.css";
 import { Link } from "react-router-dom";
-import { useLoginContext } from "../../Context/LoginContext";
+import { useAuthContext } from "../../Context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 
 const CoursesTable = () => {
-  const { user } = useLoginContext();
-  console.log(user);
+  const { user } = useAuthContext();
   const url = `/${user.role.toLowerCase()}/courses`;
 
   const {
@@ -29,21 +28,25 @@ const CoursesTable = () => {
                 <th>Code</th>
                 <th>Course name</th>
                 <th>Hours</th>
-                <th>Absence</th>
+                {/* <th>Absence</th> */}
+                <th></th>
               </tr>
             </thead>
             <tbody>
               {courses &&
-                courses.map((course, inx) => (
-                  <tr key={inx}>
+                courses.map((course) => (
+                  <tr id={course.id} key={course.id}>
                     <td className="course-id">
-                      <Link to={`/${course}`}>{course.code}</Link>
+                      <Link to={`/${course.id}`}>{course.code}</Link>
                     </td>
                     <td>{course.name}</td>
                     <td>{course.total_hours}</td>
-                    <td>
+                    {/* <td>
                       <div className="absence-percentage-bar"></div>
                       {course.courseAbsence}
+                    </td> */}
+                    <td>
+                      <Link to={`/${course.id}`}>View Attendance</Link>
                     </td>
                   </tr>
                 ))}

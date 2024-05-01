@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { useLoginContext } from "../Context/LoginContext";
+import { useAuthContext } from "../context/AuthContext";
 import useToast from "./useToast";
 
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 const url = `${API_BASE_URL}/auth/login`;
 
 const useAuthenticate = () => {
-  const { setUser } = useLoginContext();
+  const { setUser } = useAuthContext();
   const navigate = useNavigate();
 
   const authenticate = async (username, password) => {

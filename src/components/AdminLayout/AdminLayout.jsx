@@ -3,9 +3,9 @@ import Sidebar from "../Sidebar/Sidebar";
 
 const AdminLayout = ({ children }) => {
   return (
-    <div className="main">
+    <div className="main-layout">
       <Sidebar />
-      <div className="page-content"> {children} </div>
+      <div className="main-page-content"> {children} </div>
     </div>
   );
 };

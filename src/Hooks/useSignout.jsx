@@ -1,10 +1,10 @@
-import { useLoginContext } from "../Context/LoginContext";
+import { useAuthContext } from "../context/AuthContext";
 import useToast from "./useToast";
 import { useNavigate } from "react-router-dom";
 
 const useSignout = () => {
   const navigate = useNavigate();
-  const { setUser } = useLoginContext();
+  const { setUser } = useAuthContext();
 
   const signout = () => {
     localStorage.removeItem("token");

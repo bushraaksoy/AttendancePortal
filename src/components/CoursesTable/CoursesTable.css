@@ -19,7 +19,6 @@
   width: 700px;
   margin-bottom: 50px;
   text-align: center;
-  padding: 0px 50px;
   position: relative;
 }
 
@@ -107,7 +106,20 @@
   background-color: rgb(202, 0, 0);
 }
 
+.apeal {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.apeal:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 480px) {
+  .courses-table {
+    width: max-content;
+  }
+
   .course-info {
     align-items: flex-start;
   }

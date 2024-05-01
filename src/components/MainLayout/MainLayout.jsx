@@ -1,15 +1,15 @@
 import "./MainLayout.css";
 import UserDetails from "../UserDetails/UserDetails";
 import Breadcrumbs from "../Breadcrumb/Breadcrumb";
-import { useLoginContext } from "../../Context/LoginContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 const MainLayout = ({ children }) => {
-  const { user } = useLoginContext();
+  const { user } = useAuthContext();
 
   return (
-    <div className="layout">
+    <div className="main-layout">
       <UserDetails />
-      <div className="page-content">
+      <div className="main-page-content">
         <div className="title"> {user.role} PORTAL </div>
         <Breadcrumbs
           crumbs={[

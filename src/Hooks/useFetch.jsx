@@ -13,9 +13,10 @@ const useFetch = (url, options) => {
     const fetchData = async () => {
       try {
         const token = localStorage.getItem("token")?.replace(/"/g, "");
-        // if (!token) {
-        //   navigate("/login");
-        // }
+        if (!token) {
+          console.log("token not found, navigating to login");
+          navigate("/login");
+        }
 
         const res = await fetch(URL, {
           ...options,
@@ -24,6 +25,8 @@ const useFetch = (url, options) => {
             Authorization: `Bearer ${token}`,
           },
         });
+
+        console.log(res);
 
         if (!res.ok) {
           localStorage.removeItem("token");
@@ -41,7 +44,8 @@ const useFetch = (url, options) => {
     };
 
     fetchData();
-  }, [url, options.headers, navigate]);
+  }, [url]);
+  // }, [url, options.headers, navigate]);
 
   return { data, loading, error };
 };

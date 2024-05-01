@@ -15,10 +15,6 @@
               path="/:courseId/attendance-request"
               element={<AttendanceRequest />}
             />
-            <Route
-              path="/statistics"
-              element={<MainLayout children={<Statistics />} />}
-            />
           </Route>
 
           {/* private routes for ADMIN */}
@@ -35,10 +31,7 @@
               path="/:courseId/students"
               element={<AdminLayout children={<CourseStudents />} />}
             />
-            <Route
-              path="/attendance-requests"
-              element={<AdminLayout children={<AttendanceRequests />} />}
-            />
+
             {/* takes you to the list of students taking the course */}
             <Route
               path="/confirm-attendance"
@@ -53,9 +46,4 @@
               element={<AdminLayout children={<AddUser />} />}
             />
           </Route>
-          {/* For teacher */}
-          <Route
-            path="teacher-qr-code"
-            element={<AdminLayout children={<TeacherQrCode />} />}
-          />
         </Routes>
