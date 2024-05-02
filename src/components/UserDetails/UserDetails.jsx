@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import userImg from "../../assets/user-image-cartoon.png";
 import sduLogo from "/logo_sdu.png";
 import useSignout from "../../hooks/useSignout";
-import { useAuthcontext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 import { formatDate } from "../../utils";
 
 const UserDetails = () => {

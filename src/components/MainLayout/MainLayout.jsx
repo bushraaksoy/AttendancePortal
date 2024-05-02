@@ -1,7 +1,7 @@
 import "./MainLayout.css";
 import UserDetails from "../UserDetails/UserDetails";
 import Breadcrumbs from "../Breadcrumb/Breadcrumb";
-import { useAuthcontext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 const MainLayout = ({ children }) => {
   const { user } = useAuthContext();
