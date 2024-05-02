@@ -1,6 +1,6 @@
 import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
-import AuthProvider from "./Context/AuthContext";
+import AuthProvider from "./context/AuthContext";
 import { ToastContainer } from "react-toastify";
 import CustomRoutes from "./routes/Route";
 
