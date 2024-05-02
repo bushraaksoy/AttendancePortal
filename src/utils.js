@@ -59,3 +59,31 @@ export const customFetch = async (url, options) => {
     // throw new Error(`Fetch failed: ${error.message}`);
   }
 };
+
+// date time formatter
+export const formatDateAndTime = (timeArray) => {
+  if (!timeArray || timeArray.length < 5)
+    return { dateStr: "Invalid date", timeStr: "Invalid time" };
+
+  const [year, month, date, hour, minute] = timeArray;
+  const dateStr = `${date.toString().padStart(2, "0")}-${month
+    .toString()
+    .padStart(2, "0")}-${year}`;
+  const timeStr = `${hour.toString().padStart(2, "0")}:${minute
+    .toString()
+    .padStart(2, "0")}`;
+
+  return { dateStr, timeStr };
+};
+
+//date formatter
+export const formatDate = (dateArray) => {
+  if (!dateArray || dateArray.length < 3) return "Invalid date";
+
+  const [year, month, date] = dateArray;
+  const dateStr = `${date.toString().padStart(2, "0")}-${month
+    .toString()
+    .padStart(2, "0")}-${year}`;
+
+  return dateStr;
+};

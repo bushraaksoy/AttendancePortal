@@ -36,5 +36,31 @@ button:hover {
   padding: 10px 5px;
 }
 
+.table {
+  border-collapse: collapse;
+  background-color: #eee;
+  font-size: 11px;
+  font-weight: 500;
+  width: 700px;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.table tr {
+  height: 60px;
+}
+
+.table th,
+.table td {
+  border-bottom: 2px solid #cccccc;
+  padding: 10px;
+}
+
+.table th {
+  border-top: 1px solid #555;
+  background-color: #d2d2d2;
+}
+
 @media (max-width: 480px) {
 }

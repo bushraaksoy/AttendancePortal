@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import "./CourseDetails.css";
+import "./CourseAttendanceTable.css";
 import { customFetch } from "../../utils";
 import { useAuthContext } from "../../Context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import ApealForm from "../ApealForm/ApealForm";
 
-const CourseDetails = () => {
+const CourseAttendanceTable = () => {
   // const { courseId } = useParams();
   const courseId = "CSS 217";
   const [course, setCourse] = useState([]);
@@ -104,4 +104,4 @@ const CourseDetails = () => {
   );
 };
 
-export default CourseDetails;
+export default CourseAttendanceTable;

@@ -4,6 +4,7 @@ import userImg from "../../assets/user-image-cartoon.png";
 import sduLogo from "/logo_sdu.png";
 import useSignout from "../../hooks/useSignout";
 import { useAuthContext } from "../../context/AuthContext";
+import { formatDate } from "../../utils";
 
 const UserDetails = () => {
   const [userDetails, setUserDetails] = useState("");
@@ -37,6 +38,9 @@ const UserDetails = () => {
 
   console.log(userDetails);
 
+  const birthDate = formatDate(userDetails.birthDate);
+  console.log(birthDate);
+
   return (
     <div className="user-details">
       <img src={sduLogo} alt="sdu logo" width={100} />
@@ -49,7 +53,7 @@ const UserDetails = () => {
           </div>
           <dir>
             <h3>Birth Date</h3>
-            <div>{userDetails.birthDate}</div>
+            <div>{birthDate}</div>
           </dir>
           <div>
             <h3>Department</h3>

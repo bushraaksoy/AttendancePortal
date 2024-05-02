@@ -2,8 +2,10 @@ import {
   Login,
   CoursesTable,
   AttendanceRequests,
-  CourseDetails,
+  CourseAttendanceTable,
   CourseStudents,
+  CourseAttendanceTable2,
+  Permissions,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -21,15 +23,25 @@ export const userRoutes = [
     path: "/",
     element: CoursesTable,
   },
-  {
-    id: 2,
-    path: "/:courseId",
-    element: CourseDetails,
-  },
+  // {
+  //   id: 2,
+  //   path: "/:courseId/attendance",
+  //   element: CourseAttendanceTable,
+  // },
   {
     id: 3,
     path: "/:courseId/students",
     element: CourseStudents,
+  },
+  {
+    id: 4,
+    path: "/:courseId/attendance",
+    element: CourseAttendanceTable2,
+  },
+  {
+    id: 5,
+    path: "/:courseId/permissions",
+    element: Permissions,
   },
 ];
 

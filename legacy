@@ -9,7 +9,7 @@
             <Route path="/" element={<CoursesTable />} />
             <Route
               path="/:courseId"
-              element={<MainLayout children={<CourseDetails />} />}
+              element={<MainLayout children={<CourseAttendanceTable />} />}
             />
             <Route
               path="/:courseId/attendance-request"

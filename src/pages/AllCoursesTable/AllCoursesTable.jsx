@@ -26,7 +26,7 @@ const AllCoursesTable = () => {
                 <th>Code</th>
                 <th>Course name</th>
                 <th>Hours</th>
-                <th>Absence</th>
+                <th>Students</th>
               </tr>
             </thead>
             <tbody>
@@ -39,10 +39,7 @@ const AllCoursesTable = () => {
                     </td>
                     <td>{course.name}</td>
                     <td>{course.total_hours}</td>
-                    <td>
-                      <div className="absence-percentage-bar"></div>
-                      {course.courseAbsence}
-                    </td>
+                    <td>view</td>
                   </tr>
                 ))}
             </tbody>

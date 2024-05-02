@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
             "Software Architecture and Design Patterns",
           ]}
         />
-        {children}
+        <div className="course-info">{children}</div>
       </div>
     </div>
   );

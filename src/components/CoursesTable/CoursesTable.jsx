@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useAuthContext } from "../../Context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
+import { formatDateAndTime } from "../../utils";
 
 const CoursesTable = () => {
   const { user } = useAuthContext();
@@ -18,7 +19,7 @@ const CoursesTable = () => {
 
   return (
     <MainLayout>
-      <div className="course-info">
+      <>
         <div className="prompt">Select course to take attendance!</div>
         <h2>Courses</h2>
         <div className="table-div">
@@ -29,7 +30,8 @@ const CoursesTable = () => {
                 <th>Course name</th>
                 <th>Hours</th>
                 {/* <th>Absence</th> */}
-                <th></th>
+                <th>Attendance</th>
+                <th>Permission</th>
               </tr>
             </thead>
             <tbody>
@@ -37,7 +39,11 @@ const CoursesTable = () => {
                 courses.map((course) => (
                   <tr id={course.id} key={course.id}>
                     <td className="course-id">
-                      <Link to={`/${course.id}`}>{course.code}</Link>
+                      <Link
+                        to={`/${course.code}/attendance?code=${course.code}&name=${course.name}&id=${course.id}`}
+                      >
+                        {course.code}
+                      </Link>
                     </td>
                     <td>{course.name}</td>
                     <td>{course.total_hours}</td>
@@ -46,14 +52,21 @@ const CoursesTable = () => {
                       {course.courseAbsence}
                     </td> */}
                     <td>
-                      <Link to={`/${course.id}`}>View Attendance</Link>
+                      <Link
+                        to={`/${course.id}/attendance?code=${course.code}&name=${course.name}`}
+                      >
+                        View
+                      </Link>
+                    </td>
+                    <td>
+                      <Link to={`/${course.id}/permissions`}>View</Link>
                     </td>
                   </tr>
                 ))}
             </tbody>
           </table>
         </div>
-      </div>
+      </>
     </MainLayout>
   );
 };
