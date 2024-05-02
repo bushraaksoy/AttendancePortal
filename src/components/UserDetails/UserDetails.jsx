@@ -39,7 +39,6 @@ const UserDetails = () => {
   console.log(userDetails);
 
   const birthDate = formatDate(userDetails.birthDate);
-  console.log(birthDate);
 
   return (
     <div className="user-details">

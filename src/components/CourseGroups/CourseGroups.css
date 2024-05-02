@@ -1,0 +1,38 @@
+.icon-button {
+  background-color: #e0e0e0;
+  border: none;
+  color: #444;
+  width: fit-content;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 2px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline;
+}
+
+.icon-button:hover {
+  transform: scale(1.15);
+}
+
+.eye {
+  color: rgb(0, 86, 0);
+  background-color: rgb(209, 227, 209);
+}
+.eye:hover {
+  color: rgb(0, 86, 0);
+  background-color: rgb(209, 227, 209);
+}
+
+.pencil {
+  color: rgb(167, 113, 12);
+  background-color: rgb(232, 221, 202);
+}
+
+.pencil:hover {
+  color: rgb(167, 113, 12);
+  background-color: rgb(232, 221, 202);
+}

@@ -6,6 +6,7 @@ import {
   CourseStudents,
   CourseAttendanceTable2,
   Permissions,
+  CourseGroups,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -42,6 +43,11 @@ export const userRoutes = [
     id: 5,
     path: "/:courseId/permissions",
     element: Permissions,
+  },
+  {
+    id: 6,
+    path: "/:courseId/groups",
+    element: CourseGroups,
   },
 ];
 

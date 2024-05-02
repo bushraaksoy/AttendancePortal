@@ -9,6 +9,7 @@ import CourseAttendanceTable2 from "./CourseAttendanceTable2.jsx/CourseAttendanc
 import MainLayout from "./MainLayout/MainLayout";
 import AdminLayout from "./AdminLayout/AdminLayout";
 import Permissions from "./Permissions/Permissions";
+import CourseGroups from "./CourseGroups/CourseGroups";
 
 export {
   Login,
@@ -21,4 +22,5 @@ export {
   AddUser,
   CourseAttendanceTable2,
   Permissions,
+  CourseGroups,
 };

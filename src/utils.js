@@ -87,3 +87,16 @@ export const formatDate = (dateArray) => {
 
   return dateStr;
 };
+
+export const formatTime = (timeArray) => {
+  if (!timeArray || timeArray.length < 2) {
+    return "Invalid time"; // Return this if the array is not valid
+  }
+
+  const [hour, minute] = timeArray;
+  const timeStr = `${hour.toString().padStart(2, "0")}:${minute
+    .toString()
+    .padStart(2, "0")}`;
+
+  return timeStr;
+};

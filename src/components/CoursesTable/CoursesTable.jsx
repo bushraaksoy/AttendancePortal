@@ -29,7 +29,6 @@ const CoursesTable = () => {
                 <th>Code</th>
                 <th>Course name</th>
                 <th>Hours</th>
-                {/* <th>Absence</th> */}
                 <th>Attendance</th>
                 <th>Permission</th>
               </tr>
@@ -39,18 +38,22 @@ const CoursesTable = () => {
                 courses.map((course) => (
                   <tr id={course.id} key={course.id}>
                     <td className="course-id">
-                      <Link
-                        to={`/${course.code}/attendance?code=${course.code}&name=${course.name}&id=${course.id}`}
-                      >
-                        {course.code}
-                      </Link>
+                      {user.role == "STUDENT" ? (
+                        <Link
+                          to={`/${course.id}/attendance?code=${course.code}&name=${course.name}&id=${course.id}`}
+                        >
+                          {course.code}
+                        </Link>
+                      ) : (
+                        <Link
+                          to={`/${course.id}/groups?code=${course.code}&name=${course.name}&id=${course.id}`}
+                        >
+                          {course.code}
+                        </Link>
+                      )}
                     </td>
                     <td>{course.name}</td>
                     <td>{course.total_hours}</td>
-                    {/* <td>
-                      <div className="absence-percentage-bar"></div>
-                      {course.courseAbsence}
-                    </td> */}
                     <td>
                       <Link
                         to={`/${course.id}/attendance?code=${course.code}&name=${course.name}`}

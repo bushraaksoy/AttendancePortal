@@ -62,5 +62,18 @@ button:hover {
   background-color: #d2d2d2;
 }
 
+.view {
+  background-color: rgba(191, 214, 243, 0.562);
+  padding: 4px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 700;
+}
+
+.view:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 480px) {
 }

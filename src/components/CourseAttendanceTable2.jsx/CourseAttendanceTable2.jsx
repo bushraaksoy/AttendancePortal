@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../CoursesTable/CoursesTable.css";
-import { useAuthContext } from "../../Context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import AppealForm from "../ApealForm/ApealForm";
@@ -66,7 +66,7 @@ const CourseAttendanceTable2 = () => {
                 const { dateStr, timeStr } = formatDateAndTime(entry.time);
                 console.log("date ", dateStr);
                 return (
-                  <tr key={index}>
+                  <tr key={entry.id}>
                     <td>{courseCode}</td>
                     {/* Displaying course code passed via params */}
                     <td>{entry.courseGroup}</td>

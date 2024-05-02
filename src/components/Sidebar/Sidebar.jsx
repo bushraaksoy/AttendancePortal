@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import sduLogo from "/logo_sdu.png";
-import useSignout from "../../Hooks/useSignout";
+import useSignout from "../../hooks/useSignout";
 
 const Sidebar = () => {
   const sidebarItems = {
     dashboard: "Dashboard",
     "all-courses": "Courses",
+    "#": "Teacers",
     "attendance-requests": "Requests",
   };
 
