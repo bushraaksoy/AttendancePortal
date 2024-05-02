@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../CoursesTable/CoursesTable.css";
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthcontext } from "../../context/AuthContext";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import AppealForm from "../ApealForm/ApealForm";

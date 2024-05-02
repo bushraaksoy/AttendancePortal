@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
-const BreadcrumbsContext = createContext();
+const Breadcrumbscontext = createContext();
 
 export const useBreadcrumbs = () => useContext(BreadcrumbsContext);
 

@@ -1,14 +1,14 @@
-import { createContext, useContext } from "react";
+import { createContext, usecontext } from "react";
 import useLocalstorage from "../hooks/useLocalstorage.jsx";
 import { useNavigate } from "react-router-dom";
 import useAuthToken from "../hooks/useAuthToken.jsx";
 
-const AuthContext = createContext({
+const Authcontext = createContext({
   user: null,
   setUser: () => {},
 });
 
-export const useAuthContext = () => useContext(AuthContext);
+export const useAuthcontext = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();

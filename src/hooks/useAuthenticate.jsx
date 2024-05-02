@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuthContext } from "../context/AuthContext";
+import { useAuthcontext } from "../context/AuthContext";
 import useToast from "./useToast";
 
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;

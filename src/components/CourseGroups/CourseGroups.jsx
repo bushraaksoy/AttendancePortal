@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import useFetch from "../../Hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import { FaEye, FaPencilAlt } from "react-icons/fa";
-import { useAuthContext } from "../../context/AuthContext";
+import { useAuthcontext } from "../../context/AuthContext";
 import { formatTime } from "../../utils";
 
 const CourseGroups = () => {
