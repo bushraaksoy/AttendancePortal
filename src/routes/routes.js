@@ -7,6 +7,7 @@ import {
   CourseAttendanceTable2,
   Permissions,
   CourseGroups,
+  TakeAttendance,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -36,18 +37,23 @@ export const userRoutes = [
   },
   {
     id: 4,
-    path: "/:courseId/attendance",
+    path: "/:courseId/:courseGroup/attendance",
     element: CourseAttendanceTable2,
   },
   {
     id: 5,
-    path: "/:courseId/permissions",
+    path: "/:courseId/:courseGroup/permissions",
     element: Permissions,
   },
   {
     id: 6,
     path: "/:courseId/groups",
     element: CourseGroups,
+  },
+  {
+    id: 7,
+    path: ":courseId/:courseGroup/take-attendance",
+    element: TakeAttendance,
   },
 ];
 

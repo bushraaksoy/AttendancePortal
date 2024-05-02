@@ -9,13 +9,14 @@ import { formatDateAndTime } from "../../utils";
 
 const CourseAttendanceTable2 = () => {
   const authResult = new URLSearchParams(window.location.search);
+
   const courseCode = authResult.get("code");
   const courseName = authResult.get("name");
 
-  const { courseId } = useParams();
+  const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
   //   const url = `/${user.role.toLowerCase()}/attendance/take/courses/${courseId}`;
-  const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}`;
+  const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
 
   const {
     data: attendance,
@@ -34,9 +35,9 @@ const CourseAttendanceTable2 = () => {
         <div className="page-content">Loading...</div>
       </MainLayout>
     );
-  if (error) return <p>Error loading attendance data!</p>;
-  if (!attendance || attendance.length === 0)
-    return <p>No attendance data available.</p>;
+  // if (error) return <p>Error loading attendance data!</p>;
+  // if (!attendance || attendance.length === 0)
+  //   return <p>No attendance data available.</p>;
 
   console.log(attendance);
 
@@ -55,7 +56,6 @@ const CourseAttendanceTable2 = () => {
                 <th>Section</th>
                 <th>Time</th>
                 <th>Date</th>
-                {/* <th>Day</th> */}
                 <th>Attended</th>
                 <th></th>
               </tr>
@@ -68,11 +68,9 @@ const CourseAttendanceTable2 = () => {
                 return (
                   <tr key={entry.id}>
                     <td>{courseCode}</td>
-                    {/* Displaying course code passed via params */}
                     <td>{entry.courseGroup}</td>
                     <td>{timeStr}</td>
                     <td>{dateStr}</td>
-                    {/* <td>{entry.day}</td> */}
                     <td>
                       <div
                         className={`text ${

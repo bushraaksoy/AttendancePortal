@@ -10,6 +10,7 @@ import MainLayout from "./MainLayout/MainLayout";
 import AdminLayout from "./AdminLayout/AdminLayout";
 import Permissions from "./Permissions/Permissions";
 import CourseGroups from "./CourseGroups/CourseGroups";
+import TakeAttendance from "./TakeAttendance/TakeAttendance";
 
 export {
   Login,
@@ -23,4 +24,5 @@ export {
   CourseAttendanceTable2,
   Permissions,
   CourseGroups,
+  TakeAttendance,
 };

@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import MainLayout from "../MainLayout/MainLayout";
 import CoursesTable from "../CoursesTable/CoursesTable";
+import useFetch from "../../Hooks/useFetch";
+import { useParams } from "react-router-dom";
 
 const Permissions = () => {
+  const { courseId, courseGroup } = useParams();
+  const [group, setGroup] = useState("");
+  const authResult = new URLSearchParams(window.location.search); // for query search params
+
+  // const url = `/student/courses/${courseId}/${group}/students`;
+  const url = `/student/courses/${courseId}/${courseGroup}/students`;
+  const {
+    data: students,
+    loading,
+    error,
+  } = useFetch(url, { method: "GET", headers: {} });
+
+  console.log("students in the same group: ", students);
+
   return (
     <MainLayout>
       <div className="prompt">

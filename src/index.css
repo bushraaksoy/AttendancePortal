@@ -69,10 +69,15 @@ button:hover {
   cursor: pointer;
   transition: 0.3s ease;
   font-weight: 700;
+  width: 100%;
 }
 
 .view:hover {
   transform: scale(1.1);
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 480px) {
