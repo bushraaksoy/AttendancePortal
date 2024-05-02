@@ -1,7 +1,7 @@
 import "./AllCoursesTable.css";
 import { Link } from "react-router-dom";
 import { AdminLayout } from "../../components";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 
 const AllCoursesTable = () => {
   const url = `/admin/courses`;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Permissions.css";
 import MainLayout from "../MainLayout/MainLayout";
 import CoursesTable from "../CoursesTable/CoursesTable";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 
 const Permissions = () => {

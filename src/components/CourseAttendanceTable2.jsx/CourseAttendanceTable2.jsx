@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../CoursesTable/CoursesTable.css";
 import { useAuthContext } from "../../context/AuthContext";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import AppealForm from "../ApealForm/ApealForm";
 import { formatDateAndTime } from "../../utils";

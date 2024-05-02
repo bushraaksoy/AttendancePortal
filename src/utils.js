@@ -1,4 +1,4 @@
-import useToast from "./Hooks/useToast";
+import useToast from "./hooks/useToast";
 
 // function to add a new user to the database using the backend api endpoint for adding user
 export const addUser = async (username, password, role) => {

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import "./CourseAttendanceTable.css";
 import { customFetch } from "../../utils";
 import { useAuthContext } from "../../Context/AuthContext";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import ApealForm from "../ApealForm/ApealForm";
 

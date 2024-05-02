@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddUser.css";
 import { addUser } from "../../utils";
-import useToast from "../../Hooks/useToast";
+import useToast from "../../hooks/useToast";
 
 const AddUser = () => {
   const [username, setUsername] = useState("");

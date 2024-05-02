@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useAuthenticate from "../../Hooks/useAuthenticate";
+import useAuthenticate from "../../hooks/useAuthenticate";
 
 import "./Login.css";
 

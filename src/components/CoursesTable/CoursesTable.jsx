@@ -1,7 +1,7 @@
 import "./CoursesTable.css";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import { formatDateAndTime } from "../../utils";
 

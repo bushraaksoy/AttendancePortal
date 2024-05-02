@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MainLayout from "../MainLayout/MainLayout";
 import { useParams } from "react-router-dom";
-import useFetch from "../../Hooks/useFetch";
+import useFetch from "../../hooks/useFetch";
 import { formatDateAndTime } from "../../utils";
 import QrCode from "../QrCode/QrCode";
 
