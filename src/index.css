@@ -9,26 +9,17 @@
 
 button {
   width: 100px;
-  border-radius: 10px;
+  border-radius: 18px;
   padding: 5px 10px;
-  border: 0.5px solid #111;
+  border: 0.5px solid #999;
   background-color: #40526c;
   color: #fff;
+  font-size: 12px;
 }
 
 button:hover {
   background-color: #5f738f;
 }
-
-/* input[type="text"] {
-  width: 100%;
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid #ddd;
-  background-color: #eee;
-} */
 
 .prompt {
   font-size: 12px;
