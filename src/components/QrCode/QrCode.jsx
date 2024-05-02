@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./QrCode.css";
 
-const QrCode = ({ visible, qrImage }) => {
-  const [isVisible, setIsVisible] = useState(visible);
+const QrCode = ({ visible, setVisible, qrImage }) => {
+  //   const [isVisible, setIsVisible] = useState(visible);
 
   useEffect(() => {
-    setIsVisible(visible);
-  }, [visible, qrImage]);
+    setVisible(visible);
+  }, [visible]);
 
   const handleContainerClick = () => {
-    setIsVisible(false);
+    setVisible(false);
   };
 
   const handleImageClick = (e) => {
@@ -18,7 +18,7 @@ const QrCode = ({ visible, qrImage }) => {
 
   return (
     <div
-      className={`qr-container ${!isVisible ? "hide" : " "}`}
+      className={`qr-container ${!visible ? "hide" : " "}`}
       onClick={handleContainerClick}
     >
       <img

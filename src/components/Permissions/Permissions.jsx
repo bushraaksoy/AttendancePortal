@@ -28,19 +28,21 @@ const Permissions = () => {
       <table className="table">
         <thead>
           <tr>
-            <th>Id</th>
             <th>Name</th>
-            <th>Surname</th>
+            <th>Email</th>
             <th>Select</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+          {students.map((student) => (
+            <tr id={student.userId}>
+              <td>{`${student.name} ${student.surname}`}</td>
+              <td>{student.email}</td>
+              <td>
+                <div className="view">Give Permission</div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </MainLayout>

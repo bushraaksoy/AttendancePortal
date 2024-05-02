@@ -14,6 +14,7 @@ const TakeAttendance = () => {
 
   const [qrImage, setQrImage] = useState("");
   const token = localStorage.getItem("token")?.replace(/"/g, "");
+  const [qrIsVisible, setQrIsVisible] = useState(false);
 
   const url = `/teacher/attendance/take/courses/${courseId}/${courseGroup}`;
   const {
@@ -21,8 +22,6 @@ const TakeAttendance = () => {
     loading2,
     error2,
   } = useFetch(url, { method: "GET", headers: {} });
-
-  const [qrIsVisible, setQrIsVisible] = useState(false);
 
   const generateQrCode = async (lessonId, attendanceId) => {
     setQrIsVisible(true);
@@ -93,7 +92,11 @@ const TakeAttendance = () => {
               })}
           </tbody>
         </table>
-        <QrCode visible={qrIsVisible} qrImage={qrImage} />
+        <QrCode
+          visible={qrIsVisible}
+          setVisible={setQrIsVisible}
+          qrImage={qrImage}
+        />
       </>
     </MainLayout>
   );

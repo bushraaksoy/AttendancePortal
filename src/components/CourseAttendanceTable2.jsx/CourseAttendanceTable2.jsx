@@ -15,7 +15,6 @@ const CourseAttendanceTable2 = () => {
 
   const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
-  //   const url = `/${user.role.toLowerCase()}/attendance/take/courses/${courseId}`;
   const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
 
   const {
@@ -35,9 +34,6 @@ const CourseAttendanceTable2 = () => {
         <div className="page-content">Loading...</div>
       </MainLayout>
     );
-  // if (error) return <p>Error loading attendance data!</p>;
-  // if (!attendance || attendance.length === 0)
-  //   return <p>No attendance data available.</p>;
 
   console.log(attendance);
 
@@ -57,7 +53,7 @@ const CourseAttendanceTable2 = () => {
                 <th>Time</th>
                 <th>Date</th>
                 <th>Attended</th>
-                <th></th>
+                {user.role == "TEACHER" ? <></> : <th></th>}
               </tr>
             </thead>
             <tbody>
@@ -82,13 +78,17 @@ const CourseAttendanceTable2 = () => {
                         {entry.attendanceStatus}
                       </div>
                     </td>
-                    <td>
-                      {entry.attendanceStatus !== "PRESENT" && (
-                        <div onClick={handleAppealClick} className="apeal">
-                          Appeal
-                        </div>
-                      )}
-                    </td>
+                    {user.role == "TEACHER" ? (
+                      <></>
+                    ) : (
+                      <td>
+                        {entry.attendanceStatus !== "PRESENT" && (
+                          <div onClick={handleAppealClick} className="apeal">
+                            Appeal
+                          </div>
+                        )}
+                      </td>
+                    )}
                   </tr>
                 );
               })}
@@ -102,3 +102,88 @@ const CourseAttendanceTable2 = () => {
 };
 
 export default CourseAttendanceTable2;
+
+const TeacherTable = () => {
+  return (
+    <>
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Section</th>
+          <th>Time</th>
+          <th>Date</th>
+          <th>Attended</th>
+        </tr>
+      </thead>
+      <tbody>
+        {attendance.map((entry) => {
+          const { dateStr, timeStr } = formatDateAndTime(entry.time);
+
+          return (
+            <tr key={entry.id}>
+              <td>{courseCode}</td>
+              <td>{entry.courseGroup}</td>
+              <td>{timeStr}</td>
+              <td>{dateStr}</td>
+              <td>
+                <div
+                  className={`text ${
+                    entry.attendanceStatus === "PRESENT" ? "attended" : "absent"
+                  }`}
+                >
+                  {entry.attendanceStatus}
+                </div>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </>
+  );
+};
+
+const StudentTable = () => {
+  <>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Section</th>
+        <th>Time</th>
+        <th>Date</th>
+        <th>Attended</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {attendance.map((entry, index) => {
+        console.log(entry.time);
+        const { dateStr, timeStr } = formatDateAndTime(entry.time);
+        console.log("date ", dateStr);
+        return (
+          <tr key={entry.id}>
+            <td>{courseCode}</td>
+            <td>{entry.courseGroup}</td>
+            <td>{timeStr}</td>
+            <td>{dateStr}</td>
+            <td>
+              <div
+                className={`text ${
+                  entry.attendanceStatus === "PRESENT" ? "attended" : "absent"
+                }`}
+              >
+                {entry.attendanceStatus}
+              </div>
+            </td>
+            <td>
+              {entry.attendanceStatus !== "PRESENT" && (
+                <div onClick={handleAppealClick} className="apeal">
+                  Appeal
+                </div>
+              )}
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </>;
+};
