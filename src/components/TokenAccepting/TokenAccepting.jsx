@@ -9,16 +9,12 @@ const TokenAccepting = () => {
   const token = authResult.get("token");
   const url = `/student/attendance/take/qr/${token}`;
 
-  const { data, loading, error } = useFetch(url, {
-    method: "GET",
-    headers: {},
-  });
+  const loading = false;
 
-  if (loading) {
-    <MainLayout>
-      <div className="loader"></div>
-    </MainLayout>;
-  }
+  // const { data, loading, error } = useFetch(url, {
+  //   method: "GET",
+  //   headers: {},
+  // });
 
   return (
     <MainLayout>

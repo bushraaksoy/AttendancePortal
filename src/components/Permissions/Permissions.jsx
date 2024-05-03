@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Permissions.css";
 import MainLayout from "../MainLayout/MainLayout";
 import CoursesTable from "../CoursesTable/CoursesTable";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
+import { toast, useToast } from "react-toastify";
 
 const Permissions = () => {
   const { courseId, courseGroup } = useParams();
@@ -12,14 +13,48 @@ const Permissions = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const url = `/student/courses/${courseId}/${courseGroup}/students`;
+  const token = localStorage.getItem("token")?.replace(/"/g, "");
+
   const {
     data: students,
     loading,
     error,
   } = useFetch(url, { method: "GET", headers: {} });
 
-  const handleGivePermissionClick = () => {
+  const handleGivePermissionClick = (student) => {
     setIsVisible(true);
+    setStudent(student);
+  };
+
+  const handleContainerClick = () => {
+    setIsVisible(false);
+  };
+
+  const handleDialogueClick = (e) => {
+    e.stopPropagation();
+  };
+
+  const handleConfirmClick = async () => {
+    const permissionUrl = `https://attendancesystem-qpr5.onrender.com/api/v1/student/attendance/courses/${courseId}/${courseGroup}/students/${student.userId}/give-access`;
+    try {
+      const res = await fetch(permissionUrl, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      if (!res.ok) {
+        console.log(res);
+        toast.error(res.text());
+        throw new Error("Unsuccessful permission granting!");
+      }
+
+      setIsVisible(false);
+      toast.success("Permission was given successfully!");
+    } catch (error) {
+      console.error("Error giving permission:", error);
+      toast.error("You have already given permission to another student.");
+      // toast.error("Failed to give permission.");
+    }
   };
 
   return (
@@ -28,6 +63,9 @@ const Permissions = () => {
         You can give attendance permission to one student of your choice!
       </div>
       <h1>Permissions</h1>
+      <div>
+        {student && `${student.name} has permission to take your attendance!`}
+      </div>
       <table className="table">
         <thead>
           <tr>
@@ -39,11 +77,16 @@ const Permissions = () => {
         <tbody>
           {students &&
             students.map((student) => (
-              <tr id={student.userId}>
+              <tr key={student.userId} id={student.userId}>
                 <td>{`${student.name} ${student.surname}`}</td>
                 <td>{student.email}</td>
                 <td>
-                  <div className="view" onClick={handleGivePermissionClick}>
+                  <div
+                    className="view"
+                    onClick={() => {
+                      handleGivePermissionClick(student);
+                    }}
+                  >
                     Give Permission
                   </div>
                 </td>
@@ -51,42 +94,26 @@ const Permissions = () => {
             ))}
         </tbody>
       </table>
-      <ConfirmPermission
-        visible={isVisible}
-        setVisible={setIsVisible}
-        student={student}
-      />
+
+      <div
+        className={`confirm-permission-popup ${!isVisible ? "hide" : " "}`}
+        onClick={handleContainerClick}
+      >
+        <div className="confirmation-dialogue" onClick={handleDialogueClick}>
+          <h3>Confirmation</h3>
+          <div className="message">
+            Are you sure you want to give permission to{" "}
+            <span style={{ fontWeight: "700" }}>{student.name}</span> to take
+            your attendance?
+          </div>
+          <div className="buttons">
+            <button onClick={handleConfirmClick}>Confirm</button>
+            <button onClick={handleContainerClick}>Cancel</button>
+          </div>
+        </div>
+      </div>
     </MainLayout>
   );
 };
 
 export default Permissions;
-
-const ConfirmPermission = ({ student, visible, setVisible }) => {
-  const handleContainerClick = () => {
-    setVisible(false);
-  };
-
-  const handleDialogueClick = (e) => {
-    e.stopPropagation();
-  };
-
-  return (
-    <div
-      className={`confirm-permission-popup ${!visible ? "hide" : " "}`}
-      onClick={handleContainerClick}
-    >
-      <div className="confirmation-dialogue" onClick={handleDialogueClick}>
-        <h3>Confirmation</h3>
-        <div className="message">
-          Are you sure you want to give permission to {student} for your
-          attendance?
-        </div>
-        <div className="buttons">
-          <button>Confirm</button>
-          <button onClick={handleContainerClick}>Cancel</button>
-        </div>
-      </div>
-    </div>
-  );
-};

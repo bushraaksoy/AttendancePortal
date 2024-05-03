@@ -13,11 +13,6 @@ const CourseAttendanceTable2 = () => {
   const courseCode = authResult.get("code");
   const courseName = authResult.get("name");
 
-  if (token) {
-    console.log(token);
-    return <MainLayout>We have a token!!</MainLayout>;
-  }
-
   const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
   const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
