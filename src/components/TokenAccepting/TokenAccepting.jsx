@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const TokenAccepting = () => {
   const authResult = new URLSearchParams(window.location.search);
   const token = authResult.get("token");
-  const url = `student/attendance/take/qr/${token}`;
+  const url = `/student/attendance/take/qr/${token}`;
 
   const { data, loading, error } = useFetch(url, {
     method: "GET",
@@ -29,7 +29,7 @@ const TokenAccepting = () => {
         ) : (
           <>
             <div className="checkmark-circle">
-              <div class="checkmark"></div>
+              <div className="checkmark"></div>
             </div>
             <Link className="back-home" to={"/"}>
               Back to Home
