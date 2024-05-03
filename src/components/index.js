@@ -11,6 +11,7 @@ import AdminLayout from "./AdminLayout/AdminLayout";
 import Permissions from "./Permissions/Permissions";
 import CourseGroups from "./CourseGroups/CourseGroups";
 import TakeAttendance from "./TakeAttendance/TakeAttendance";
+import TokenAccepting from "./TokenAccepting/TokenAccepting";
 
 export {
   Login,
@@ -25,4 +26,5 @@ export {
   Permissions,
   CourseGroups,
   TakeAttendance,
+  TokenAccepting,
 };

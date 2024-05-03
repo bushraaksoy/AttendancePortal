@@ -13,6 +13,11 @@ const CourseAttendanceTable2 = () => {
   const courseCode = authResult.get("code");
   const courseName = authResult.get("name");
 
+  if (token) {
+    console.log(token);
+    return <MainLayout>We have a token!!</MainLayout>;
+  }
+
   const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
   const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
@@ -95,95 +100,10 @@ const CourseAttendanceTable2 = () => {
             </tbody>
           </table>
         </div>
-        <AppealForm visible={isVisible} />
+        <AppealForm visible={isVisible} setVisible={setIsVisible} />
       </>
     </MainLayout>
   );
 };
 
 export default CourseAttendanceTable2;
-
-const TeacherTable = () => {
-  return (
-    <>
-      <thead>
-        <tr>
-          <th>Code</th>
-          <th>Section</th>
-          <th>Time</th>
-          <th>Date</th>
-          <th>Attended</th>
-        </tr>
-      </thead>
-      <tbody>
-        {attendance.map((entry) => {
-          const { dateStr, timeStr } = formatDateAndTime(entry.time);
-
-          return (
-            <tr key={entry.id}>
-              <td>{courseCode}</td>
-              <td>{entry.courseGroup}</td>
-              <td>{timeStr}</td>
-              <td>{dateStr}</td>
-              <td>
-                <div
-                  className={`text ${
-                    entry.attendanceStatus === "PRESENT" ? "attended" : "absent"
-                  }`}
-                >
-                  {entry.attendanceStatus}
-                </div>
-              </td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </>
-  );
-};
-
-const StudentTable = () => {
-  <>
-    <thead>
-      <tr>
-        <th>Code</th>
-        <th>Section</th>
-        <th>Time</th>
-        <th>Date</th>
-        <th>Attended</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {attendance.map((entry, index) => {
-        console.log(entry.time);
-        const { dateStr, timeStr } = formatDateAndTime(entry.time);
-        console.log("date ", dateStr);
-        return (
-          <tr key={entry.id}>
-            <td>{courseCode}</td>
-            <td>{entry.courseGroup}</td>
-            <td>{timeStr}</td>
-            <td>{dateStr}</td>
-            <td>
-              <div
-                className={`text ${
-                  entry.attendanceStatus === "PRESENT" ? "attended" : "absent"
-                }`}
-              >
-                {entry.attendanceStatus}
-              </div>
-            </td>
-            <td>
-              {entry.attendanceStatus !== "PRESENT" && (
-                <div onClick={handleAppealClick} className="apeal">
-                  Appeal
-                </div>
-              )}
-            </td>
-          </tr>
-        );
-      })}
-    </tbody>
-  </>;
-};

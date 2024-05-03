@@ -42,7 +42,7 @@ const UserDetails = () => {
 
   return (
     <div className="user-details">
-      <img src={sduLogo} alt="sdu logo" width={100} />
+      <img className="sdu-logo" src={sduLogo} alt="sdu logo" width={100} />
       <div className="user-info">
         <img className="user-profile-pic" src={userImg} alt="profile-pic" />
         <div>

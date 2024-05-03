@@ -8,6 +8,7 @@ import {
   Permissions,
   CourseGroups,
   TakeAttendance,
+  TokenAccepting,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -54,6 +55,11 @@ export const userRoutes = [
     id: 7,
     path: ":courseId/:courseGroup/take-attendance",
     element: TakeAttendance,
+  },
+  {
+    id: 8,
+    path: "token-accepting",
+    element: TokenAccepting,
   },
 ];
 
