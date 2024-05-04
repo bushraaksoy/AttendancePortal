@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAuthenticate from "../../hooks/useAuthenticate";
 
 import "./Login.css";
 
 const Login = () => {
+  const authResult = new URLSearchParams(window.location.search);
+  const token = authResult.get("token");
+
+  // login variables
   const [formData, setFormData] = useState({ email: "", password: "" });
   const authenticate = useAuthenticate();
 
@@ -14,7 +18,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    authenticate(formData.email, formData.password);
+    authenticate(formData.email, formData.password, token);
   };
 
   return (

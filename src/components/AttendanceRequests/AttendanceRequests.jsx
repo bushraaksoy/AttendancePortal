@@ -3,14 +3,33 @@ import "./AttendanceRequests.css";
 import { AdminLayout } from "../../components";
 import yes from "/correct.png";
 import no from "/delete.png";
+import useFetch from "../../hooks/useFetch";
 
 const AttendanceRequests = () => {
   const [requests, setRequests] = useState([]);
   const [approvalStatus, setApprovalStatus] = useState({});
+  const [tooltipVisibility, setTooltipVisibility] = useState({});
 
   const handleApproval = (id, status) => {
     setApprovalStatus((prevStatus) => ({ ...prevStatus, [id]: status }));
   };
+
+  const handleAcceptClick = (attendanceId) => {
+    const acceptUrl = `/admin/attendance/${attendanceId}/appeals/accept`;
+  };
+
+  const handleDenyClick = (attendanceId) => {
+    const denyUrl = `/admin/attendance/${attendanceId}/appeals/deny`;
+  };
+
+  const url = `/admin/absence_reasons`;
+  const {
+    data: AttendanceRequests,
+    loading,
+    error,
+  } = useFetch(url, { method: "GET", headers: {} });
+
+  console.log("Absense reasons: ", AttendanceRequests);
 
   useEffect(() => {
     const getRequests = async () => {
@@ -21,10 +40,19 @@ const AttendanceRequests = () => {
     getRequests();
   }, []);
 
+  const toggleTooltip = (id) => {
+    setTooltipVisibility((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
+
   return (
     <AdminLayout>
       <div className="course-info">
-        <table className="courses-table">
+        <h2>Attendance Requests</h2>
+        <div className="prompt">Click on the explanation to read more!</div>
+        <table className="table">
           <thead>
             <tr>
               <th></th>
@@ -45,7 +73,17 @@ const AttendanceRequests = () => {
                 <td>{request.courseId}</td>
                 <td>{request.section}</td>
                 <td>{request.date}</td>
-                <td className="request-explanation">{request.explanation}</td>
+                {/* <td className="request-explanation">{request.explanation}</td> */}
+                <td onClick={() => toggleTooltip(request.id)}>
+                  <CustomTooltip
+                    content={request.explanation}
+                    isVisible={tooltipVisibility[request.id] || false}
+                  >
+                    <div className="request-explanation">
+                      {request.explanation}
+                    </div>
+                  </CustomTooltip>
+                </td>
                 <td>
                   <a href={request.documentUrl}>View Document</a>
                 </td>
@@ -79,3 +117,17 @@ const AttendanceRequests = () => {
 };
 
 export default AttendanceRequests;
+
+const CustomTooltip = ({ children, content, isVisible }) => {
+  return (
+    <div className="tooltip-container">
+      {children}
+      {isVisible && (
+        <>
+          <div className="tooltip-arrow"></div>
+          <div className="tooltip-content">{content}</div>
+        </>
+      )}
+    </div>
+  );
+};

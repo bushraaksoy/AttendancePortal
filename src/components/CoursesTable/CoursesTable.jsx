@@ -4,10 +4,27 @@ import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import { formatDateAndTime } from "../../utils";
+import { useEffect, useState } from "react";
 
 const CoursesTable = () => {
   const { user } = useAuthContext();
   const url = `/${user.role.toLowerCase()}/courses`;
+
+  // extract token from URL search params
+  const authResult = new URLSearchParams(window.location.search);
+  const token = authResult.get("token");
+
+  const urlAttendance = `/student/attendance/take/qr/${token}`; // url that will automatically take the attendance for the student
+
+  // state for showing QR accepting popup
+  const [qrAcceptingPopupVisible, setQrAcceptingPopupVisible] = useState(false);
+
+  // Set popup visibility based on token presence
+  useEffect(() => {
+    if (token) {
+      setQrAcceptingPopupVisible(true);
+    }
+  }, [token]);
 
   const {
     data: courses,
@@ -63,6 +80,13 @@ const CoursesTable = () => {
           </table>
         </div>
       </>
+      {/* <div
+        className={`qr-accepting-popup ${
+          qrAcceptingPopupVisible ? "" : "hide"
+        }`}
+      >
+        <div className="loader"></div>
+      </div> */}
     </MainLayout>
   );
 };

@@ -5,7 +5,7 @@ import { customFetch } from "../../utils";
 import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
-import ApealForm from "../ApealForm/ApealForm";
+import AppealForm from "../AppealForm/AppealForm";
 
 const CourseAttendanceTable = () => {
   // const { courseId } = useParams();

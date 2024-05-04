@@ -9,7 +9,7 @@ const useAuthenticate = () => {
   const { setUser } = useAuthContext();
   const navigate = useNavigate();
 
-  const authenticate = async (username, password) => {
+  const authenticate = async (username, password, token) => {
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -35,7 +35,11 @@ const useAuthenticate = () => {
           navigate("/dashboard");
         } else {
           console.log(`Logged in as ${data.role}`);
-          navigate("/");
+          if (token) {
+            navigate(`/?token=${token}`);
+          } else {
+            navigate("/");
+          }
         }
 
         console.log("successful login");

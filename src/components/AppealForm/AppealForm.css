@@ -1,4 +1,4 @@
-.apeal-popup {
+.appeal-popup {
   font-size: 12px;
   position: fixed;
   display: flex;
@@ -20,7 +20,7 @@
   overflow-y: scroll;
 }
 
-.apeal-form {
+.appeal-form {
   font-size: 11px;
   display: flex;
   flex-direction: column;
@@ -68,6 +68,9 @@ input {
   color: red;
   text-align: left;
 }
+.file-div {
+  position: relative;
+}
 
 .sent-button-div {
   display: flex;
@@ -83,4 +86,18 @@ input {
   gap: 10px;
   border-radius: 15px;
   padding: 10px;
+}
+
+.delete-button {
+  position: absolute;
+  right: -25px;
+  bottom: 10px;
+  color: rgb(245, 90, 90);
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.file-info {
+  display: flex;
+  padding: 5px 0;
 }

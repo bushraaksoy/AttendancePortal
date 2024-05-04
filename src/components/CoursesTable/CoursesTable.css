@@ -106,6 +106,22 @@
   background-color: rgb(202, 0, 0);
 }
 
+.permitted {
+  background-color: #d5e4ee;
+  position: relative;
+}
+
+.permitted::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 12px;
+  left: -14px;
+  background-color: rgb(0, 61, 202);
+}
+
 .apeal {
   font-size: 12px;
   cursor: pointer;

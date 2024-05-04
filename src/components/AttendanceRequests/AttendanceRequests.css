@@ -55,4 +55,41 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+/* for tooltip */
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-arrow {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #758aa8;
+  transform: rotate(45deg);
+  bottom: 17px;
+  left: 35px;
+}
+
+.tooltip-content {
+  position: absolute;
+  width: 250px;
+  font-size: 12px;
+  color: white;
+  background-color: #111;
+  border: 1.5px solid #758aa8;
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 6px;
+  z-index: 1;
+
+  /* Position the tooltip */
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
 }

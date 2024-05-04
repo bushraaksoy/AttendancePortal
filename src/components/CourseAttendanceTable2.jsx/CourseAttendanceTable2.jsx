@@ -4,18 +4,19 @@ import "../CoursesTable/CoursesTable.css";
 import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
-import AppealForm from "../ApealForm/ApealForm";
+import AppealForm from "../AppealForm/AppealForm";
 import { formatDateAndTime } from "../../utils";
 
 const CourseAttendanceTable2 = () => {
   const authResult = new URLSearchParams(window.location.search);
-
   const courseCode = authResult.get("code");
   const courseName = authResult.get("name");
 
   const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
   const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
+
+  const [selectedEntry, setSelectedEntry] = useState(null); // stores the selected attendance entry for apeal
 
   const {
     data: attendance,
@@ -24,8 +25,9 @@ const CourseAttendanceTable2 = () => {
   } = useFetch(url, { method: "GET", headers: {} });
 
   const [isVisible, setIsVisible] = useState(false);
-  const handleAppealClick = () => {
+  const handleAppealClick = (entry) => {
     setIsVisible(true);
+    setSelectedEntry(entry);
   };
 
   if (loading)
@@ -58,9 +60,9 @@ const CourseAttendanceTable2 = () => {
             </thead>
             <tbody>
               {attendance.map((entry, index) => {
-                console.log(entry.time);
                 const { dateStr, timeStr } = formatDateAndTime(entry.time);
-                console.log("date ", dateStr);
+                const courseGroup = entry.courseGroup;
+                const attendanceId = entry.id;
                 return (
                   <tr key={entry.id}>
                     <td>{courseCode}</td>
@@ -83,7 +85,18 @@ const CourseAttendanceTable2 = () => {
                     ) : (
                       <td>
                         {entry.attendanceStatus !== "PRESENT" && (
-                          <div onClick={handleAppealClick} className="apeal">
+                          <div
+                            onClick={() =>
+                              handleAppealClick({
+                                attendanceId,
+                                courseCode,
+                                courseGroup,
+                                dateStr,
+                                timeStr,
+                              })
+                            }
+                            className="apeal"
+                          >
                             Appeal
                           </div>
                         )}
@@ -95,7 +108,11 @@ const CourseAttendanceTable2 = () => {
             </tbody>
           </table>
         </div>
-        <AppealForm visible={isVisible} setVisible={setIsVisible} />
+        <AppealForm
+          visible={isVisible}
+          setVisible={setIsVisible}
+          attendance={selectedEntry}
+        />
       </>
     </MainLayout>
   );
