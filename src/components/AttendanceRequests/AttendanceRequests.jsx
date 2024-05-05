@@ -9,10 +9,12 @@ import { toast } from "react-toastify";
 
 const AttendanceRequests = () => {
   const [tooltipVisibility, setTooltipVisibility] = useState({});
+  const [loading2, setLoading2] = useState(false);
   const token = localStorage.getItem("token")?.replace(/\"/g, "");
   const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
   const handleClick = async (attendanceId, action) => {
+    setLoading2(true);
     const acceptUrl = `${API_BASE_URL}/admin/attendance/${attendanceId}/appeals/${action}`;
     const res = await fetch(acceptUrl, {
       method: "POST",
@@ -23,7 +25,7 @@ const AttendanceRequests = () => {
       toast.error(`${action} was not successful!`);
       throw new Error(errorData.message || `${action} was not successful!`); // Throw an error with the message from the server
     }
-
+    setLoading2(false);
     toast.success(`${action} was successful!`);
   };
 
@@ -43,7 +45,7 @@ const AttendanceRequests = () => {
     }));
   };
 
-  if (loading)
+  if (loading || loading2)
     return (
       <AdminLayout>
         <img width={50} src="https://i.gifer.com/ZKZg.gif" />
