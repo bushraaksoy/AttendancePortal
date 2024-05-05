@@ -63,7 +63,7 @@ const Permissions = () => {
         You can give attendance permission to one student of your choice!
       </div>
       <h1>Permissions</h1>
-      <div>
+      <div className="permitted-message">
         {student && `${student.name} has permission to take your attendance!`}
       </div>
       <table className="table">

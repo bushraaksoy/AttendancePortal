@@ -52,7 +52,7 @@ const CourseAttendanceTable2 = () => {
         </div>
         <h2>{courseName}</h2>
         <div className="table-div">
-          <table className="courses-table">
+          <table className="table">
             <thead>
               <tr>
                 <th>Student</th>
@@ -60,7 +60,9 @@ const CourseAttendanceTable2 = () => {
                 <th>Section</th>
                 <th>Time</th>
                 <th>Date</th>
+                <th>Method</th>
                 <th>Attended</th>
+                <th>Attendance By</th>
                 {user.role == "TEACHER" ? <></> : <th></th>}
               </tr>
             </thead>
@@ -78,9 +80,20 @@ const CourseAttendanceTable2 = () => {
                     <td>{dateStr}</td>
                     <td>
                       <div
+                        className={
+                          "text " +
+                            (entry.attendanceType &&
+                              entry.attendanceType.toLowerCase()) || "no-method"
+                        }
+                      >
+                        {entry.attendanceType}
+                      </div>
+                    </td>
+                    <td>
+                      <div
                         className={`text ${
                           entry.attendanceStatus === "EXCUSE_ABSENCE"
-                            ? "permitted"
+                            ? "permitted-"
                             : entry.attendanceStatus.toLowerCase()
                         }`}
                       >
@@ -89,6 +102,7 @@ const CourseAttendanceTable2 = () => {
                           : entry.attendanceStatus}
                       </div>
                     </td>
+                    <td>{entry.designatedStudent}</td>
                     {user.role == "TEACHER" ? (
                       <></>
                     ) : (

@@ -31,3 +31,8 @@
 .message {
   text-align: center;
 }
+
+.permitted-message {
+  color: rgb(0, 0, 144);
+  font-weight: bold;
+}

@@ -106,12 +106,12 @@
   background-color: rgb(202, 0, 0);
 }
 
-.permitted {
+.permitted- {
   background-color: #d5e4ee;
   position: relative;
 }
 
-.permitted::after {
+.permitted-::after {
   position: absolute;
   content: "";
   width: 5px;
@@ -120,6 +120,21 @@
   top: 12px;
   left: -14px;
   background-color: rgb(0, 61, 202);
+}
+
+.permitted {
+  background-color: #d5e4ee;
+  position: relative;
+}
+
+.manual {
+  background-color: #f0a3d8;
+  position: relative;
+}
+
+.qr {
+  background-color: #f9f0ac;
+  position: relative;
 }
 
 .apeal {
