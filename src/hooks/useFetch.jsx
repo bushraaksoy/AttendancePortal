@@ -44,8 +44,8 @@ const useFetch = (url, options) => {
     };
 
     fetchData();
-  }, [url]);
-  // }, [url, options.headers, navigate]);
+    // }, [url]);
+  }, [url, options.headers, navigate]);
 
   return { data, loading, error };
 };
