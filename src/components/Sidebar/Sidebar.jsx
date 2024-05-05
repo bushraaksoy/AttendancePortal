@@ -7,7 +7,7 @@ const Sidebar = () => {
   const sidebarItems = {
     dashboard: "Dashboard",
     "all-courses": "Courses",
-    "#": "Teachers",
+    teachers: "Teachers",
     "attendance-requests": "Requests",
   };
 

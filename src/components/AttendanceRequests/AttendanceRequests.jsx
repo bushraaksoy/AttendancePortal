@@ -4,41 +4,37 @@ import { AdminLayout } from "../../components";
 import yes from "/correct.png";
 import no from "/delete.png";
 import useFetch from "../../hooks/useFetch";
+import { formatDateAndTime } from "../../utils";
+import { toast } from "react-toastify";
 
 const AttendanceRequests = () => {
-  const [requests, setRequests] = useState([]);
-  const [approvalStatus, setApprovalStatus] = useState({});
   const [tooltipVisibility, setTooltipVisibility] = useState({});
+  const token = localStorage.getItem("token")?.replace(/\"/g, "");
+  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
-  const handleApproval = (id, status) => {
-    setApprovalStatus((prevStatus) => ({ ...prevStatus, [id]: status }));
-  };
+  const handleClick = async (attendanceId, action) => {
+    const acceptUrl = `${API_BASE_URL}/admin/attendance/${attendanceId}/appeals/${action}`;
+    const res = await fetch(acceptUrl, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!res.ok) {
+      const errorData = await response.json(); // Assuming server sends JSON error details
+      toast.error(`${action} was not successful!`);
+      throw new Error(errorData.message || `${action} was not successful!`); // Throw an error with the message from the server
+    }
 
-  const handleAcceptClick = (attendanceId) => {
-    const acceptUrl = `/admin/attendance/${attendanceId}/appeals/accept`;
-  };
-
-  const handleDenyClick = (attendanceId) => {
-    const denyUrl = `/admin/attendance/${attendanceId}/appeals/deny`;
+    toast.success(`${action} was successful!`);
   };
 
   const url = `/admin/absence_reasons`;
   const {
-    data: AttendanceRequests,
+    data: requests,
     loading,
     error,
   } = useFetch(url, { method: "GET", headers: {} });
 
-  console.log("Absense reasons: ", AttendanceRequests);
-
-  useEffect(() => {
-    const getRequests = async () => {
-      const res = await fetch("http://localhost:3002/requests");
-      const data = await res.json();
-      setRequests(data);
-    };
-    getRequests();
-  }, []);
+  console.log("Absense reasons: ", requests);
 
   const toggleTooltip = (id) => {
     setTooltipVisibility((prev) => ({
@@ -49,69 +45,84 @@ const AttendanceRequests = () => {
 
   return (
     <AdminLayout>
-      <div className="course-info">
+      <>
         <h2>Attendance Requests</h2>
         <div className="prompt">Click on the explanation to read more!</div>
         <table className="table">
           <thead>
             <tr>
-              <th></th>
-              <th>Student ID</th>
-              <th>Course ID</th>
-              <th>Section</th>
+              <th>Student</th>
+              <th>Course code</th>
+              <th>Group</th>
               <th>Date</th>
+              <th>Time</th>
               <th>Explanation</th>
               <th>Document</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            {requests.map((request) => (
-              <tr key={request.id}>
-                <td>{request.id}</td>
-                <td>{request.studentId}</td>
-                <td>{request.courseId}</td>
-                <td>{request.section}</td>
-                <td>{request.date}</td>
-                {/* <td className="request-explanation">{request.explanation}</td> */}
-                <td onClick={() => toggleTooltip(request.id)}>
-                  <CustomTooltip
-                    content={request.explanation}
-                    isVisible={tooltipVisibility[request.id] || false}
-                  >
-                    <div className="request-explanation">
-                      {request.explanation}
-                    </div>
-                  </CustomTooltip>
-                </td>
-                <td>
-                  <a href={request.documentUrl}>View Document</a>
-                </td>
-                <td className="action">
-                  <img
-                    className={
-                      approvalStatus[request.id] === "approved" ? "active" : ""
-                    }
-                    onClick={() => handleApproval(request.id, "approved")}
-                    src={yes}
-                    alt="Approve Request"
-                    title="Approve Request"
-                  />
-                  <img
-                    className={
-                      approvalStatus[request.id] === "denied" ? "active" : ""
-                    }
-                    onClick={() => handleApproval(request.id, "denied")}
-                    src={no}
-                    alt="Deny Request"
-                    title="Deny Request"
-                  />
-                </td>
-              </tr>
-            ))}
+            {requests &&
+              requests.map((request) => {
+                const { dateStr, timeStr } = formatDateAndTime(
+                  request.requestedDate
+                );
+                console.log(dateStr, timeStr);
+                return (
+                  <tr key={request.attendance_record_id}>
+                    <td>{request.student}</td>
+                    <td>{request.course_code}</td>
+                    <td>{request.group}</td>
+                    <td>{dateStr}</td>
+                    <td>{timeStr}</td>
+                    <td
+                      onClick={() =>
+                        toggleTooltip(request.attendance_record_id)
+                      }
+                    >
+                      <CustomTooltip
+                        content={request.reason}
+                        isVisible={
+                          tooltipVisibility[request.attendance_record_id] ||
+                          false
+                        }
+                      >
+                        <div className="request-explanation">
+                          {request.reason}
+                        </div>
+                      </CustomTooltip>
+                    </td>
+                    <td>
+                      <a href={request.file_path}>View Document</a>
+                    </td>
+                    <td className="action">
+                      <img
+                        className={
+                          request.status === "APPROVED" ? "active" : ""
+                        }
+                        onClick={() => {
+                          handleClick(request.attendance_record_id, "accept");
+                        }}
+                        src={yes}
+                        alt="Approve Request"
+                        title="Approve Request"
+                      />
+                      <img
+                        className={request.status === "DENIED" ? "active" : ""}
+                        onClick={() => {
+                          handleClick(request.attendance_record_id, "deny");
+                        }}
+                        src={no}
+                        alt="Deny Request"
+                        title="Deny Request"
+                      />
+                    </td>
+                  </tr>
+                );
+              })}
           </tbody>
         </table>
-      </div>
+      </>
     </AdminLayout>
   );
 };

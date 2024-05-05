@@ -74,12 +74,12 @@
   margin-right: auto;
 }
 
-.attended {
+.present {
   background-color: #c4e3c3;
   position: relative;
 }
 
-.attended::after {
+.present::after {
   position: absolute;
   content: "";
   width: 5px;

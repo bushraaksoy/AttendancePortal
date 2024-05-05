@@ -5,7 +5,9 @@ const AdminLayout = ({ children }) => {
   return (
     <div className="main-layout">
       <Sidebar />
-      <div className="main-page-content"> {children} </div>
+      <div className="main-page-content">
+        <div className="course-info">{children}</div>
+      </div>
     </div>
   );
 };

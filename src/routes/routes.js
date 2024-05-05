@@ -9,6 +9,8 @@ import {
   CourseGroups,
   TakeAttendance,
   TokenAccepting,
+  Teachers,
+  AdminCourseGroups,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -78,5 +80,15 @@ export const adminRoutes = [
     id: 3,
     path: "/all-courses",
     element: AllCoursesTable,
+  },
+  {
+    id: 4,
+    path: "/all-courses/:courseId/groups",
+    element: AdminCourseGroups,
+  },
+  {
+    id: 5,
+    path: "/teachers",
+    element: Teachers,
   },
 ];

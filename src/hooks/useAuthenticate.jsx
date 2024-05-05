@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
-import useToast from "./useToast";
+import { toast } from "react-toastify";
 
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 const url = `${API_BASE_URL}/auth/login`;
 
 const useAuthenticate = () => {
-  const { setUser } = useAuthContext();
   const navigate = useNavigate();
+  const { setUser } = useAuthContext();
 
   const authenticate = async (username, password, token) => {
     try {
@@ -26,38 +26,29 @@ const useAuthenticate = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data);
         localStorage.setItem("token", JSON.stringify(data.access_token));
         setUser({ login: data.login, role: data.role });
 
-        if (data.role === "ADMIN") {
-          console.log("Logged in as ADMIN");
-          navigate("/dashboard");
-        } else {
-          console.log(`Logged in as ${data.role}`);
-          if (token) {
-            navigate(`/?token=${token}`);
-          } else {
-            navigate("/");
-          }
-        }
+        data.role == "ADMIN"
+          ? navigate("/dashboard")
+          : token
+          ? navigate(`/?token=${token}`)
+          : navigate("/");
 
-        console.log("successful login");
-        useToast("Logged in Successfully", "success");
+        toast.success("Logged in Successfully");
         return;
       } else if (responseCode === 401 || responseCode === 403) {
-        useToast("Invalid Email or Password!", "error");
+        toast.error("Invalid Email or Password!");
       } else if (responseCode === 404) {
-        useToast("Resource not found!", "error");
+        toast.error("Resource not found!");
       } else {
         throw new Error("Request failed!");
       }
     } catch (error) {
-      useToast("Failed to Login", "error");
+      toast.error("Failed to Login");
       throw new Error(error.message);
     }
   };
-
   return authenticate;
 };
 

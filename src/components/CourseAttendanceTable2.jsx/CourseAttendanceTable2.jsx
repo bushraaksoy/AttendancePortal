@@ -72,19 +72,21 @@ const CourseAttendanceTable2 = () => {
                     <td>
                       <div
                         className={`text ${
-                          entry.attendanceStatus === "PRESENT"
-                            ? "attended"
-                            : "absent"
+                          entry.attendanceStatus === "EXCUSE_ABSENCE"
+                            ? "permitted"
+                            : entry.attendanceStatus.toLowerCase()
                         }`}
                       >
-                        {entry.attendanceStatus}
+                        {entry.attendanceStatus === "EXCUSE_ABSENCE"
+                          ? "PERMITTED"
+                          : entry.attendanceStatus}
                       </div>
                     </td>
                     {user.role == "TEACHER" ? (
                       <></>
                     ) : (
                       <td>
-                        {entry.attendanceStatus !== "PRESENT" && (
+                        {entry.attendanceStatus === "ABSENT" && (
                           <div
                             onClick={() =>
                               handleAppealClick({
