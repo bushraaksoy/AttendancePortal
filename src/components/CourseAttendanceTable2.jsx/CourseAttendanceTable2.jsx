@@ -14,7 +14,12 @@ const CourseAttendanceTable2 = () => {
 
   const { courseId, courseGroup } = useParams();
   const { user } = useAuthContext();
-  const url = `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`;
+  const url =
+    user.role == "STUDENT"
+      ? `/${user.role.toLowerCase()}/attendance/courses/${courseId}/${courseGroup}`
+      : `/teacher/attendance/courses/${courseId}/${courseGroup}/students/${authResult.get(
+          "studentId"
+        )}`;
 
   const [selectedEntry, setSelectedEntry] = useState(null); // stores the selected attendance entry for apeal
 
@@ -50,6 +55,7 @@ const CourseAttendanceTable2 = () => {
           <table className="courses-table">
             <thead>
               <tr>
+                <th>Student</th>
                 <th>Code</th>
                 <th>Section</th>
                 <th>Time</th>
@@ -65,6 +71,7 @@ const CourseAttendanceTable2 = () => {
                 const attendanceId = entry.id;
                 return (
                   <tr key={entry.id}>
+                    <td>{entry.student}</td>
                     <td>{courseCode}</td>
                     <td>{entry.courseGroup}</td>
                     <td>{timeStr}</td>

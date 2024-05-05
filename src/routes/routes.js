@@ -11,6 +11,7 @@ import {
   TokenAccepting,
   Teachers,
   AdminCourseGroups,
+  Students,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -62,6 +63,11 @@ export const userRoutes = [
     id: 8,
     path: "token-accepting",
     element: TokenAccepting,
+  },
+  {
+    id: 9,
+    path: "/:courseId/:courseGroup/students",
+    element: Students,
   },
 ];
 

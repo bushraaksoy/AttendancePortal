@@ -1,6 +1,6 @@
 import React from "react";
 import "./CourseGroups.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import { FaEye, FaPencilAlt } from "react-icons/fa";
@@ -10,6 +10,7 @@ import { formatTime } from "../../utils";
 const CourseGroups = () => {
   const { courseId } = useParams();
   const { user } = useAuthContext();
+  const navigate = useNavigate();
 
   const authResult = new URLSearchParams(window.location.search);
   const courseCode = authResult.get("code");
@@ -46,11 +47,7 @@ const CourseGroups = () => {
               <th>Day</th>
               <th>Time</th>
               <th>Teacher</th>
-              {user.role == "STUDENT" ? (
-                <th>Permissions</th>
-              ) : (
-                <th>Students</th>
-              )}
+              {user.role == "STUDENT" ? <th>Permissions</th> : <></>}
               <th>Attendance</th>
             </tr>
           </thead>
@@ -82,9 +79,7 @@ const CourseGroups = () => {
                       </div>
                     </td>
                   ) : (
-                    <td>
-                      <div className="view">view</div>
-                    </td>
+                    <></>
                   )}
                   <td>
                     {user.role == "STUDENT" ? (
@@ -98,11 +93,10 @@ const CourseGroups = () => {
                     ) : (
                       <>
                         <Link
-                          to={`/${courseId}/${lesson.group}/attendance?code=${courseCode}&name=${courseName}&id=${courseId}`}
+                          to={`/${courseId}/${lesson.group}/students?name=${courseName}&code=${courseCode}`}
                         >
                           <button
                             title="View lesson attendance records"
-                            onClick={() => handleViewClick(lesson.id)}
                             className="icon-button eye"
                           >
                             <FaEye />

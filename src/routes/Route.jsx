@@ -3,8 +3,6 @@ import { adminRoutes, publicRoutes, userRoutes } from "./routes";
 import PrivateRoutes from "./PrivateRoutes";
 
 const CustomRoutes = () => {
-  // create adminRoutes and userRoutes, and map using PrivateRoutes allowing specified users.
-
   return (
     <Routes>
       {publicRoutes.map((route) => (

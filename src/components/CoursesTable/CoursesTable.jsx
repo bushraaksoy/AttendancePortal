@@ -52,7 +52,7 @@ const CoursesTable = () => {
       const fetchData = async () => {
         try {
           const response = await fetch(urlQr, {
-            method: "POST",
+            method: "GET",
             headers: {
               Authorization: `Bearer ${localStorage
                 .getItem("token")

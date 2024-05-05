@@ -14,6 +14,7 @@ import TakeAttendance from "./TakeAttendance/TakeAttendance";
 import TokenAccepting from "./TokenAccepting/TokenAccepting";
 import Teachers from "./Teachers/Teachers";
 import AdminCourseGroups from "./AdminCourseGroups/AdminCourseGroups";
+import Students from "./Students/Students";
 
 export {
   Login,
@@ -31,4 +32,5 @@ export {
   TokenAccepting,
   Teachers,
   AdminCourseGroups,
+  Students,
 };
