@@ -24,38 +24,42 @@ const Students = () => {
   // name surname, email, birthdate
   return (
     <MainLayout>
-      <>
-        <div className="prompt">
-          Click on a student to view their attendance records!
-        </div>
-        <h2>Students</h2>
-        <table className="table hover">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Birthdate</th>
-            </tr>
-          </thead>
-          <tbody>
-            {students &&
-              students.map((student) => (
-                <tr
-                  key={student.userId}
-                  onClick={() => {
-                    navigate(
-                      `/${courseId}/${courseGroup}/attendance?name=${courseName}&code=${courseCode}&studentId=${student.userId}`
-                    );
-                  }}
-                >
-                  <td>{`${student.name} ${student.surname}`}</td>
-                  <td>{student.email}</td>
-                  <td>{formatDate(student.birthDate)}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </>
+      {loading ? (
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      ) : (
+        <>
+          <div className="prompt">
+            Click on a student to view their attendance records!
+          </div>
+          <h2>Students</h2>
+          <table className="table hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+              </tr>
+            </thead>
+            <tbody>
+              {students &&
+                students.map((student) => (
+                  <tr
+                    key={student.userId}
+                    onClick={() => {
+                      navigate(
+                        `/${courseId}/${courseGroup}/attendance?name=${courseName}&code=${courseCode}&studentId=${student.userId}`
+                      );
+                    }}
+                  >
+                    <td>{`${student.name} ${student.surname}`}</td>
+                    <td>{student.email}</td>
+                    <td>{formatDate(student.birthDate)}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </>
+      )}
     </MainLayout>
   );
 };

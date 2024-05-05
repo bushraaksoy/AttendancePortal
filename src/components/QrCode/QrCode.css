@@ -14,3 +14,25 @@
   width: 400px;
   height: 400px;
 }
+
+.qr-image-container {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  padding: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(216, 28, 28, 0.877);
+  color: #fff;
+  cursor: pointer;
+}

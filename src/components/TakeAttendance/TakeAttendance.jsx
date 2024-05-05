@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { formatDateAndTime } from "../../utils";
 import QrCode from "../QrCode/QrCode";
-
 const TakeAttendance = () => {
   const { courseId, courseGroup } = useParams();
   const authResult = new URLSearchParams(window.location.search);

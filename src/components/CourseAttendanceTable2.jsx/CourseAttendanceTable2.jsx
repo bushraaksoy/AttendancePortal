@@ -38,7 +38,7 @@ const CourseAttendanceTable2 = () => {
   if (loading)
     return (
       <MainLayout>
-        <div className="page-content">Loading...</div>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
       </MainLayout>
     );
 

@@ -34,6 +34,14 @@ const CourseGroups = () => {
   };
 
   console.log(`Lessons for ${courseCode}: `, lessons);
+
+  if (loading)
+    return (
+      <MainLayout>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      </MainLayout>
+    );
+
   return (
     <MainLayout>
       <>

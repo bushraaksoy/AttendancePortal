@@ -43,6 +43,13 @@ const AttendanceRequests = () => {
     }));
   };
 
+  if (loading)
+    return (
+      <AdminLayout>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      </AdminLayout>
+    );
+
   return (
     <AdminLayout>
       <>
