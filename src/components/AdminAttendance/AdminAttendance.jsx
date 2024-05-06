@@ -85,7 +85,7 @@ const AdminAttendance = () => {
                             : entry.attendanceStatus}
                         </div>
                       </td>
-                      <td>{entry.designatedStudent}</td>
+                      <td>{entry.designatedStudent || studentName}</td>
                     </tr>
                   );
                 })}

@@ -2,9 +2,12 @@ import React from "react";
 import AdminLayout from "../AdminLayout/AdminLayout";
 import useFetch from "../../hooks/useFetch";
 import { formatDate } from "../../utils";
+import { useNavigate } from "react-router-dom";
 
 const Teachers = () => {
+  const navigate = useNavigate();
   const url = "/admin/teachers";
+
   const {
     data: teachers,
     loading,
@@ -34,7 +37,14 @@ const Teachers = () => {
           <tbody>
             {teachers &&
               teachers.map((teacher) => (
-                <tr key={teacher.userId}>
+                <tr
+                  key={teacher.userId}
+                  onClick={() =>
+                    navigate(
+                      `/teachers/${teacher.userId}/courses?name=${teacher.name} ${teacher.surname}`
+                    )
+                  }
+                >
                   <td>{`${teacher.name} ${teacher.surname}`}</td>
                   <td>{teacher.email}</td>
                   <td>{formatDate(teacher.birthDate)}</td>

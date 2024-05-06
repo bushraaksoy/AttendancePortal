@@ -17,6 +17,7 @@ import AdminCourseGroups from "./AdminCourseGroups/AdminCourseGroups";
 import Students from "./Students/Students";
 import AdminAttendance from "./AdminAttendance/AdminAttendance";
 import AdminStudents from "./AdminStudents/AdminStudents";
+import TeacherCourses from "./TeacherCourses/TeacherCourses";
 
 export {
   Login,
@@ -37,4 +38,5 @@ export {
   Students,
   AdminAttendance,
   AdminStudents,
+  TeacherCourses,
 };
