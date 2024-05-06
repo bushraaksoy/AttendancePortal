@@ -23,11 +23,6 @@ const CourseGroups = () => {
     error,
   } = useFetch(url, { method: "GET", headers: {} });
 
-  const handleViewClick = (id) => {
-    console.log("View Clicked for:", id);
-    // navigation logic or further actions here
-  };
-
   const handleTakeClick = (id) => {
     console.log("Take Clicked for:", id);
     // logic for taking attendance here

@@ -2,13 +2,15 @@ import React from "react";
 import AdminLayout from "../AdminLayout/AdminLayout";
 import { formatTime } from "../../utils";
 import useFetch from "../../hooks/useFetch";
+import { Link, useParams } from "react-router-dom";
 
 const AdminCourseGroups = () => {
   const authResult = new URLSearchParams(window.location.search);
   const courseCode = authResult.get("code");
   const courseName = authResult.get("name");
+  const { courseId } = useParams();
 
-  const url = "/admin/courses/1/lessons";
+  const url = `/admin/courses/${courseId}/lessons`;
   const {
     data: lessons,
     loading,
@@ -17,6 +19,13 @@ const AdminCourseGroups = () => {
     method: "GET",
     headers: {},
   });
+
+  if (loading)
+    return (
+      <AdminLayout>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      </AdminLayout>
+    );
 
   return (
     <AdminLayout>
@@ -31,17 +40,26 @@ const AdminCourseGroups = () => {
               <th>Day</th>
               <th>Time</th>
               <th>Teacher</th>
+              <th>Attendance</th>
             </tr>
           </thead>
           <tbody>
             {lessons &&
-              lessons.map((lesson) => (
-                <tr>
+              lessons.map((lesson, inx) => (
+                <tr key={inx}>
                   <td>{courseCode}</td>
                   <td>{lesson.group}</td>
                   <td>{lesson.dayOfWeek}</td>
                   <td>{formatTime(lesson.startTime)}</td>
                   <td>{lesson.teacher}</td>
+                  <td>
+                    <Link
+                      className="view"
+                      to={`/all-courses/${courseId}/${lesson.group}/students?name=${courseName}&code=${courseCode}`}
+                    >
+                      View
+                    </Link>
+                  </td>
                 </tr>
               ))}
           </tbody>

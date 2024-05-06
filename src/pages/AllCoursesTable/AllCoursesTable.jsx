@@ -14,12 +14,12 @@ const AllCoursesTable = () => {
   } = useFetch(url, { method: "GET", headers: {} });
   console.log(courses);
 
-  const testUrl = "/admin/courses/1/lessons";
+  const testUrl = "/admin/courses/2/lessons";
   const { data, loading2, error2 } = useFetch(testUrl, {
     method: "GET",
     headers: {},
   });
-  console.log("teacher 1 data: ", data);
+  console.log("course 2 data: ", data);
   return (
     <AdminLayout>
       <>
@@ -31,34 +31,33 @@ const AllCoursesTable = () => {
           <table className="table hover">
             <thead>
               <tr>
-                <th></th>
+                <th>Id</th>
                 <th>Code</th>
                 <th>Course name</th>
                 <th>Hours</th>
-                <th>Students</th>
               </tr>
             </thead>
             <tbody>
               {courses &&
                 courses.map((course, inx) => (
                   <tr
-                    id={course.id}
                     key={course.id}
-                    onClick={() => {
+                    onClick={() =>
                       navigate(
-                        `/all-courses/${course.id}/groups?name=${course.name}&code=${course.code}`
-                      );
-                    }}
+                        `/all-courses/${course.id}/groups?code=${course.code}&name=${course.name}`
+                      )
+                    }
                   >
-                    <td>{inx + 1}</td>
-                    <td className="course-id">
-                      <Link to={`/${course.code}/students`}>{course.code}</Link>
+                    <td>{course.id}</td>
+                    <td>
+                      <Link
+                        to={`/all-courses/${course.id}/groups?code=${course.code}&name=${course.name}`}
+                      >
+                        {course.code}
+                      </Link>
                     </td>
                     <td>{course.name}</td>
                     <td>{course.total_hours}</td>
-                    <td>
-                      <div className="view">view</div>
-                    </td>
                   </tr>
                 ))}
             </tbody>

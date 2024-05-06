@@ -15,6 +15,8 @@ import TokenAccepting from "./TokenAccepting/TokenAccepting";
 import Teachers from "./Teachers/Teachers";
 import AdminCourseGroups from "./AdminCourseGroups/AdminCourseGroups";
 import Students from "./Students/Students";
+import AdminAttendance from "./AdminAttendance/AdminAttendance";
+import AdminStudents from "./AdminStudents/AdminStudents";
 
 export {
   Login,
@@ -33,4 +35,6 @@ export {
   Teachers,
   AdminCourseGroups,
   Students,
+  AdminAttendance,
+  AdminStudents,
 };

@@ -12,6 +12,8 @@ import {
   Teachers,
   AdminCourseGroups,
   Students,
+  AdminAttendance,
+  AdminStudents,
 } from "../components";
 import { AllCoursesTable, Dashboard } from "../pages";
 
@@ -96,5 +98,15 @@ export const adminRoutes = [
     id: 5,
     path: "/teachers",
     element: Teachers,
+  },
+  {
+    id: 6,
+    path: "/all-courses/:courseId/:courseGroup/:studentId/attendance",
+    element: AdminAttendance,
+  },
+  {
+    id: 6,
+    path: "/all-courses/:courseId/:courseGroup/students",
+    element: AdminStudents,
   },
 ];

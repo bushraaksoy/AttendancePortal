@@ -66,6 +66,7 @@ button:hover {
   transition: 0.3s ease;
   font-weight: 700;
   width: 100%;
+  z-index: 99;
 }
 
 .view:hover {

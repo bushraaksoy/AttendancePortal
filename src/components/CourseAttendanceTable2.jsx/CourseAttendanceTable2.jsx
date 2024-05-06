@@ -60,6 +60,7 @@ const CourseAttendanceTable2 = () => {
                 <th>Section</th>
                 <th>Time</th>
                 <th>Date</th>
+                <th>Entry Time</th>
                 <th>Method</th>
                 <th>Attended</th>
                 <th>Attendance By</th>
@@ -78,6 +79,7 @@ const CourseAttendanceTable2 = () => {
                     <td>{entry.courseGroup}</td>
                     <td>{timeStr}</td>
                     <td>{dateStr}</td>
+                    <td>{formatTime(entry.setTime)}</td>
                     <td>
                       <div
                         className={
