@@ -5,8 +5,12 @@ const Dashboard = () => {
   return (
     <AdminLayout>
       <>
-        <h1>Admin Panel</h1>
+        <h2>Admin Panel</h2>
         <div>Hello and welcome to the Admin Panel!</div>
+        <img
+          src="https://cdni.iconscout.com/illustration/premium/thumb/web-admin-panel-4439075-3726750.png"
+          alt="dashboard image"
+        />
       </>
     </AdminLayout>
   );
