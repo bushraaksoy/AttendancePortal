@@ -62,8 +62,7 @@ export const customFetch = async (url, options) => {
 
 // date time formatter
 export const formatDateAndTime = (timeArray) => {
-  if (!timeArray || timeArray.length < 5)
-    return { dateStr: "Invalid date", timeStr: "Invalid time" };
+  if (!timeArray || timeArray.length < 5) return { dateStr: "", timeStr: "" };
 
   const [year, month, date, hour, minute] = timeArray;
   const dateStr = `${date.toString().padStart(2, "0")}-${month
@@ -78,7 +77,7 @@ export const formatDateAndTime = (timeArray) => {
 
 //date formatter
 export const formatDate = (dateArray) => {
-  if (!dateArray || dateArray.length < 3) return "Invalid date";
+  if (!dateArray || dateArray.length < 3) return "";
 
   const [year, month, date] = dateArray;
   const dateStr = `${date.toString().padStart(2, "0")}-${month
@@ -90,7 +89,7 @@ export const formatDate = (dateArray) => {
 
 export const formatTime = (timeArray) => {
   if (!timeArray || timeArray.length < 2) {
-    return "Invalid time"; // Return this if the array is not valid
+    return ""; // Return this if the array is not valid
   }
 
   const [hour, minute] = timeArray;

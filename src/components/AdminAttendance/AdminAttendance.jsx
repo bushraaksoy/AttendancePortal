@@ -3,7 +3,7 @@ import AdminLayout from "../AdminLayout/AdminLayout";
 import { useParams } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
-import { formatDateAndTime } from "../../utils";
+import { formatDateAndTime, formatTime } from "../../utils";
 
 const AdminAttendance = () => {
   const { courseId, courseGroup, studentId } = useParams();
@@ -35,18 +35,19 @@ const AdminAttendance = () => {
       <>
         <div className="prompt">View student attendance records!</div>
         <h2>{studentName}</h2>
+        <h5>
+          {courseCode} / {courseGroup}
+        </h5>
         <div className="table-div">
           <table className="table">
             <thead>
               <tr>
-                {/* <th>Student</th> */}
-                <th>Code</th>
-                <th>Group</th>
                 <th>Time</th>
                 <th>Date</th>
+                <th>Entry Time</th>
                 <th>Method</th>
                 <th>Attended</th>
-                <th>Attendance By</th>
+                <th>Designated Person</th>
               </tr>
             </thead>
             <tbody>
@@ -56,11 +57,9 @@ const AdminAttendance = () => {
 
                   return (
                     <tr key={entry.id}>
-                      {/* <td>{entry.student}</td> */}
-                      <td>{courseCode}</td>
-                      <td>{entry.courseGroup}</td>
                       <td>{timeStr}</td>
                       <td>{dateStr}</td>
+                      <td>{formatTime(entry.entryTime)}</td>
                       <td>
                         <div
                           className={
@@ -85,7 +84,7 @@ const AdminAttendance = () => {
                             : entry.attendanceStatus}
                         </div>
                       </td>
-                      <td>{entry.designatedStudent || studentName}</td>
+                      <td>{entry.designatedStudent}</td>
                     </tr>
                   );
                 })}

@@ -1,6 +1,8 @@
 import "./UserDetails.css";
 import React, { useEffect, useState } from "react";
-import userImg from "../../assets/user-image-cartoon.png";
+// import userImg from "../../assets/user-image-cartoon.png";
+import userImg from "../../assets/placeholder-man.jpeg";
+// import userImg from "../../assets/user-placeholder-blueish.webp";
 import sduLogo from "/logo_sdu.png";
 import useSignout from "../../hooks/useSignout";
 import { useAuthContext } from "../../context/AuthContext";

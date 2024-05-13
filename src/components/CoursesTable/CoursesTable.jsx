@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../context/AuthContext";
 import MainLayout from "../MainLayout/MainLayout";
+import yes from "/correct.png";
+import no from "/delete.png";
 import "./CoursesTable.css";
 
 const CoursesTable = () => {
@@ -106,7 +108,7 @@ const CoursesTable = () => {
               <tr key={course.id}>
                 <td className="course-id">
                   <Link
-                    to={`/${course.id}/groups?code=${course.code}&name=${course.name}&id=${course.id}`}
+                    to={`/${course.id}?code=${course.code}&name=${course.name}&id=${course.id}`}
                   >
                     {course.code}
                   </Link>
@@ -114,13 +116,12 @@ const CoursesTable = () => {
                 <td>{course.name}</td>
                 <td>{course.total_hours}</td>
                 <td>
-                  <div className="view">
-                    <Link
-                      to={`/${course.id}/groups?code=${course.code}&name=${course.name}&id=${course.id}`}
-                    >
-                      View
-                    </Link>
-                  </div>
+                  <Link
+                    className="view"
+                    to={`/${course.id}?code=${course.code}&name=${course.name}&id=${course.id}`}
+                  >
+                    View
+                  </Link>
                 </td>
               </tr>
             ))}
@@ -134,9 +135,12 @@ const CoursesTable = () => {
         {qrState.loading && <div className="loader"></div>}
         {qrState.success && (
           <>
-            <div className="checkmark-circle">
-              <div className="checkmark"></div>
-            </div>
+            <img
+              src={yes}
+              alt="success"
+              width={250}
+              className="attendance-attempt"
+            />
             <div className="message success">
               Attendance taken successfully!
             </div>
@@ -144,9 +148,12 @@ const CoursesTable = () => {
         )}
         {qrState.error && (
           <>
-            <div className="xmark-circle">
-              <div className="xmark"></div>
-            </div>
+            <img
+              src={no}
+              alt="error"
+              width={250}
+              className="attendance-attempt"
+            />
             <div className="message error">
               Failed to mark attendance - Error message: {qrState.error}
             </div>

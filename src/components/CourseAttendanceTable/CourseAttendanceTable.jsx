@@ -55,7 +55,7 @@ const CourseAttendanceTable = () => {
         <div className="table-div">
           {courseSections &&
             courseSections.map((section, inx) => (
-              <table className="courses-table" key={section.courseSection}>
+              <table className="table" key={section.courseSection}>
                 <thead>
                   <tr>
                     <th>Code</th>

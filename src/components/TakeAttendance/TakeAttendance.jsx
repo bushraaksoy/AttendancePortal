@@ -14,6 +14,7 @@ const TakeAttendance = () => {
   const [qrImage, setQrImage] = useState("");
   const token = localStorage.getItem("token")?.replace(/"/g, "");
   const [qrIsVisible, setQrIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const url = `/teacher/attendance/take/courses/${courseId}/${courseGroup}`;
   const {
@@ -24,6 +25,7 @@ const TakeAttendance = () => {
 
   const generateQrCode = async (lessonId, attendanceId) => {
     setQrIsVisible(true);
+    setLoading(true);
     console.log(qrIsVisible);
     lessonId = 3;
     console.log(`lessonId: ${lessonId}, attendanceId: ${attendanceId}`);
@@ -47,6 +49,7 @@ const TakeAttendance = () => {
       }
       const data = await response.blob();
       setQrImage(URL.createObjectURL(data));
+      setLoading(false);
     } catch (err) {
       console.error("Error fetching QR code:", err);
     }
@@ -94,7 +97,11 @@ const TakeAttendance = () => {
         <QrCode
           visible={qrIsVisible}
           setVisible={setQrIsVisible}
-          qrImage={qrImage}
+          qrImage={
+            loading
+              ? "https://assets-v2.lottiefiles.com/a/773c6c28-1170-11ee-a2b3-1b70cb950de9/Cw0hAVusK0.gif"
+              : qrImage
+          }
         />
       </>
     </MainLayout>
@@ -102,3 +109,8 @@ const TakeAttendance = () => {
 };
 
 export default TakeAttendance;
+
+//   ? "https://cdn.pixabay.com/animation/2023/05/02/04/29/04-29-06-428_512.gif"
+// ? "https://assets-v2.lottiefiles.com/a/773c6c28-1170-11ee-a2b3-1b70cb950de9/Cw0hAVusK0.gif"
+// below is the interesting loader
+// ? "https://64.media.tumblr.com/c37398622c6e09e3c6ed2fad980b469e/tumblr_mzti8ldcVX1svwlszo1_500.gif"

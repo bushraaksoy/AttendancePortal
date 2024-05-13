@@ -54,7 +54,7 @@ export const userRoutes = [
   },
   {
     id: 6,
-    path: "/:courseId/groups",
+    path: "/:courseId",
     element: CourseGroups,
   },
   {
@@ -71,6 +71,12 @@ export const userRoutes = [
     id: 9,
     path: "/:courseId/:courseGroup/students",
     element: Students,
+  },
+  {
+    // this is not very correct, as the course group is for all groups and not a specific one
+    id: 10,
+    path: "/:courseId/:courseGroup",
+    element: CourseGroups,
   },
 ];
 

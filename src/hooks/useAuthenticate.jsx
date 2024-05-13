@@ -26,6 +26,7 @@ const useAuthenticate = () => {
 
       if (response.ok) {
         const data = await response.json();
+        console.log(data);
         localStorage.setItem("token", JSON.stringify(data.access_token));
         setUser({ login: data.login, role: data.role });
 

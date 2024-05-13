@@ -65,8 +65,8 @@
 
 .text {
   border-radius: 25px;
-  height: 28px;
-  width: 90px;
+  height: 22px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,11 +139,17 @@
 
 .apeal {
   font-size: 12px;
+  font-style: italic;
+  color: rgb(0, 0, 65);
   cursor: pointer;
 }
 
 .apeal:hover {
   text-decoration: underline;
+}
+
+.attendnace-attemp {
+  width: 250px;
 }
 
 /* styles for attendance confirmation loading and done */

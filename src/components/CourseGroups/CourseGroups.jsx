@@ -75,24 +75,24 @@ const CourseGroups = () => {
                   <td>{lesson.teacher}</td>
                   {user.role == "STUDENT" ? (
                     <td>
-                      <div className="view">
-                        <Link to={`/${courseId}/${lesson.group}/permissions`}>
-                          view
-                        </Link>
-                      </div>
+                      <Link
+                        className="view"
+                        to={`/${courseId}/${lesson.group}/permissions`}
+                      >
+                        view
+                      </Link>
                     </td>
                   ) : (
                     <></>
                   )}
                   <td>
                     {user.role == "STUDENT" ? (
-                      <div className="view">
-                        <Link
-                          to={`/${courseId}/${lesson.group}/attendance?code=${courseCode}&name=${courseName}&id=${courseId}`}
-                        >
-                          view
-                        </Link>
-                      </div>
+                      <Link
+                        className="view"
+                        to={`/${courseId}/${lesson.group}/attendance?code=${courseCode}&name=${courseName}&id=${courseId}`}
+                      >
+                        view
+                      </Link>
                     ) : (
                       <>
                         <Link
@@ -102,9 +102,10 @@ const CourseGroups = () => {
                             title="View lesson attendance records"
                             className="icon-button eye"
                           >
-                            <FaEye />
+                            <FaEye size={"14px"} />
                           </button>
                         </Link>
+                        <span></span>
                         <Link
                           to={`/${courseId}/${lesson.group}/take-attendance?code=${courseCode}&name=${courseName}$lessonId=${lesson.id}`}
                         >
@@ -113,7 +114,7 @@ const CourseGroups = () => {
                             onClick={() => handleTakeClick(lesson.id)}
                             className="icon-button pencil"
                           >
-                            <FaPencilAlt />
+                            <FaPencilAlt size={"14px"} />
                           </button>
                         </Link>
                       </>

@@ -5,7 +5,7 @@ import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import AppealForm from "../AppealForm/AppealForm";
-import { formatDateAndTime } from "../../utils";
+import { formatDateAndTime, formatTime } from "../../utils";
 
 const CourseAttendanceTable2 = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -51,35 +51,35 @@ const CourseAttendanceTable2 = () => {
           Select section to submit attendance or attendance request!
         </div>
         <h2>{courseName}</h2>
+        <h5>
+          {courseCode} / {courseGroup}
+        </h5>
         <div className="table-div">
           <table className="table">
             <thead>
               <tr>
                 <th>Student</th>
-                <th>Code</th>
-                <th>Section</th>
                 <th>Time</th>
                 <th>Date</th>
                 <th>Entry Time</th>
                 <th>Method</th>
                 <th>Attended</th>
-                <th>Attendance By</th>
+                <th>Designated Person</th>
                 {user.role == "TEACHER" ? <></> : <th></th>}
               </tr>
             </thead>
             <tbody>
               {attendance.map((entry, index) => {
                 const { dateStr, timeStr } = formatDateAndTime(entry.time);
+
                 const courseGroup = entry.courseGroup;
                 const attendanceId = entry.id;
                 return (
                   <tr key={entry.id}>
                     <td>{entry.student}</td>
-                    <td>{courseCode}</td>
-                    <td>{entry.courseGroup}</td>
                     <td>{timeStr}</td>
                     <td>{dateStr}</td>
-                    <td>{formatTime(entry.setTime)}</td>
+                    <td>{formatTime(entry.entryTime)}</td>
                     <td>
                       <div
                         className={

@@ -26,12 +26,17 @@ const useFetch = (url, options) => {
           },
         });
 
-        console.log(res);
+        const responseCode = res.status;
 
         if (!res.ok) {
-          localStorage.removeItem("token");
-          navigate("/login");
-          throw new Error(res.statusText);
+          if (responseCode == 401 || responseCode == 403) {
+            localStorage.removeItem("token");
+            navigate("/login");
+            throw new Error(res.statusText);
+          }
+          if (responseCode == 500) {
+            toast.error("Server Error!");
+          }
         }
 
         const data = await res.json();

@@ -20,6 +20,12 @@ const AllCoursesTable = () => {
     headers: {},
   });
   console.log("course 2 data: ", data);
+  if (loading)
+    return (
+      <AdminLayout>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      </AdminLayout>
+    );
   return (
     <AdminLayout>
       <>
