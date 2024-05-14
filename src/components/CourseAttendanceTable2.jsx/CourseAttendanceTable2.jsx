@@ -58,7 +58,7 @@ const CourseAttendanceTable2 = () => {
           <table className="table">
             <thead>
               <tr>
-                <th>Student</th>
+                {user.role == "STUDENT" ? <></> : <th>Student</th>}
                 <th>Time</th>
                 <th>Date</th>
                 <th>Entry Time</th>
@@ -76,7 +76,7 @@ const CourseAttendanceTable2 = () => {
                 const attendanceId = entry.id;
                 return (
                   <tr key={entry.id}>
-                    <td>{entry.student}</td>
+                    {user.role == "STUDENT" ? <></> : <td>{entry.student}</td>}
                     <td>{timeStr}</td>
                     <td>{dateStr}</td>
                     <td>{formatTime(entry.entryTime)}</td>
