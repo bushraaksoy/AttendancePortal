@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useAuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
+import { useState } from "react";
 
 const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 const url = `${API_BASE_URL}/auth/login`;
@@ -8,8 +9,10 @@ const url = `${API_BASE_URL}/auth/login`;
 const useAuthenticate = () => {
   const navigate = useNavigate();
   const { setUser } = useAuthContext();
+  const [loading, setLoading] = useState(false);
 
   const authenticate = async (username, password, token) => {
+    setLoading(true);
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -48,9 +51,11 @@ const useAuthenticate = () => {
     } catch (error) {
       toast.error("Failed to Login");
       throw new Error(error.message);
+    } finally {
+      setLoading(false);
     }
   };
-  return authenticate;
+  return { authenticate, loading };
 };
 
 export default useAuthenticate;

@@ -68,6 +68,7 @@ button:hover {
   font-weight: 700;
   width: 100%;
   z-index: 99;
+  box-shadow: 1px 1px 4px #bbb;
 }
 
 .view:hover {
@@ -98,4 +99,7 @@ h2 {
 }
 
 @media (max-width: 480px) {
+  .big-screen {
+    display: none;
+  }
 }

@@ -11,7 +11,7 @@ import { formatDate } from "../../utils";
 const UserDetails = () => {
   const [userDetails, setUserDetails] = useState("");
   const signout = useSignout();
-  const { user, setUser } = useAuthContext();
+  const { user } = useAuthContext();
 
   const token = localStorage.getItem("token")?.replace(/"/g, "");
   const url = `https://attendancesystem-qpr5.onrender.com/api/v1/${user.role.toLowerCase()}`;
@@ -62,7 +62,12 @@ const UserDetails = () => {
           </div>
         </div>
       </div>
-      <button className="signout-btn" onClick={signout}>
+      <button
+        className="signout-btn"
+        onClick={() => {
+          signout();
+        }}
+      >
         Sign out
       </button>
     </div>
