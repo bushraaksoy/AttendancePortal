@@ -125,8 +125,8 @@ const Permissions = () => {
           {permittedStudent ? (
             <>
               <div className="message">
-                You have already given permission to
-                {` ${permittedStudent.name} ${permittedStudent.surname}! `}
+                You have already permitted
+                {` ${permittedStudent.name} ${permittedStudent.surname} for taking your attendance `}
               </div>
               <button onClick={handleContainerClick}>Cancel</button>
             </>

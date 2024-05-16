@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
   const { user } = useAuthContext();
   const breadcrumbs =
     user.role == "ADMIN" ? useAdminBreadcrumbs() : useBreadcrumbs();
-  const styles = { color: "#40526c", fontWeight: "500" };
+  const styles = { color: "#2d62af", fontWeight: "500" };
 
   return (
     <div className="breadcrumb">
