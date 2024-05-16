@@ -2,6 +2,7 @@ import "./AllCoursesTable.css";
 import { Link, useNavigate } from "react-router-dom";
 import { AdminLayout } from "../../components";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../../components/Loader";
 
 const AllCoursesTable = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const AllCoursesTable = () => {
   if (loading)
     return (
       <AdminLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </AdminLayout>
     );
   return (

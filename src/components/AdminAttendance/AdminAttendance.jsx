@@ -1,9 +1,9 @@
 import React from "react";
 import AdminLayout from "../AdminLayout/AdminLayout";
 import { useParams } from "react-router-dom";
-import { useAuthContext } from "../../context/AuthContext";
 import useFetch from "../../hooks/useFetch";
 import { formatDateAndTime, formatTime } from "../../utils";
+import Loader from "../Loader";
 
 const AdminAttendance = () => {
   const { courseId, courseGroup, studentId } = useParams();
@@ -24,7 +24,7 @@ const AdminAttendance = () => {
   if (loading)
     return (
       <AdminLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </AdminLayout>
     );
 

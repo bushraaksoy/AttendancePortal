@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Permissions.css";
 import MainLayout from "../MainLayout/MainLayout";
-import CoursesTable from "../CoursesTable/CoursesTable";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import { toast, useToast } from "react-toastify";
+import { toast } from "react-toastify";
+import Loader from "../Loader";
 
 const Permissions = () => {
   const { courseId, courseGroup } = useParams();
   const [student, setStudent] = useState({ name: "No one", surname: "" });
   const token = localStorage.getItem("token")?.replace(/"/g, "");
-  const authResult = new URLSearchParams(window.location.search); // for query search params
 
-  // fetch the student and show it here, or store it here to the student
   const studentsUrl = `/student/courses/${courseId}/consumers`;
   const [isVisible, setIsVisible] = useState(false);
 
@@ -67,6 +65,14 @@ const Permissions = () => {
       toast.error("You have already given permission to another student.");
     }
   };
+
+  if (loading || loading2) {
+    return (
+      <MainLayout>
+        <Loader />
+      </MainLayout>
+    );
+  }
 
   return (
     <MainLayout>

@@ -6,6 +6,7 @@ import yes from "/correct.png";
 import no from "/delete.png";
 import "./CoursesTable.css";
 import useFetch from "../../hooks/useFetch";
+import Loader from "../Loader";
 
 const CoursesTable = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -77,7 +78,7 @@ const CoursesTable = () => {
   if (loading)
     return (
       <MainLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </MainLayout>
     );
 

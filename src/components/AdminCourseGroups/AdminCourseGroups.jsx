@@ -3,6 +3,7 @@ import AdminLayout from "../AdminLayout/AdminLayout";
 import { formatTime } from "../../utils";
 import useFetch from "../../hooks/useFetch";
 import { Link, useParams } from "react-router-dom";
+import Loader from "../Loader";
 
 const AdminCourseGroups = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -23,7 +24,7 @@ const AdminCourseGroups = () => {
   if (loading)
     return (
       <AdminLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </AdminLayout>
     );
 

@@ -3,6 +3,7 @@ import AdminLayout from "../AdminLayout/AdminLayout";
 import useFetch from "../../hooks/useFetch";
 import { formatDate } from "../../utils";
 import { useNavigate } from "react-router-dom";
+import Loader from "../Loader";
 
 const Teachers = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const Teachers = () => {
   if (loading)
     return (
       <AdminLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </AdminLayout>
     );
 

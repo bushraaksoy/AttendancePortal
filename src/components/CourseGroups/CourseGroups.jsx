@@ -6,6 +6,7 @@ import MainLayout from "../MainLayout/MainLayout";
 import { FaEye, FaPencilAlt } from "react-icons/fa";
 import { useAuthContext } from "../../context/AuthContext";
 import { formatTime } from "../../utils";
+import Loader from "../Loader";
 
 const CourseGroups = () => {
   const { courseId } = useParams();
@@ -33,7 +34,7 @@ const CourseGroups = () => {
   if (loading)
     return (
       <MainLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </MainLayout>
     );
 

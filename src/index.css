@@ -113,14 +113,16 @@ h2 {
 }
 
 .back-button {
-  width: 35px;
-  height: 35px;
+  padding: 7px 10px;
+  width: max-content;
   border-radius: 5px;
   margin-right: auto;
   margin-bottom: auto;
   position: absolute;
   top: 15px;
   left: 18px;
+  border: none;
+  box-shadow: 0 0 10px #aaa;
 }
 
 @media (max-width: 480px) {

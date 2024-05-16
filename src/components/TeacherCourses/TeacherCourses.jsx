@@ -2,6 +2,7 @@ import React from "react";
 import AdminLayout from "../AdminLayout/AdminLayout";
 import useFetch from "../../hooks/useFetch";
 import { useNavigate, useParams } from "react-router-dom";
+import Loader from "../Loader";
 
 const TeacherCourses = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -21,7 +22,7 @@ const TeacherCourses = () => {
   if (loading)
     return (
       <AdminLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </AdminLayout>
     );
   console.log(courses);

@@ -6,6 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import MainLayout from "../MainLayout/MainLayout";
 import AppealForm from "../AppealForm/AppealForm";
 import { formatDateAndTime, formatTime } from "../../utils";
+import Loader from "../Loader";
 
 const CourseAttendanceTable2 = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -38,7 +39,7 @@ const CourseAttendanceTable2 = () => {
   if (loading)
     return (
       <MainLayout>
-        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+        <Loader />
       </MainLayout>
     );
 
@@ -69,7 +70,7 @@ const CourseAttendanceTable2 = () => {
               </tr>
             </thead>
             <tbody>
-              {attendance.map((entry, index) => {
+              {attendance.map((entry) => {
                 const { dateStr, timeStr } = formatDateAndTime(entry.time);
 
                 const courseGroup = entry.courseGroup;
