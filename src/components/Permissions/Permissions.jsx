@@ -8,7 +8,8 @@ import Loader from "../Loader";
 
 const Permissions = () => {
   const { courseId, courseGroup } = useParams();
-  const [student, setStudent] = useState({ name: "No one", surname: "" });
+  const [student, setStudent] = useState(null);
+  const [permittedStudent, setPermittedStudent] = useState(null);
   const token = localStorage.getItem("token")?.replace(/"/g, "");
 
   const studentsUrl = `/student/courses/${courseId}/consumers`;
@@ -22,7 +23,7 @@ const Permissions = () => {
   } = useFetch(studentsUrl, { method: "GET", headers: {} });
 
   useEffect(() => {
-    setStudent(permittedStudents && permittedStudents[0]);
+    setPermittedStudent(permittedStudents && permittedStudents[0]);
   }, [permittedStudents]);
 
   const {
@@ -82,7 +83,8 @@ const Permissions = () => {
       <h1>Permissions</h1>
       <div className="permitted-message">
         <span style={{ fontWeight: "700" }}>
-          {student && `${student.name} ${student.surname}  `}
+          {permittedStudent &&
+            `${permittedStudent.name} ${permittedStudent.surname}  `}
         </span>
         has permission to take your attendance
       </div>
@@ -102,7 +104,7 @@ const Permissions = () => {
                 <td>{student.email}</td>
                 <td>
                   <div
-                    className="view"
+                    className={student ? "view disabled" : "view"}
                     onClick={() => {
                       handleGivePermissionClick(student);
                     }}
@@ -120,18 +122,30 @@ const Permissions = () => {
         onClick={handleContainerClick}
       >
         <div className="confirmation-dialogue" onClick={handleDialogueClick}>
-          <h3>Confirmation</h3>
-          <div className="message">
-            Are you sure you want to give permission to{" "}
-            <span style={{ fontWeight: "700" }}>
-              {student && `${student.name} ${student.surname}`}
-            </span>{" "}
-            to take your attendance?
-          </div>
-          <div className="buttons">
-            <button onClick={handleConfirmClick}>Confirm</button>
-            <button onClick={handleContainerClick}>Cancel</button>
-          </div>
+          {permittedStudent ? (
+            <>
+              <div className="message">
+                You have already given permission to
+                {` ${permittedStudent.name} ${permittedStudent.surname}! `}
+              </div>
+              <button onClick={handleContainerClick}>Cancel</button>
+            </>
+          ) : (
+            <>
+              <h3>Confirmation</h3>
+              <div className="message">
+                Are you sure you want to give permission to{" "}
+                <span style={{ fontWeight: "700" }}>
+                  {student && `${student.name} ${student.surname}`}
+                </span>{" "}
+                to take your attendance?
+              </div>
+              <div className="buttons">
+                <button onClick={handleConfirmClick}>Confirm</button>
+                <button onClick={handleContainerClick}>Cancel</button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </MainLayout>

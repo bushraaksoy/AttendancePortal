@@ -75,6 +75,15 @@ button:hover {
   transform: scale(1.1);
 }
 
+.view.disabled {
+  background-color: #ddd;
+}
+
+.view.disabled:hover {
+  transform: none;
+  cursor: auto;
+}
+
 .hide {
   display: none;
 }
