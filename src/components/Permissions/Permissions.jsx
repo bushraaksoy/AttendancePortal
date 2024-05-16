@@ -82,11 +82,12 @@ const Permissions = () => {
       </div>
       <h1>Permissions</h1>
       <div className="permitted-message">
+        You gave
         <span style={{ fontWeight: "700" }}>
           {permittedStudent &&
-            `${permittedStudent.name} ${permittedStudent.surname}  `}
+            ` ${permittedStudent.name} ${permittedStudent.surname}  `}
         </span>
-        has permission to take your attendance
+        permission to take your attendance
       </div>
       <table className="table">
         <thead>
@@ -125,8 +126,7 @@ const Permissions = () => {
           {permittedStudent ? (
             <>
               <div className="message">
-                You have already permitted
-                {` ${permittedStudent.name} ${permittedStudent.surname} for taking your attendance `}
+                {`You have already permitted ${permittedStudent.name} ${permittedStudent.surname} to take your attendance `}
               </div>
               <button onClick={handleContainerClick}>Cancel</button>
             </>
