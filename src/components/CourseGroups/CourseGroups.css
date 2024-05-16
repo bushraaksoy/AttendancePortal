@@ -1,5 +1,5 @@
 .icon-button {
-  background-color: #e0e0e0;
+  background-color: #ebebeb;
   border: none;
   color: #444;
   width: fit-content;
@@ -15,18 +15,9 @@
   transform: scale(1.15);
 }
 
-.eye {
-  color: rgb(0, 86, 0);
-  background-color: rgb(209, 227, 209);
-}
 .eye:hover {
   color: rgb(0, 86, 0);
   background-color: rgb(209, 227, 209);
-}
-
-.pencil {
-  color: rgb(167, 113, 12);
-  background-color: rgb(232, 221, 202);
 }
 
 .pencil:hover {

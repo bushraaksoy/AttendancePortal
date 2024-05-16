@@ -74,12 +74,19 @@ const CoursesTable = () => {
     removeTokenParam();
   };
 
+  if (loading)
+    return (
+      <MainLayout>
+        <img width={50} src="https://i.gifer.com/ZKZg.gif" />
+      </MainLayout>
+    );
+
   return (
     <MainLayout>
       <div className="prompt">Select course to take attendance!</div>
       <h2>Courses</h2>
       <div className="table-div">
-        <table className="courses-table">
+        <table className="table">
           <thead>
             <tr>
               <th>Code</th>

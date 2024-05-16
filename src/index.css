@@ -23,7 +23,7 @@ button:hover {
 
 .prompt {
   font-size: 12px;
-  color: #999;
+  color: #777;
   padding: 10px 5px;
 }
 
@@ -45,7 +45,7 @@ button:hover {
 }
 
 .table tr {
-  height: 60px;
+  height: 57px;
 }
 
 .table th,
@@ -65,7 +65,7 @@ button:hover {
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s ease;
-  font-weight: 700;
+  font-weight: 600;
   width: 100%;
   z-index: 99;
   box-shadow: 1px 1px 4px #bbb;
@@ -96,6 +96,14 @@ h2 {
   /* color: #254675; */
   color: #0a3e86;
   /* color: #0051c2; */
+}
+
+.back-button {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 @media (max-width: 480px) {

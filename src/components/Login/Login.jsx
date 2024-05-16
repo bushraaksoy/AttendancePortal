@@ -17,22 +17,17 @@ const Login = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const defaultFavicon = "/logo_sdu.png"; // Path to your default favicon
-  const loadingFavicon = "/loading-favicon.gif"; // Path to your loading GIF
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFavicon(loadingFavicon);
-    authenticate(formData.email, formData.password, token).finally(() => {
-      setFavicon(defaultFavicon);
-    });
+    authenticate(formData.email, formData.password, token);
   };
 
   return (
     <>
       <img
         className="big-screen"
-        width={"350px"}
+        style={{ filter: "brightness(.93)" }} // .97 for first and .93 for second
+        width={"360px"}
         src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png?f=webp"
         alt="login"
       />
@@ -71,7 +66,7 @@ const Login = () => {
             Login
             {/* {loading ? "Loading..." : "Login"} */}
           </button>
-          <div style={{ textAlign: "center" }}>
+          <div style={{ textAlign: "center", fontSize: "10px", color: "#999" }}>
             {loading ? "Loading..." : ""}
           </div>
         </form>

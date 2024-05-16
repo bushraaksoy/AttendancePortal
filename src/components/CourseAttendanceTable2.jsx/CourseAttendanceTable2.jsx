@@ -62,9 +62,9 @@ const CourseAttendanceTable2 = () => {
                 <th>Time</th>
                 <th>Date</th>
                 <th>Entry Time</th>
+                <th>Designated Person</th>
                 <th>Method</th>
                 <th>Attended</th>
-                <th>Designated Person</th>
                 {user.role == "TEACHER" ? <></> : <th></th>}
               </tr>
             </thead>
@@ -80,6 +80,7 @@ const CourseAttendanceTable2 = () => {
                     <td>{timeStr}</td>
                     <td>{dateStr}</td>
                     <td>{formatTime(entry.entryTime)}</td>
+                    <td>{entry.designatedStudent}</td>
                     <td>
                       <div
                         className={
@@ -104,7 +105,6 @@ const CourseAttendanceTable2 = () => {
                           : entry.attendanceStatus}
                       </div>
                     </td>
-                    <td>{entry.designatedStudent}</td>
                     {user.role == "TEACHER" ? (
                       <></>
                     ) : (

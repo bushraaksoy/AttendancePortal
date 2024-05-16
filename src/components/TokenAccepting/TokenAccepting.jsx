@@ -3,6 +3,8 @@ import MainLayout from "../MainLayout/MainLayout";
 import useFetch from "../../hooks/useFetch";
 import "./TokenAccepting.css";
 import { Link } from "react-router-dom";
+import yes from "/correct.png";
+import no from "/delete.png";
 
 const TokenAccepting = () => {
   const authResult = new URLSearchParams(window.location.search);
@@ -24,9 +26,7 @@ const TokenAccepting = () => {
           <div className="loader"></div>
         ) : (
           <>
-            <div className="checkmark-circle">
-              <div className="checkmark"></div>
-            </div>
+            <img src={yes} alt="checkmark" width={250} />
             <Link className="back-home" to={"/"}>
               Back to Home
             </Link>

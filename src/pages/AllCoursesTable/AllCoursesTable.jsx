@@ -14,12 +14,6 @@ const AllCoursesTable = () => {
   } = useFetch(url, { method: "GET", headers: {} });
   console.log(courses);
 
-  const testUrl = "/admin/courses/2/lessons";
-  const { data, loading2, error2 } = useFetch(testUrl, {
-    method: "GET",
-    headers: {},
-  });
-  console.log("course 2 data: ", data);
   if (loading)
     return (
       <AdminLayout>
@@ -50,14 +44,14 @@ const AllCoursesTable = () => {
                     key={course.id}
                     onClick={() =>
                       navigate(
-                        `/all-courses/${course.id}/groups?code=${course.code}&name=${course.name}`
+                        `/all-courses/${course.id}?code=${course.code}&name=${course.name}`
                       )
                     }
                   >
                     <td>{course.id}</td>
                     <td>
                       <Link
-                        to={`/all-courses/${course.id}/groups?code=${course.code}&name=${course.name}`}
+                        to={`/all-courses/${course.id}?code=${course.code}&name=${course.name}`}
                       >
                         {course.code}
                       </Link>

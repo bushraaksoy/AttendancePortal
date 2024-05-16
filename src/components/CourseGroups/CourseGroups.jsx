@@ -77,9 +77,9 @@ const CourseGroups = () => {
                     <td>
                       <Link
                         className="view"
-                        to={`/${courseId}/${lesson.group}/permissions`}
+                        to={`/${courseId}/${lesson.group}/permissions?code=${courseCode}`}
                       >
-                        view
+                        View
                       </Link>
                     </td>
                   ) : (
@@ -91,7 +91,7 @@ const CourseGroups = () => {
                         className="view"
                         to={`/${courseId}/${lesson.group}/attendance?code=${courseCode}&name=${courseName}&id=${courseId}`}
                       >
-                        view
+                        View
                       </Link>
                     ) : (
                       <>

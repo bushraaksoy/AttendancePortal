@@ -1,12 +1,68 @@
-{/* <img
+ {
+  /* <img
   className="big-screen"
   width={"400px"}
   src="https://static.vecteezy.com/system/resources/previews/005/877/701/large_2x/mobile-banking-modern-flat-concept-for-web-banner-design-woman-enters-login-and-password-for-secure-access-to-personal-financial-account-in-application-illustration-with-isolated-people-scene-free-vector.jpg"
   alt="login"
-/> */}
-{/* <img
+/> */
+}
+ {
+  /* <img
   className="big-screen"
   width={"400px"}
   src="https://static.vecteezy.com/system/resources/previews/001/991/652/non_2x/sign-in-page-flat-design-concept-illustration-icon-account-login-user-login-abstract-metaphor-can-use-for-landing-page-mobile-app-ui-posters-banners-free-vector.jpg"
   alt="login"
-/> */}
+/> */
+}
+
+/* {
+  id: 3,
+  path: "/:courseId/students",
+  element: CourseStudents,
+},
+{
+  id: 4,
+  path: "/:courseId/:courseGroup/attendance",
+  element: CourseAttendanceTable,
+}, */
+
+/* default breadcrumbs */
+
+/* import React from "react";
+import useBreadcrumbs from "use-react-router-breadcrumbs";
+import {
+  CustomCourseBreadcrumb,
+  CustomGroupBreadcrumb,
+} from "../../breadcrumbs/CustomBreadcrumbs";
+import "./Breadcrumbs.css";
+
+const breadcrumbRoutes = [
+  { path: "/:courseId", breadcrumb: CustomCourseBreadcrumb },
+  { path: "/:courseId/:courseGroup", breadcrumb: CustomGroupBreadcrumb },
+];
+
+const Breadcrumbs = () => {
+  const breadcrumbs = useBreadcrumbs();
+
+  const styles = { color: "#40526c", fontWeight: "500" };
+
+  return (
+    <div className="breadcrumb">
+      {breadcrumbs.map(({ breadcrumb, match }, index) => {
+        console.log("match: ", match);
+        console.log("breadcrumb: ", breadcrumb);
+        return (
+          <span
+            style={index == breadcrumbs.length - 1 ? styles : {}}
+            key={index}
+          >
+            <a href={match.pathname}>{breadcrumb}</a>
+            {index < breadcrumbs.length - 1 && " > "}{" "}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Breadcrumbs; */

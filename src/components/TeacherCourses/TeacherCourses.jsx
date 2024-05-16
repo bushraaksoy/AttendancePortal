@@ -47,7 +47,7 @@ const TeacherCourses = () => {
                   key={course.id}
                   onClick={() =>
                     navigate(
-                      `/all-courses/${course.id}/groups?code=${course.code}&name=${course.name}`
+                      `/all-courses/${course.id}?code=${course.code}&name=${course.name}`
                     )
                   }
                 >

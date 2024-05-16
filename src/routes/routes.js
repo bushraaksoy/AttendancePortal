@@ -32,51 +32,30 @@ export const userRoutes = [
     path: "/",
     element: CoursesTable,
   },
-  // {
-  //   id: 2,
-  //   path: "/:courseId/attendance",
-  //   element: CourseAttendanceTable,
-  // },
   {
-    id: 3,
-    path: "/:courseId/students",
-    element: CourseStudents,
-  },
-  {
-    id: 4,
-    path: "/:courseId/:courseGroup/attendance",
-    element: CourseAttendanceTable2,
-  },
-  {
-    id: 5,
-    path: "/:courseId/:courseGroup/permissions",
-    element: Permissions,
-  },
-  {
-    id: 6,
+    id: 2,
     path: "/:courseId",
     element: CourseGroups,
   },
   {
-    id: 7,
-    path: ":courseId/:courseGroup/take-attendance",
+    id: 3,
+    path: "/:courseId/:courseGroup/attendance" /* it should return breadcrumbs 'Home > CSS 220 > 01-P Attendance' */,
+    element: CourseAttendanceTable2,
+  },
+  {
+    id: 4,
+    path: "/:courseId/:courseGroup/permissions" /* it should return breadcrumbs 'Home > CSS 220 > 01-P Permissions' */,
+    element: Permissions,
+  },
+  {
+    id: 5, // teacher
+    path: "/:courseId/:courseGroup/take-attendance" /* it should return breadcrumbs 'Home > CSS 220 > 01-P Take Attendance' */,
     element: TakeAttendance,
   },
   {
-    id: 8,
-    path: "token-accepting",
-    element: TokenAccepting,
-  },
-  {
-    id: 9,
-    path: "/:courseId/:courseGroup/students",
+    id: 6, // student: for giving permission - teacher: for viewing students
+    path: "/:courseId/:courseGroup/students" /* it should return breadcrumbs 'Home > CSS 220 > 01-P Students' */,
     element: Students,
-  },
-  {
-    // this is not very correct, as the course group is for all groups and not a specific one
-    id: 10,
-    path: "/:courseId/:courseGroup",
-    element: CourseGroups,
   },
 ];
 
@@ -97,19 +76,19 @@ export const adminRoutes = [
     element: AllCoursesTable,
   },
   {
-    id: 4,
-    path: "/all-courses/:courseId/groups",
-    element: AdminCourseGroups,
-  },
-  {
     id: 5,
     path: "/teachers",
     element: Teachers,
   },
   {
-    id: 6,
-    path: "/all-courses/:courseId/:courseGroup/:studentId/attendance",
-    element: AdminAttendance,
+    id: 4,
+    path: "/all-courses/:courseId",
+    element: AdminCourseGroups,
+  },
+  {
+    id: 8,
+    path: "/teachers/:teacherId/courses",
+    element: TeacherCourses,
   },
   {
     id: 7,
@@ -117,8 +96,8 @@ export const adminRoutes = [
     element: AdminStudents,
   },
   {
-    id: 8,
-    path: "/teachers/:teacherId/courses",
-    element: TeacherCourses,
+    id: 6,
+    path: "/all-courses/:courseId/:courseGroup/:studentId/attendance",
+    element: AdminAttendance,
   },
 ];

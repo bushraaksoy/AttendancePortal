@@ -110,3 +110,11 @@ export const setFavicon = (iconURL) => {
   link.href = iconURL;
   document.getElementsByTagName("head")[0].appendChild(link);
 };
+
+// capitalize
+
+export const capitalize = (text) => {
+  if (text.length > 0) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+};

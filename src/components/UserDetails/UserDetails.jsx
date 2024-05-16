@@ -7,54 +7,43 @@ import sduLogo from "/logo_sdu.png";
 import useSignout from "../../hooks/useSignout";
 import { useAuthContext } from "../../context/AuthContext";
 import { formatDate } from "../../utils";
+import useFetch from "../../hooks/useFetch";
 
 const UserDetails = () => {
-  const [userDetails, setUserDetails] = useState("");
   const signout = useSignout();
   const { user } = useAuthContext();
 
   const token = localStorage.getItem("token")?.replace(/"/g, "");
-  const url = `https://attendancesystem-qpr5.onrender.com/api/v1/${user.role.toLowerCase()}`;
+  const url = `/${user.role.toLowerCase()}`;
 
-  useEffect(() => {
-    const getUserDetails = async () => {
-      try {
-        const res = await fetch(url, {
-          method: "GET",
-          headers: { Authorization: "Bearer " + token },
-        });
-        console.log(res);
-        if (res.ok) {
-          const data = await res.json();
-          setUserDetails(data);
-        } else {
-          console.error("Failed to fetch courses:", res.statusText);
-        }
-      } catch (error) {
-        console.error("Error occurred while fetching courses:", error);
-      }
-    };
-
-    getUserDetails();
-  }, [token]);
+  const {
+    data: userDetails,
+    loading,
+    error,
+  } = useFetch(url, { method: "GET", headers: {} });
 
   console.log(userDetails);
-
-  const birthDate = formatDate(userDetails.birthDate);
 
   return (
     <div className="user-details">
       <img className="sdu-logo" src={sduLogo} alt="sdu logo" width={100} />
+
       <div className="user-info">
         <img className="user-profile-pic" src={userImg} alt="profile-pic" />
         <div>
           <div>
             <h3>Name</h3>
-            <div>{userDetails.name + " " + userDetails.surname}</div>
+            <div>
+              {loading
+                ? "Name Surname..."
+                : userDetails.name + " " + userDetails.surname}
+            </div>
           </div>
           <dir>
             <h3>Birth Date</h3>
-            <div>{birthDate}</div>
+            <div>
+              {loading ? "Birthdate..." : formatDate(userDetails.birthDate)}
+            </div>
           </dir>
           <div>
             <h3>Department</h3>
