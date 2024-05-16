@@ -27,11 +27,12 @@ const Login = () => {
       <img
         className="big-screen"
         style={{ filter: "brightness(.93)" }} // .97 for first and .93 for second
-        width={"360px"}
-        src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png?f=webp"
+        width={"410px"}
+        src="https://media.istockphoto.com/id/1281150061/vector/register-account-submit-access-login-password-username-internet-online-website-concept.jpg?b=1&s=612x612&w=0&k=20&c=9H5N9Jy8BA9yCzL-Wt5uCeZqETmpPYsJKJ2Nh1-SDaw="
+        // src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png?f=webp"
         alt="login"
       />
-      <div className="big-screen" style={{ width: "70px" }}></div>
+      <div className="big-screen" style={{ width: "60px" }}></div>
       <div className="login">
         <div className="form-title">
           <h1>Welcome to Attendance Portal👋</h1>
