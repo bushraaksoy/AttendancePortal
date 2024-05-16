@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { formatDateAndTime } from "../../utils";
 import QrCode from "../QrCode/QrCode";
+import Loader from "../Loader";
+
 const TakeAttendance = () => {
   const { courseId, courseGroup } = useParams();
   const authResult = new URLSearchParams(window.location.search);
@@ -17,6 +19,7 @@ const TakeAttendance = () => {
   const [loading, setLoading] = useState(false);
 
   const url = `/teacher/attendance/take/courses/${courseId}/${courseGroup}`;
+
   const {
     data: attendance,
     loading2,
@@ -54,6 +57,14 @@ const TakeAttendance = () => {
       console.error("Error fetching QR code:", err);
     }
   };
+
+  if (loading2) {
+    return (
+      <MainLayout>
+        <Loader />
+      </MainLayout>
+    );
+  }
 
   return (
     <MainLayout>

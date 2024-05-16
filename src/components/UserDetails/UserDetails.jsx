@@ -22,8 +22,6 @@ const UserDetails = () => {
     error,
   } = useFetch(url, { method: "GET", headers: {} });
 
-  console.log(userDetails);
-
   return (
     <div className="user-details">
       <img className="sdu-logo" src={sduLogo} alt="sdu logo" width={100} />
