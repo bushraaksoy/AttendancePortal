@@ -8,12 +8,24 @@ import { toast, useToast } from "react-toastify";
 
 const Permissions = () => {
   const { courseId, courseGroup } = useParams();
+  const [student, setStudent] = useState({ name: "No one", surname: "" });
+  const token = localStorage.getItem("token")?.replace(/"/g, "");
   const authResult = new URLSearchParams(window.location.search); // for query search params
-  const [student, setStudent] = useState("");
+
+  // fetch the student and show it here, or store it here to the student
+  const studentsUrl = `/student/courses/${courseId}/consumers`;
   const [isVisible, setIsVisible] = useState(false);
 
   const url = `/student/courses/${courseId}/${courseGroup}/students`;
-  const token = localStorage.getItem("token")?.replace(/"/g, "");
+  const {
+    data: permittedStudents,
+    loading2,
+    error2,
+  } = useFetch(studentsUrl, { method: "GET", headers: {} });
+
+  useEffect(() => {
+    setStudent(permittedStudents && permittedStudents[0]);
+  }, [permittedStudents]);
 
   const {
     data: students,
@@ -53,7 +65,6 @@ const Permissions = () => {
     } catch (error) {
       console.error("Error giving permission:", error);
       toast.error("You have already given permission to another student.");
-      // toast.error("Failed to give permission.");
     }
   };
 
@@ -64,7 +75,10 @@ const Permissions = () => {
       </div>
       <h1>Permissions</h1>
       <div className="permitted-message">
-        {student && `${student.name} has permission to take your attendance!`}
+        <span style={{ fontWeight: "700" }}>
+          {student && `${student.name} ${student.surname}  `}
+        </span>
+        has permission to take your attendance
       </div>
       <table className="table">
         <thead>
@@ -103,8 +117,10 @@ const Permissions = () => {
           <h3>Confirmation</h3>
           <div className="message">
             Are you sure you want to give permission to{" "}
-            <span style={{ fontWeight: "700" }}>{student.name}</span> to take
-            your attendance?
+            <span style={{ fontWeight: "700" }}>
+              {student && `${student.name} ${student.surname}`}
+            </span>{" "}
+            to take your attendance?
           </div>
           <div className="buttons">
             <button onClick={handleConfirmClick}>Confirm</button>

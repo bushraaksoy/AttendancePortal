@@ -9,13 +9,7 @@ export const useBreadcrumbs = () => {
   const location = useLocation();
   const { courseGroup, courseId } = useParams();
 
-  console.log("loacaton", location);
   const currentQueryParams = queryString.parse(location.search);
-
-  console.log(
-    "current query params after parsing location: ",
-    currentQueryParams
-  );
 
   var paths = location.pathname.split("/").filter(Boolean);
   var breadcrumbs = [];
@@ -37,10 +31,7 @@ export const useBreadcrumbs = () => {
     }
 
     Object.assign(accumulatedQueryParams, currentQueryParams);
-    console.log(
-      "accumulated query params after Object.assign: ",
-      accumulatedQueryParams
-    );
+
     const queryStr = queryString.stringify(accumulatedQueryParams);
 
     breadcrumbs.push({ path: `${pathAccumulator}?${queryStr}`, crumb: label });
@@ -91,6 +82,5 @@ export const useAdminBreadcrumbs = () => {
     breadcrumbs.push({ path: pathAccumulator, crumb: label });
   });
 
-  console.log(breadcrumbs);
   return breadcrumbs;
 };
